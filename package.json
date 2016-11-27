@@ -95,9 +95,7 @@
     "socket.io": "^1.4.8",
     "validator": "~6.0.0",
     "winston": "^2.2.0",
-    "wiredep": "~4.0.0"
-  },
-  "devDependencies": {
+    "wiredep": "~4.0.0",
     "coveralls": "~2.11.6",
     "del": "^2.2.2",
     "eslint": "~2.2.0",
