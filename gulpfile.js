@@ -68,7 +68,7 @@ gulp.task('nodemon-nodebug', function () {
 // Watch Files For Changes
 gulp.task('watch', function () {
   // Start livereload
-  plugins.refresh.listen();
+  // plugins.refresh.listen();
 
   // Add watch rules
   gulp.watch(defaultAssets.server.views).on('change', plugins.refresh.changed);
@@ -90,7 +90,7 @@ gulp.task('watch', function () {
 // Watch server test files
 gulp.task('watch:server:run-tests', function () {
   // Start livereload
-  plugins.refresh.listen();
+  // plugins.refresh.listen();
 
   // Add Server Test file rules
   gulp.watch([testAssets.tests.server, defaultAssets.server.allJS], ['test:server']).on('change', function (file) {
