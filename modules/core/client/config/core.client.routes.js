@@ -70,6 +70,14 @@
           ignoreState: true,
           pageTitle: 'Forbidden'
         }
+      })
+      .state('contact', {
+        url: '/contact',
+        templateUrl: '/modules/core/client/views/contact.client.view.html',
+        data: {
+          ignoreState: true,
+          pageTitle: 'Contact Info'
+        }
       });
   }
 }());
