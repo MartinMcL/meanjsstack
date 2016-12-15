@@ -12,7 +12,8 @@
       .state('timetables', {
         abstract: true,
         url: '/timetables',
-        template: '<ui-view/>'
+        templateUrl: 'modules/timetables/client/views/test.client.view.html',
+        controller: 'testController'
       })
       .state('timetables.list', {
         url: '',

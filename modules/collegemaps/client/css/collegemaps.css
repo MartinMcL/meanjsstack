@@ -1,12 +1,41 @@
 svg #GreenLayer_main{
-    stroke-width: 2;
-    stroke: #fff;
-    fill: #52b552;
+
 }
 
 svg #GreenLayer_main:hover{
-  fill: black;
+
 }
 svg #block_p:hover{
-  fill: red;
+
+}
+.cls-1 {
+    fill: #8cc640;
+}
+.cls-1,
+.cls-4,
+.cls-5,
+.cls-6,
+.cls-7,
+.cls-8 {
+    stroke: #000;
+    stroke-miterlimit: 10;
+}
+.cls-2,
+.cls-6 {
+    fill: #8e8e8e;
+}
+.cls-3 {
+    fill: #01007f;
+}
+.cls-4 {
+    fill: #52b552;
+}
+.cls-5 {
+    fill: #3e6600;
+}
+.cls-7 {
+    fill: #550019;
+}
+.cls-8 {
+    fill: none;
 }
