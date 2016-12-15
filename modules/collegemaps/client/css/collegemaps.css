@@ -1,14 +1,12 @@
-svg{
+svg #GreenLayer_main{
     stroke-width: 2;
     stroke: #fff;
-
-    -webkit-transition: stroke 0.5s, stroke-width 0.5s;
-    -o-transition: stroke 0.5s, stroke-width 0.5s;
-    transition: stroke 0.5s, stroke-width 0.5s;
+    fill: #52b552;
 }
 
-svg:hover{
-    cursor: pointer;
-    stroke-width: 54;
-    stroke: #000;
+svg #GreenLayer_main:hover{
+  fill: black;
+}
+svg #block_p:hover{
+  fill: red;
 }
