@@ -154,14 +154,42 @@ body {
 }
 
 #menu-toggle {
-	background-color: black;
-	color: white;
+	background-color: #026990;
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 }
+#menu-toggle span{
+	color: white;
+	background-color: none;
+	font-size: 50px;
+	vertical-align: middle;
+
+}
 
 #menu-toggle.toggled {
 	margin-left: 5px;
+}
+
+/* Media Queries */
+/* Smartphones */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 737px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+@media screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1600px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
 }
