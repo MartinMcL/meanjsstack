@@ -66,11 +66,14 @@
       </li>
     </ul>
   </div>
-  <section class="container">
+  <section class="container1">
     <button ng-click="showDiv = !showDiv" class="btn" ng-class="{toggled : showDiv}" id="menu-toggle">
       <span class="glyphicon glyphicon-menu-hamburger"></span>
     </button>
-    {{{block "content"}}}
+    <section class="container layoutChanges">
+          {{{block "content"}}}
+    </section>
+
   </section>
 </section>
   <noscript>

@@ -1,7 +1,13 @@
 body {
 	overflow-x: hidden;
 }
-
+.btn{
+	margin: 10px;
+	position: absolute;
+}
+.layoutChanges{
+	
+}
 
 /* Toggle Styles */
 
@@ -131,26 +137,7 @@ body {
 }
 
 @media(min-width:768px) {
-	#wrapper {
-		padding-left: 0px;
-	}
-	#wrapper.toggled {
-		padding-left: 0px;
-	}
-	#sidebar-wrapper {
-		width: 250px;
-	}
-	#wrapper.toggled #sidebar-wrapper {
-		width: 0;
-	}
-	#page-content-wrapper {
-		padding: 20px;
-		position: relative;
-	}
-	#wrapper.toggled #page-content-wrapper {
-		position: relative;
-		margin-right: 0;
-	}
+
 }
 
 #menu-toggle {
@@ -171,25 +158,6 @@ body {
 #menu-toggle.toggled {
 	margin-left: 5px;
 }
-
-/* Media Queries */
-/* Smartphones */
-@media only screen
-  and (min-device-width: 320px)
-  and (max-device-width: 736px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-/* Portrait and Landscape */
-@media only screen
-  and (min-device-width: 737px)
-  and (max-device-width: 1024px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-@media screen
-  and (min-device-width: 1024px)
-  and (max-device-width: 1600px)
-  and (-webkit-min-device-pixel-ratio: 1) {
-
+.blocks:hover {
+	background-color: red;
 }

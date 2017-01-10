@@ -18,6 +18,6 @@
       $scope.mainData = dataTemp;
     }
     $scope.data();
-    
+
   }
 }());
