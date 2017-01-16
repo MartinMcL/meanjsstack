@@ -1,0 +1,1404 @@
+[{
+  "deptName": "Department of Computing and Creative Practices",
+  "courses": [{
+    "courseName": "Computing in Software Development Year 1",
+    "timetable": [{
+      "monday": [{
+        "subjectName": "Database Development",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "D2034"
+      }, {
+        "subjectName": "Software Development",
+        "startTime": "12:00",
+        "endTime": "13:00",
+        "roomNum": "D2034"
+      }, {
+        "subjectName": "Digital Media",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "D2034"
+      }, {
+        "subjectName": "Introduction to C#",
+        "startTime": "16:00",
+        "endTime": "17:00",
+        "roomNum": "D2034"
+      }]
+    }, {
+      "tuesday": [{
+        "subjectName": "Database Development",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "D2034"
+      }, {
+        "subjectName": "Database Development",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "D2034"
+      }, {
+        "subjectName": "Database Development",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "D2034"
+      }]
+    }, {
+      "wednesday": [{
+        "subjectName": "Database Development",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "D2034"
+      }, {
+        "subjectName": "Database Development",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "D2034"
+      }, {
+        "subjectName": "Database Development",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "D2034"
+      }]
+    }, {
+      "thursday": [{
+        "subjectName": "Database Development",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "D2034"
+      }, {
+        "subjectName": "Database Development",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "D2034"
+      }, {
+        "subjectName": "Database Development",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "D2034"
+      }]
+    }, {
+      "friday": [{
+        "subjectName": "Database Development",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "D2034"
+      }]
+    }]
+  }, {
+    "courseName": "Computing in Software Development Year 2",
+    "timetable": [{
+      "monday": [{
+        "subjectName": "Software Development",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "D2034"
+      }, {
+        "subjectName": "Project Management",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "D2008"
+      }, {
+        "subjectName": "Intermidiate C#",
+        "startTime": "16:00",
+        "endTime": "18:00",
+        "roomNum": "B1034"
+      }]
+    }, {
+      "tuesday": [{
+        "subjectName": "Professional Development",
+        "startTime": "9:00",
+        "endTime": "12:00",
+        "roomNum": "D1034"
+      }, {
+        "subjectName": "Rich Applications Development",
+        "startTime": "12:00",
+        "endTime": "13:00",
+        "roomNum": "D2031"
+      }, {
+        "subjectName": "Web Programming",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "B1041"
+      }]
+    }, {
+      "wednesday": [{
+        "subjectName": "Database Development",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "D2008"
+      }, {
+        "subjectName": "Rich Applications Development",
+        "startTime": "16:00",
+        "endTime": "17:00",
+        "roomNum": "D2034"
+      }, {
+        "subjectName": "Software Development",
+        "startTime": "17:00",
+        "endTime": "18:00",
+        "roomNum": "D2034"
+      }]
+    }, {
+      "thursday": [{
+        "subjectName": "Database Development",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "D2034"
+      }, {
+        "subjectName": "Database Development",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "D2034"
+      }, {
+        "subjectName": "Database Development",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "D2034"
+      }]
+    }]
+    }]
+  }, {
+    "courseName": "Computing in Software Development Year 3",
+    "timetable": [{
+      "monday": [{
+        "subjectName": "Software Development",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "D2034"
+      }, {
+        "subjectName": "Project Management",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "D2008"
+      }, {
+        "subjectName": "Intermidiate C#",
+        "startTime": "16:00",
+        "endTime": "18:00",
+        "roomNum": "B1034"
+      }]
+    }, {
+      "tuesday": [{
+        "subjectName": "Professional Development",
+        "startTime": "9:00",
+        "endTime": "12:00",
+        "roomNum": "D1034"
+      }, {
+        "subjectName": "Rich Applications Development",
+        "startTime": "12:00",
+        "endTime": "13:00",
+        "roomNum": "D2031"
+      }, {
+        "subjectName": "Web Programming",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "B1041"
+      }]
+    }, {
+      "wednesday": [{
+        "subjectName": "Database Development",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "D2008"
+      }, {
+        "subjectName": "Rich Applications Development",
+        "startTime": "16:00",
+        "endTime": "17:00",
+        "roomNum": "D2034"
+      }, {
+        "subjectName": "Software Development",
+        "startTime": "17:00",
+        "endTime": "18:00",
+        "roomNum": "D2034"
+      }]
+    }, {
+      "thursday": [{
+        "subjectName": "Database Development",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "D2034"
+      }, {
+        "subjectName": "Database Development",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "D2034"
+      }, {
+        "subjectName": "Database Development",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "D2034"
+      }]
+    }]
+}, {
+  "deptName": "Department of Civil Engineering and Construction",
+  "courses": [{
+    "courseName": "Civil Engineering Year 1",
+    "timetable": [{
+      "monday": [{
+        "subjectName": "Construction Studies",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Project Management",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "E1023"
+      }, {
+        "subjectName": "Architectural Design",
+        "startTime": "16:00",
+        "endTime": "18:00",
+        "roomNum": "E2034"
+      }]
+    }, {
+      "tuesday": [{
+        "subjectName": "Professional Development",
+        "startTime": "9:00",
+        "endTime": "12:00",
+        "roomNum": "D1034"
+      }, {
+        "subjectName": "Intro to Civil Law",
+        "startTime": "12:00",
+        "endTime": "13:00",
+        "roomNum": "D2031"
+      }, {
+        "subjectName": "Maths",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "E2041"
+      }]
+    }, {
+      "wednesday": [{
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E1023"
+      }, {
+        "subjectName": "Intro to Civil Law",
+        "startTime": "16:00",
+        "endTime": "17:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Construction Studies",
+        "startTime": "17:00",
+        "endTime": "18:00",
+        "roomNum": "E0023"
+      }]
+    }, {
+      "thursday": [{
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }]
+    }, {
+      "friday": [{
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }]
+    }]
+  }, {
+    "courseName": "Civil Engineering Year 2",
+    "timetable": [{
+      "monday": [{
+        "subjectName": "Construction Studies",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Project Management",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "E1023"
+      }, {
+        "subjectName": "Architectural Design",
+        "startTime": "16:00",
+        "endTime": "18:00",
+        "roomNum": "E2034"
+      }]
+    }, {
+      "tuesday": [{
+        "subjectName": "Professional Development",
+        "startTime": "9:00",
+        "endTime": "12:00",
+        "roomNum": "D1034"
+      }, {
+        "subjectName": "Intro to Civil Law",
+        "startTime": "12:00",
+        "endTime": "13:00",
+        "roomNum": "D2031"
+      }, {
+        "subjectName": "Maths",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "E2041"
+      }]
+    }, {
+      "wednesday": [{
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E1023"
+      }, {
+        "subjectName": "Intro to Civil Law",
+        "startTime": "16:00",
+        "endTime": "17:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Construction Studies",
+        "startTime": "17:00",
+        "endTime": "18:00",
+        "roomNum": "E0023"
+      }]
+    }, {
+      "thursday": [{
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }]
+    }, {
+      "friday": [{
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }]
+    }]
+  }, {
+    "courseName": "Civil Engineering Year 3",
+    "timetable": [{
+      "monday": [{
+        "subjectName": "Construction Studies",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Project Management",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "E1023"
+      }, {
+        "subjectName": "Architectural Design",
+        "startTime": "16:00",
+        "endTime": "18:00",
+        "roomNum": "E2034"
+      }]
+    }, {
+      "tuesday": [{
+        "subjectName": "Professional Development",
+        "startTime": "9:00",
+        "endTime": "12:00",
+        "roomNum": "D1034"
+      }, {
+        "subjectName": "Intro to Civil Law",
+        "startTime": "12:00",
+        "endTime": "13:00",
+        "roomNum": "D2031"
+      }, {
+        "subjectName": "Maths",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "E2041"
+      }]
+    }, {
+      "wednesday": [{
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E1023"
+      }, {
+        "subjectName": "Intro to Civil Law",
+        "startTime": "16:00",
+        "endTime": "17:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Construction Studies",
+        "startTime": "17:00",
+        "endTime": "18:00",
+        "roomNum": "E0023"
+      }]
+    }, {
+      "thursday": [{
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }]
+    }, {
+      "friday": [{
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }]
+    }]
+  }, {
+    "courseName": "Architectural Design Year 1",
+    "timetable": [{
+      "monday": [{
+        "subjectName": "Construction Studies",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Project Management",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "E1023"
+      }, {
+        "subjectName": "Architectural Design",
+        "startTime": "16:00",
+        "endTime": "18:00",
+        "roomNum": "E2034"
+      }]
+    }, {
+      "tuesday": [{
+        "subjectName": "Professional Development",
+        "startTime": "9:00",
+        "endTime": "12:00",
+        "roomNum": "D1034"
+      }, {
+        "subjectName": "Intro to Civil Law",
+        "startTime": "12:00",
+        "endTime": "13:00",
+        "roomNum": "D2031"
+      }, {
+        "subjectName": "Maths",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "E2041"
+      }]
+    }, {
+      "wednesday": [{
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E1023"
+      }, {
+        "subjectName": "Intro to Civil Law",
+        "startTime": "16:00",
+        "endTime": "17:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Construction Studies",
+        "startTime": "17:00",
+        "endTime": "18:00",
+        "roomNum": "E0023"
+      }]
+    }, {
+      "thursday": [{
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }]
+    }, {
+      "friday": [{
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }]
+    }]
+  }, {
+    "courseName": "Architectural Design Year 2",
+    "timetable": [{
+      "monday": [{
+        "subjectName": "Construction Studies",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Project Management",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "E1023"
+      }, {
+        "subjectName": "Architectural Design",
+        "startTime": "16:00",
+        "endTime": "18:00",
+        "roomNum": "E2034"
+      }]
+    }, {
+      "tuesday": [{
+        "subjectName": "Professional Development",
+        "startTime": "9:00",
+        "endTime": "12:00",
+        "roomNum": "D1034"
+      }, {
+        "subjectName": "Intro to Civil Law",
+        "startTime": "12:00",
+        "endTime": "13:00",
+        "roomNum": "D2031"
+      }, {
+        "subjectName": "Maths",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "E2041"
+      }]
+    }, {
+      "wednesday": [{
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E1023"
+      }, {
+        "subjectName": "Intro to Civil Law",
+        "startTime": "16:00",
+        "endTime": "17:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Construction Studies",
+        "startTime": "17:00",
+        "endTime": "18:00",
+        "roomNum": "E0023"
+      }]
+    }, {
+      "thursday": [{
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }]
+    }, {
+      "friday": [{
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }]
+    }]
+  }, {
+    "courseName": "Architectural Design Year 3",
+    "timetable": [{
+      "monday": [{
+        "subjectName": "Construction Studies",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Project Management",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "E1023"
+      }, {
+        "subjectName": "Architectural Design",
+        "startTime": "16:00",
+        "endTime": "18:00",
+        "roomNum": "E2034"
+      }]
+    }, {
+      "tuesday": [{
+        "subjectName": "Professional Development",
+        "startTime": "9:00",
+        "endTime": "12:00",
+        "roomNum": "D1034"
+      }, {
+        "subjectName": "Intro to Civil Law",
+        "startTime": "12:00",
+        "endTime": "13:00",
+        "roomNum": "D2031"
+      }, {
+        "subjectName": "Maths",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "E2041"
+      }]
+    }, {
+      "wednesday": [{
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E1023"
+      }, {
+        "subjectName": "Intro to Civil Law",
+        "startTime": "16:00",
+        "endTime": "17:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Construction Studies",
+        "startTime": "17:00",
+        "endTime": "18:00",
+        "roomNum": "E0023"
+      }]
+    }, {
+      "thursday": [{
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }]
+    }, {
+      "friday": [{
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }, {
+        "subjectName": "Engineering Fundamentals",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "E0023"
+      }]
+    }]
+  }]
+}, {
+  "deptName": "Department of Social Sciences",
+  "courses": [{
+    "courseName": "Early Child Care & Education Year 1",
+    "timetable": [{
+      "monday": [{
+        "subjectName": "Childcare",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "C0023"
+      }, {
+        "subjectName": "Intro to Psychology",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "C1023"
+      }, {
+        "subjectName": "Communication Studies",
+        "startTime": "16:00",
+        "endTime": "18:00",
+        "roomNum": "C1034"
+      }]
+    }, {
+      "tuesday": [{
+        "subjectName": "Professional Development",
+        "startTime": "9:00",
+        "endTime": "12:00",
+        "roomNum": "D1034"
+      }, {
+        "subjectName": "Intro to Law",
+        "startTime": "12:00",
+        "endTime": "13:00",
+        "roomNum": "D2031"
+      }, {
+        "subjectName": "Early Learning",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "C1041"
+      }]
+    }, {
+      "wednesday": [{
+        "subjectName": "Early Learning",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "C1023"
+      }, {
+        "subjectName": "Intro to Law",
+        "startTime": "16:00",
+        "endTime": "17:00",
+        "roomNum": "C0023"
+      }, {
+        "subjectName": "Childcare",
+        "startTime": "17:00",
+        "endTime": "18:00",
+        "roomNum": "C0023"
+      }]
+    }
+    ]
+  }, {
+    "courseName": "Early Child Care & Education Year 2",
+    "timetable": [{
+      "monday": [{
+        "subjectName": "Childcare",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "C0023"
+      }, {
+        "subjectName": "Intro to Psychology",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "C1023"
+      }, {
+        "subjectName": "Communication Studies",
+        "startTime": "16:00",
+        "endTime": "18:00",
+        "roomNum": "C1034"
+      }]
+    }, {
+      "tuesday": [{
+        "subjectName": "Professional Development",
+        "startTime": "9:00",
+        "endTime": "12:00",
+        "roomNum": "D1034"
+      }, {
+        "subjectName": "Intro to Law",
+        "startTime": "12:00",
+        "endTime": "13:00",
+        "roomNum": "D2031"
+      }, {
+        "subjectName": "Early Learning",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "C1041"
+      }]
+    }, {
+      "wednesday": [{
+        "subjectName": "Early Learning",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "C1023"
+      }, {
+        "subjectName": "Intro to Law",
+        "startTime": "16:00",
+        "endTime": "17:00",
+        "roomNum": "C0023"
+      }, {
+        "subjectName": "Childcare",
+        "startTime": "17:00",
+        "endTime": "18:00",
+        "roomNum": "C0023"
+      }]
+  }, {
+    "courseName": "Early Child Care & Education Year 3",
+    "timetable": [{
+      "monday": [{
+        "subjectName": "Childcare",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "C0023"
+      }, {
+        "subjectName": "Intro to Psychology",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "C1023"
+      }, {
+        "subjectName": "Communication Studies",
+        "startTime": "16:00",
+        "endTime": "18:00",
+        "roomNum": "C1034"
+      }]
+    }, {
+      "tuesday": [{
+        "subjectName": "Professional Development",
+        "startTime": "9:00",
+        "endTime": "12:00",
+        "roomNum": "D1034"
+      }, {
+        "subjectName": "Intro to Law",
+        "startTime": "12:00",
+        "endTime": "13:00",
+        "roomNum": "D2031"
+      }, {
+        "subjectName": "Early Learning",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "C1041"
+      }]
+    }, {
+      "wednesday": [{
+        "subjectName": "Early Learning",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "C1023"
+      }, {
+        "subjectName": "Intro to Law",
+        "startTime": "16:00",
+        "endTime": "17:00",
+        "roomNum": "C0023"
+      }, {
+        "subjectName": "Childcare",
+        "startTime": "17:00",
+        "endTime": "18:00",
+        "roomNum": "C0023"
+      }]
+  }, {
+    "courseName": "Social Care Practice Year 1",
+    "timetable": [{
+      "monday": [{
+        "subjectName": "Social Care",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "C0023"
+      }, {
+        "subjectName": "Intro to Psychology",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "C1023"
+      }, {
+        "subjectName": "Communication Studies",
+        "startTime": "16:00",
+        "endTime": "18:00",
+        "roomNum": "C1034"
+      }]
+    }, {
+      "tuesday": [{
+        "subjectName": "Professional Development",
+        "startTime": "9:00",
+        "endTime": "12:00",
+        "roomNum": "D1034"
+      }, {
+        "subjectName": "Intro to Law",
+        "startTime": "12:00",
+        "endTime": "13:00",
+        "roomNum": "D2031"
+      }, {
+        "subjectName": "Human Needs and Rights",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "C1041"
+      }]
+    }, {
+      "wednesday": [{
+        "subjectName": "Human Needs and Rights",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "C1023"
+      }, {
+        "subjectName": "Intro to Law",
+        "startTime": "16:00",
+        "endTime": "17:00",
+        "roomNum": "C0023"
+      }, {
+        "subjectName": "Social Care",
+        "startTime": "17:00",
+        "endTime": "18:00",
+        "roomNum": "C0023"
+      }]
+  }, {
+    "courseName": "Social Care Practice Year 2",
+    "timetable": [{
+      "monday": [{
+        "subjectName": "Social Care",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "C0023"
+      }, {
+        "subjectName": "Intro to Psychology",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "C1023"
+      }, {
+        "subjectName": "Communication Studies",
+        "startTime": "16:00",
+        "endTime": "18:00",
+        "roomNum": "C1034"
+      }]
+    }, {
+      "tuesday": [{
+        "subjectName": "Professional Development",
+        "startTime": "9:00",
+        "endTime": "12:00",
+        "roomNum": "D1034"
+      }, {
+        "subjectName": "Intro to Law",
+        "startTime": "12:00",
+        "endTime": "13:00",
+        "roomNum": "D2031"
+      }, {
+        "subjectName": "Human Needs and Rights",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "C1041"
+      }]
+    }, {
+      "wednesday": [{
+        "subjectName": "Human Needs and Rights",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "C1023"
+      }, {
+        "subjectName": "Intro to Law",
+        "startTime": "16:00",
+        "endTime": "17:00",
+        "roomNum": "C0023"
+      }, {
+        "subjectName": "Social Care",
+        "startTime": "17:00",
+        "endTime": "18:00",
+        "roomNum": "C0023"
+      }]
+  }, {
+    "courseName": "Social Care Practice Year 3",
+    "timetable": [{
+      "monday": [{
+        "subjectName": "Social Care",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "C0023"
+      }, {
+        "subjectName": "Intro to Psychology",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "C1023"
+      }, {
+        "subjectName": "Communication Studies",
+        "startTime": "16:00",
+        "endTime": "18:00",
+        "roomNum": "C1034"
+      }]
+    }, {
+      "tuesday": [{
+        "subjectName": "Professional Development",
+        "startTime": "9:00",
+        "endTime": "12:00",
+        "roomNum": "D1034"
+      }, {
+        "subjectName": "Intro to Law",
+        "startTime": "12:00",
+        "endTime": "13:00",
+        "roomNum": "D2031"
+      }, {
+        "subjectName": "Human Needs and Rights",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "C1041"
+      }]
+    }, {
+      "wednesday": [{
+        "subjectName": "Human Needs and Rights",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "C1023"
+      }, {
+        "subjectName": "Intro to Law",
+        "startTime": "16:00",
+        "endTime": "17:00",
+        "roomNum": "C0023"
+      }, {
+        "subjectName": "Social Care",
+        "startTime": "17:00",
+        "endTime": "18:00",
+        "roomNum": "C0023"
+      }]
+  }]
+}, {
+  "deptName": "Department of Life Sciences",
+  "courses": [{
+    "courseName": "Health Science & Psychology Year 1",
+    "timetable": [{
+      "monday": [{
+        "subjectName": "Social Care",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "C0023"
+      }, {
+        "subjectName": "Intro to Psychology",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "C1023"
+      }, {
+        "subjectName": "Communication Studies",
+        "startTime": "16:00",
+        "endTime": "18:00",
+        "roomNum": "C1034"
+      }]
+    }, {
+      "tuesday": [{
+        "subjectName": "Professional Development",
+        "startTime": "9:00",
+        "endTime": "12:00",
+        "roomNum": "D1034"
+      }, {
+        "subjectName": "Intro to Law",
+        "startTime": "12:00",
+        "endTime": "13:00",
+        "roomNum": "D2031"
+      }, {
+        "subjectName": "Human Needs and Rights",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "C1041"
+      }]
+    }, {
+      "wednesday": [{
+        "subjectName": "Human Needs and Rights",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "C1023"
+      }, {
+        "subjectName": "Intro to Law",
+        "startTime": "16:00",
+        "endTime": "17:00",
+        "roomNum": "C0023"
+      }, {
+        "subjectName": "Nutrition and Health",
+        "startTime": "17:00",
+        "endTime": "18:00",
+        "roomNum": "C0023"
+      }]
+  }, {
+    "courseName": "Health Science & Psychology Year 2",
+    "timetable": [{
+      "monday": [{
+        "subjectName": "Social Care",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "C0023"
+      }, {
+        "subjectName": "Intro to Psychology",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "C1023"
+      }, {
+        "subjectName": "Communication Studies",
+        "startTime": "16:00",
+        "endTime": "18:00",
+        "roomNum": "C1034"
+      }]
+    }, {
+      "tuesday": [{
+        "subjectName": "Professional Development",
+        "startTime": "9:00",
+        "endTime": "12:00",
+        "roomNum": "D1034"
+      }, {
+        "subjectName": "Intro to Law",
+        "startTime": "12:00",
+        "endTime": "13:00",
+        "roomNum": "D2031"
+      }, {
+        "subjectName": "Human Needs and Rights",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "C1041"
+      }]
+    }, {
+      "wednesday": [{
+        "subjectName": "Human Needs and Rights",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "C1023"
+      }, {
+        "subjectName": "Intro to Law",
+        "startTime": "16:00",
+        "endTime": "17:00",
+        "roomNum": "C0023"
+      }, {
+        "subjectName": "Nutrition and Health",
+        "startTime": "17:00",
+        "endTime": "18:00",
+        "roomNum": "C0023"
+      }]
+  }, {
+    "courseName": "Health Science & Psychology Year 3",
+    "timetable": [{
+      "monday": [{
+        "subjectName": "Social Care",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "C0023"
+      }, {
+        "subjectName": "Intro to Psychology",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "C1023"
+      }, {
+        "subjectName": "Communication Studies",
+        "startTime": "16:00",
+        "endTime": "18:00",
+        "roomNum": "C1034"
+      }]
+    }, {
+      "tuesday": [{
+        "subjectName": "Professional Development",
+        "startTime": "9:00",
+        "endTime": "12:00",
+        "roomNum": "D1034"
+      }, {
+        "subjectName": "Intro to Law",
+        "startTime": "12:00",
+        "endTime": "13:00",
+        "roomNum": "D2031"
+      }, {
+        "subjectName": "Human Needs and Rights",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "C1041"
+      }]
+    }, {
+      "wednesday": [{
+        "subjectName": "Human Needs and Rights",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "C1023"
+      }, {
+        "subjectName": "Intro to Law",
+        "startTime": "16:00",
+        "endTime": "17:00",
+        "roomNum": "C0023"
+      }, {
+        "subjectName": "Nutrition and Health",
+        "startTime": "17:00",
+        "endTime": "18:00",
+        "roomNum": "C0023"
+      }]
+  }, {
+    "courseName": "Biomedical Science Year 1",
+    "timetable": [{
+      "monday": [{
+        "subjectName": "Chemistry",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "C0023"
+      }, {
+        "subjectName": "Medicine",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "C1023"
+      }, {
+        "subjectName": "Physics",
+        "startTime": "16:00",
+        "endTime": "18:00",
+        "roomNum": "C1034"
+      }]
+    }, {
+      "tuesday": [{
+        "subjectName": "Professional Development",
+        "startTime": "9:00",
+        "endTime": "12:00",
+        "roomNum": "D1034"
+      }, {
+        "subjectName": "Biology",
+        "startTime": "12:00",
+        "endTime": "13:00",
+        "roomNum": "D2031"
+      }, {
+        "subjectName": "Biomedicine",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "C1041"
+      }]
+    }, {
+      "wednesday": [{
+        "subjectName": "Biology",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "C1023"
+      }, {
+        "subjectName": "Chemsitry",
+        "startTime": "16:00",
+        "endTime": "17:00",
+        "roomNum": "C0023"
+      }, {
+        "subjectName": "Nutrition and Health",
+        "startTime": "17:00",
+        "endTime": "18:00",
+        "roomNum": "C0023"
+      }]
+  }, {
+    "courseName": "Biomedical Science Year 2",
+    "timetable": [{
+      "monday": [{
+        "subjectName": "Chemistry",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "C0023"
+      }, {
+        "subjectName": "Medicine",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "C1023"
+      }, {
+        "subjectName": "Physics",
+        "startTime": "16:00",
+        "endTime": "18:00",
+        "roomNum": "C1034"
+      }]
+    }, {
+      "tuesday": [{
+        "subjectName": "Professional Development",
+        "startTime": "9:00",
+        "endTime": "12:00",
+        "roomNum": "D1034"
+      }, {
+        "subjectName": "Biology",
+        "startTime": "12:00",
+        "endTime": "13:00",
+        "roomNum": "D2031"
+      }, {
+        "subjectName": "Biomedicine",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "C1041"
+      }]
+    }, {
+      "wednesday": [{
+        "subjectName": "Biology",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "C1023"
+      }, {
+        "subjectName": "Chemsitry",
+        "startTime": "16:00",
+        "endTime": "17:00",
+        "roomNum": "C0023"
+      }, {
+        "subjectName": "Nutrition and Health",
+        "startTime": "17:00",
+        "endTime": "18:00",
+        "roomNum": "C0023"
+      }]
+  }, {
+    "courseName": "Biomedical Science Year 3",
+    "timetable": [{
+      "monday": [{
+        "subjectName": "Chemistry",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "C0023"
+      }, {
+        "subjectName": "Medicine",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "C1023"
+      }, {
+        "subjectName": "Physics",
+        "startTime": "16:00",
+        "endTime": "18:00",
+        "roomNum": "C1034"
+      }]
+    }, {
+      "tuesday": [{
+        "subjectName": "Professional Development",
+        "startTime": "9:00",
+        "endTime": "12:00",
+        "roomNum": "D1034"
+      }, {
+        "subjectName": "Biology",
+        "startTime": "12:00",
+        "endTime": "13:00",
+        "roomNum": "D2031"
+      }, {
+        "subjectName": "Biomedicine",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "roomNum": "C1041"
+      }]
+    }, {
+      "wednesday": [{
+        "subjectName": "Biology",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "roomNum": "C1023"
+      }, {
+        "subjectName": "Chemsitry",
+        "startTime": "16:00",
+        "endTime": "17:00",
+        "roomNum": "C0023"
+      }, {
+        "subjectName": "Nutrition and Health",
+        "startTime": "17:00",
+        "endTime": "18:00",
+        "roomNum": "C0023"
+      }]
+  }]
+}]
