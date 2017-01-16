@@ -1,7 +1,13 @@
 body {
 	overflow-x: hidden;
 }
-
+.btn{
+	margin: 10px;
+	position: absolute;
+}
+.layoutChanges{
+	
+}
 
 /* Toggle Styles */
 
@@ -131,38 +137,27 @@ body {
 }
 
 @media(min-width:768px) {
-	#wrapper {
-		padding-left: 0px;
-	}
-	#wrapper.toggled {
-		padding-left: 0px;
-	}
-	#sidebar-wrapper {
-		width: 250px;
-	}
-	#wrapper.toggled #sidebar-wrapper {
-		width: 0;
-	}
-	#page-content-wrapper {
-		padding: 20px;
-		position: relative;
-	}
-	#wrapper.toggled #page-content-wrapper {
-		position: relative;
-		margin-right: 0;
-	}
+
 }
 
 #menu-toggle {
-	margin-left: 255px;
-	background-color: black;
-	color: white;
+	background-color: #026990;
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 }
+#menu-toggle span{
+	color: white;
+	background-color: none;
+	font-size: 50px;
+	vertical-align: middle;
+
+}
 
 #menu-toggle.toggled {
 	margin-left: 5px;
+}
+.blocks:hover {
+	background-color: red;
 }

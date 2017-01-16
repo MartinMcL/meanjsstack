@@ -6,6 +6,11 @@ svg #GreenLayer_main:hover{
 
 }
 svg #block_p:hover{
+ background-color: red;
+}
+svg .blocks:hover{
+  stroke-width: 4;
+  stroke: red;
 
 }
 .cls-1 {
@@ -17,7 +22,7 @@ svg #block_p:hover{
 .cls-6,
 .cls-7,
 .cls-8 {
-    stroke: #000;
+    stroke: black;
     stroke-miterlimit: 10;
 }
 .cls-2,
