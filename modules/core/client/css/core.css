@@ -1,12 +1,13 @@
 body {
 	overflow-x: hidden;
+	background-color: #d1d1d1;
 }
 .btn{
 	margin: 10px;
 	position: absolute;
 }
 .layoutChanges{
-	
+
 }
 
 /* Toggle Styles */
@@ -31,7 +32,7 @@ body {
 	height: 100%;
 	margin-left: -250px;
 	overflow-y: auto;
-	background: #000;
+	background: #f7f7f7;
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
@@ -108,32 +109,53 @@ body {
 
 /* Color Changes Sidebar */
 
-#homeLink:hover {
+#homeLink:hover,
+#homeLink:active,
+#homeLink:focus {
 	background-color: #FBB735;
+	color: white;
 }
 
-#calendarLink:hover {
+#calendarLink:hover,
+#calendarLink:active,
+#calendarLink:focus {
 	background-color: #E98931;
+	color: white;
 }
 
-#emailLink:hover {
+#emailLink:hover,
+#emailLink:active,
+#emailLink:focus {
 	background-color: #EB403B;
+	color: white;
 }
 
-#timetableLink:hover {
+#timetableLink:hover,
+#timetableLink:active,
+#timetableLink:focus {
 	background-color: #A52A32;
+	color: white;
 }
 
-#mapLink:hover {
+#mapLink:hover,
+#mapLink:active,
+#mapLink:focus {
 	background-color: #6C2A6A;
+	color: white;
 }
 
-#servicesLink:hover {
+#servicesLink:hover,
+#servicesLink:active,
+#servicesLink:focus {
 	background-color: #5C4399;
+	color: white;
 }
 
-#contactLink:hover {
-	background-color: #FFFFFF;
+#contactsLink:hover,
+#contactsLink:active,
+#contactsLink:focus {
+	background-color: #430549;
+	color: white;
 }
 
 @media(min-width:768px) {
@@ -160,4 +182,27 @@ body {
 }
 .blocks:hover {
 	background-color: red;
+}
+
+/* HomePage Changes */
+.allHeaders{
+	background-color: #f7f7f7;
+	height: 86px;
+	margin: 0px;
+	padding: 0px;
+}
+.studentHubCont{
+	float: right;
+	margin-right: 10px;
+}
+.studentHub{
+	display: inline;
+	font-size: 50px;
+}
+#student{
+	font-family: 'Dosis', sans-serif;
+}
+#hub{
+	font-family: 'Indie Flower', cursive;
+	font-weight: bold;
 }

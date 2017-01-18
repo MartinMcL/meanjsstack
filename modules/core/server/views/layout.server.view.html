@@ -31,6 +31,8 @@
   <!-- Fav Icon -->
   <link href="/{{favicon}}" rel="shortcut icon" type="image/x-icon">
 
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Dosis|Indie+Flower" rel="stylesheet">
   <!-- Application CSS Files -->
   {{#each cssFiles}}<link rel="stylesheet" href="/{{this}}">{{/each}}
 </head>
@@ -38,11 +40,6 @@
 <section id="wrapper" ng-controller="HeaderController as vm" ng-class="{toggled : showDiv}">
   <div id="sidebar-wrapper">
     <ul class="sidebar-nav">
-      <li class="sidebar-brand">
-        <a href="#">
-          Student Hub
-        </a>
-      </li>
       <li>
         <a href="/" id="homeLink">Home</a>
       </li>
@@ -70,7 +67,8 @@
     <button ng-click="showDiv = !showDiv" class="btn" ng-class="{toggled : showDiv}" id="menu-toggle">
       <span class="glyphicon glyphicon-menu-hamburger"></span>
     </button>
-    <section class="container layoutChanges">
+    <section class="layoutChanges">
+      <header ng-include="'/modules/core/client/views/header.client.view.html'"></header>
           {{{block "content"}}}
     </section>
 
