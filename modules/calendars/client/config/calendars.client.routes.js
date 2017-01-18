@@ -9,14 +9,14 @@
 
   function routeConfig($stateProvider) {
     $stateProvider
-       .state('calendars', {
+      .state('calendars', {
         abstract: true,
         url: '/calendars',
         templateUrl: 'modules/calendars/client/views/calendar.client.view.html',
         controller: 'CalendarsMainCtrl',
         directive: 'calendar',
         data: {
-          pageTitle: "Calendar Info"
+          pageTitle: 'Calendar Info'
         }
       })
       .state('calendars.list', {

@@ -16,7 +16,7 @@
         controller: 'CollegeMapMainCtrl',
         directive: 'collegemap',
         data: {
-          pageTitle: "College Map"
+          pageTitle: 'College Map'
         }
       })
       .state('collegemaps.list', {

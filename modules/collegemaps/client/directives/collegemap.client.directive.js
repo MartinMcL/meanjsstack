@@ -1,4 +1,4 @@
-(function () {
+(function() {
   'use strict';
 
   angular
@@ -14,13 +14,11 @@
       scope: true,
       templateUrl: 'modules/collegemaps/client/img/map.svg',
       link: function (scope, element, attrs) {
-        scope.elementId = element.attr("id");
+        scope.elementId = element.attr('id');
         scope.blockClick = function () {
-          alert(scope.elementId)
+          alert(scope.elementId);
         };
       }
-    }
-  };
-
-
-})();
+    };
+  }
+}());

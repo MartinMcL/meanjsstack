@@ -10,7 +10,6 @@
 
   function CalendarsController ($scope, $state, $window, Authentication, calendar) {
     var vm = this;
-
     vm.authentication = Authentication;
     vm.calendar = calendar;
     vm.error = null;

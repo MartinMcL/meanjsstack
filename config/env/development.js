@@ -4,7 +4,7 @@ var defaultEnvConfig = require('./default');
 
 module.exports = {
   db: {
-   uri: 'mongodb://ds050539.mlab.com:50539/testdbmml',
+    uri: 'mongodb://ds050539.mlab.com:50539/testdbmml',
     options: {
       user: 'martin',
       pass: 'martinspassword'

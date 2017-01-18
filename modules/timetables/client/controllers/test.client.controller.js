@@ -8,6 +8,5 @@
   testController.$inject = ['$scope'];
 
   function testController($scope) {
-    
   }
 }());
