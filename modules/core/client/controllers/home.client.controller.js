@@ -1,11 +1,13 @@
-(function () {
+(function() {
   'use strict';
 
   angular
     .module('core')
     .controller('HomeController', HomeController);
 
-  function HomeController() {
+  HomeController.$inject = ['$scope'];
+
+  function HomeController($scope) {
     var vm = this;
   }
 }());
