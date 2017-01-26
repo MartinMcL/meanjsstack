@@ -56,16 +56,15 @@ body {
 /* Sidebar Styles */
 
 .sidebar-nav {
-
+	text-align: center;
 	top: 0;
-	width: 250px;
+	width: 350px;
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
 
 .sidebar-nav li {
-	text-indent: 1.5em;
 	line-height: 2.5em;
 	font-size: 2.5em;
 }
@@ -74,8 +73,9 @@ body {
 	display: block;
 	text-decoration: none;
 	color: #999999;
-	width: 90%;
-	float: left;
+	width: 100%;
+	background-color: rgba(0,0,0,0.2);
+
 }
 
 .sidebar-nav li a:hover {
