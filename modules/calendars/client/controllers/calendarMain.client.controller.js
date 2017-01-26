@@ -37,5 +37,12 @@
       $scope.events.push(newEvent);
       $scope.addEventForm = '';
     };
+
+    $scope.prevMonth = function () {
+      $scope.viewDate = moment($scope.viewDate).subtract(1, 'month');
+    };
+    $scope.nextMonth = function () {
+      $scope.viewDate = moment($scope.viewDate).add(1, 'month');
+    };
   }
 }());
