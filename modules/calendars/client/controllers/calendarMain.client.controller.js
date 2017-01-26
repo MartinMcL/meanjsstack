@@ -38,11 +38,31 @@
       $scope.addEventForm = '';
     };
 
-    $scope.prevMonth = function () {
-      $scope.viewDate = moment($scope.viewDate).subtract(1, 'month');
+    $scope.prevArrow = function () {
+      if ($scope.calendarView === 'day') {
+        $scope.viewDate = moment($scope.viewDate).subtract(1, 'day');
+      } else if ($scope.calendarView === 'month') {
+        $scope.viewDate = moment($scope.viewDate).subtract(1, 'month');
+      } else {
+        $scope.viewDate = moment($scope.viewDate).subtract(1, 'year');
+      }
     };
-    $scope.nextMonth = function () {
-      $scope.viewDate = moment($scope.viewDate).add(1, 'month');
+
+    $scope.nextArrow = function () {
+      if ($scope.calendarView === 'day') {
+        $scope.viewDate = moment($scope.viewDate).add(1, 'day');
+      } else if ($scope.calendarView === 'month') {
+        $scope.viewDate = moment($scope.viewDate).add(1, 'month');
+      } else {
+        $scope.viewDate = moment($scope.viewDate).add(1, 'year');
+      }
+    };
+    $scope.upArrow = function () {
+      if ($scope.calendarView === 'day') {
+        $scope.calendarView = 'month';
+      } else if ($scope.calendarView === 'month') {
+        $scope.calendarView = 'year';
+      }
     };
   }
 }());

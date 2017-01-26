@@ -42,9 +42,10 @@
     </div>
     <div class="mainCal col-md-7 col-md-offset-1 container">
       <div class="row">
-      <img src="modules/calendars/client/img/leftArrow.svg" alt="" ng-click="prevMonth()" class='arrow img img-responsive col-md-3'>
+      <img src="modules/calendars/client/img/upArrow.svg" alt="" ng-click="upArrow()" class='arrow img img-responsive col-md-2'>
+      <img src="modules/calendars/client/img/leftArrow.svg" alt="" ng-click="prevArrow()" class='arrow img img-responsive col-md-2'>
       <h1 class="text-center col-md-6"> {{ calendarTitle }} </h1>
-      <img src="modules/calendars/client/img/rightArrow.svg" alt="" ng-click="nextMonth()" class='arrow img img-responsive col-md-3'>      
+      <img src="modules/calendars/client/img/rightArrow.svg" alt="" ng-click="nextArrow()" class='arrow img img-responsive col-md-2'>      
       </div>
       <div class="row">
       <mwl-calendar view="calendarView" view-date="viewDate" events="events" view-title="calendarTitle"
