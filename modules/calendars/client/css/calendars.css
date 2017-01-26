@@ -1,0 +1,12 @@
+.sideCal {
+    background-color: lightcyan;
+}
+
+.mainCal {
+    background-color: lightblue;
+}
+
+.button {
+    display: inline-block;
+    vertical-align: top;
+}

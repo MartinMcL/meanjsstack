@@ -13,10 +13,7 @@ module.exports = {
   // Binding to 127.0.0.1 is safer in production.
   host: process.env.HOST || '0.0.0.0',
   db: {
-    uri: 'mongodb://ds050539.mlab.com:50539/testdbmml',
-    options: {
-      user: 'martin',
-      pass: 'martinspassword'
+    uri: 'mongodb://dadmin:dadminjokes@ds061415.mlab.com:61415/bamsdevdb',
       /**
         * Uncomment to enable ssl certificate based authentication to mongodb
         * servers. Adjust the settings below for your specific certificate
@@ -31,7 +28,6 @@ module.exports = {
         sslPass: '1234'
       }
       */
-    },
     // Enable mongoose debug mode
     debug: process.env.MONGODB_DEBUG || false
   },
