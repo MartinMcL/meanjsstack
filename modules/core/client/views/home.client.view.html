@@ -1,4 +1,6 @@
-<div class="container homeContainer" ng-controller="HomeController">
-  <div carousel></div>
-  
+<div class="row">
+  <div class="col-sm-4" ng-repeat="icon in icons">
+    <img ng-src="{{icon.url}}">
+    
+  </div>
 </div>
