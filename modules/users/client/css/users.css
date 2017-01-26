@@ -29,7 +29,10 @@
 
 /* Sidebar login */
 #loginSideBar{
-  padding: 10px;
+  margin: 10px;
+}
+#loginSideBar form{
+  width: 300px;
 }
 #loginSideBar form input[type="text"]{
   padding-top: 10px;
