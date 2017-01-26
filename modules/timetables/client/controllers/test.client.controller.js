@@ -9,8 +9,24 @@
   testController.$inject = ['$scope'];
 
   function testController($scope) {
+    var _timetables = Timetables;
+    console.log(_timetables);
+
+    function _init() {
+      console.log('in controller');
+      $scope.slots = [];
+      $scope.timetables = _timetables;
+      $scope.timetable = {};
+
+      $scope.$watchCollection('timetable', function () {
+        console.log('selected timetable changed');
+      }, true);
+    }
+
+    _init();
+    
   }
-  function Timetables(){
+    function Timetables(){
         return [
       {
         TTDId: 1,
