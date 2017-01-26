@@ -26,3 +26,37 @@
 .social-button:hover {
   opacity: 0.65;
 }
+
+/* Sidebar login */
+#loginSideBar{
+  padding: 10px;
+}
+#loginSideBar form input[type="text"]{
+  padding-top: 10px;
+  border: 0px;
+  outline: 0px;
+  border-radius: 0px;
+  background-color: #F7F7F7;
+  width: 100%;
+  height: 50px;
+  border-bottom: 8px solid;
+  border-bottom-color: #026990;
+  font-size: 2em;
+}
+#loginSideBar form input[type="submit"]{
+  border: 0px;
+  outline: 0px;
+  border-radius: 0px;
+  text-align: center;
+  width: 100px;
+  height: 50px;
+  font-size: 2em;
+  background-color: #A0CF61;
+  color: white;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.centertext{
+  text-align: center;
+}
+
