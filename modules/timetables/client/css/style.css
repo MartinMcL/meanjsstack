@@ -1,20 +1,4 @@
-html {
-  background: #f9f9f9;
-  font-family:'Roboto Condensed';
-}
 
-h1 {
-  width: 100%;
-  margin-bottom: 0;
-  color: #2cab54;
-}
-
-h2 {
-  margin-top: 0;
-  border-bottom: 1px solid #aaa;
-  font-size: 0.9em;
-  color: #808080;
-}
 
 .my-timetable{
   width: 100%;
