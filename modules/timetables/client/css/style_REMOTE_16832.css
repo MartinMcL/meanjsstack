@@ -1,4 +1,22 @@
+html {
+  background: #228691;
+  font-family:'Roboto Condensed';
+}
 
+h1 {
+  width: 100%;
+  margin-bottom: 0;
+  color: #2cab54;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 0;
+  border-bottom: 1px solid #aaa;
+  font-size: 0.9em;
+  color: #000;
+  text-align: center;
+}
 
 .my-timetable{
   width: 100%;
