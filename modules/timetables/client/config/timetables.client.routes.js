@@ -13,7 +13,11 @@
         abstract: true,
         url: '/timetables',
         templateUrl: 'modules/timetables/client/views/test.client.view.html',
-        controller: 'testController'
+        controller: 'testController',
+        directive: 'myTimetable',
+        data: {
+          pageTitle: 'Timetable'
+        }
       })
       .state('timetables.list', {
         url: '',

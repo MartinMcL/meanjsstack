@@ -1,31 +1,5 @@
 
-
-<!DOCTYPE html>
-<html>
-<head>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width" />
-    <script data-require="angular.js@*" data-semver="1.2.12" src="http://code.angularjs.org/1.2.12/angular.js"></script>
-    <script data-require="angular-route@*" data-semver="1.2.12" src="http://code.angularjs.org/1.2.12/angular-route.js"></script>
-    <script data-require="angular-touch@*" data-semver="1.2.12" src="http://code.angularjs.org/1.2.12/angular-touch.js"></script>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="\E:\Year 3\Project300\Live-Editable-Table\jquery.tabledit.min"></script>-->
-
-</head>
-<body>
-    <script>
-
-    </script>
-    <div data-ng-app="myApp">
-        <div data-ng-controller="MainCtrl">
-            <h1>TIMETABLE</h1>
+        <h1>TIMETABLE</h1>
             <h2>Define your timetable slots here</h2>
             <label>Choose a timetable to show <select data-ng-model="timetable" data-ng-options="timetable as timetable.TTDName for timetable in timetables"></select></label>
-            <button my-dir type="button" class="btn btn-primary">Edit</button>
             <div data-my-timetable="" data-slots="slots"></div>
-        </div>
-    </div>
-</body>
-</html>
