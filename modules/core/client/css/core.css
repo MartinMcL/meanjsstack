@@ -1,6 +1,7 @@
 body {
 	overflow-x: hidden;
-	background-color: #d1d1d1;
+	background-color: #026f97;
+	margin: 0px;
 }
 .btn{
 	margin: 10px;
@@ -188,6 +189,20 @@ body {
 	height: 86px;
 	margin: 0px;
 	padding: 0px;
+	border-bottom: 2px solid #03a7e2;
+	
+}
+.headerline1{
+	width: 100%;
+	border-bottom: 2px solid#0394c9;
+}
+.headerline2{
+	width:100%;
+	border-bottom: 2px solid #0382b0;
+}
+.headerline3{
+	width: 100%;
+	border-bottom: 2px solid #026f97;
 }
 .studentHubCont{
 	float: right;
@@ -204,6 +219,20 @@ body {
 	font-family: 'Indie Flower', cursive;
 	font-weight: bold;
 }
-.homeContainer{
-
+.iconContainer{
+	padding: 10px;
+}
+.homeIcons img{
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	background-color: red;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+.wrapper{
+	background-color: #F7F7F7;
+	border: 2px solid white;
+	border-radius: 5px;
 }
