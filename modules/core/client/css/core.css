@@ -190,6 +190,7 @@ body {
 	margin: 0px;
 	padding: 0px;
 	border-bottom: 2px solid #03a7e2;
+
 	
 }
 .headerline1{
@@ -218,6 +219,11 @@ body {
 #hub{
 	font-family: 'Indie Flower', cursive;
 	font-weight: bold;
+}
+.headerUserInfo{
+	height: 86px;
+	float: right;
+	margin-right: 20px;
 }
 .iconContainer{
 	padding: 10px;

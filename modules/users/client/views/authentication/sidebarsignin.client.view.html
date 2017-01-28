@@ -1,7 +1,8 @@
 <div id="loginSideBar">
     <div class="container">
         <h3>Sign In</h3>
-        <form>
+        <form name="vm.userForm" ng-submit="vm.signin(vm.userForm.$valid)" novalidate autocomplete="off">
+            
             <input type="text" name="studentNumber" placeholder="Student Number">
             <input type="text" name="studentPassword" placeholder="Password">
             <div class="centertext">
