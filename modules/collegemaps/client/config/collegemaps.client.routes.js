@@ -14,7 +14,6 @@
         url: '/collegemaps',
         templateUrl: 'modules/collegemaps/client/views/collegemap.client.view.html',
         controller: 'CollegeMapMainCtrl',
-        directive: 'collegemap',
         data: {
           pageTitle: 'College Map'
         }
