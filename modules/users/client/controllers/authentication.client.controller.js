@@ -23,9 +23,8 @@
     }
 
     // If user is signed in then redirect back home
-    if (vm.authentication.user) {
-      
-    }
+    // if (vm.authentication.user) {
+    // }
 
     function signup(isValid) {
 
