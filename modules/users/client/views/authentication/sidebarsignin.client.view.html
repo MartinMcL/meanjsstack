@@ -1,32 +1,31 @@
-<div id="loginSideBar">
-    <div class="container">
-        <h3>Sign In</h3>
-        <form name="vm.userForm" ng-submit="vm.signin(vm.userForm.$valid)" novalidate autocomplete="off">
-            <fieldset>
-                <div class="form-group" show-errors>
-                    <uib-alert type="danger" ng-show="vm.error" class="text-center text-danger">
-                        <span ng-bind="vm.error"></span>
-                    </uib-alert>
-                    <label for="usernameOrEmail"></label>
-                    <input type="text" class="sidebarInput" id="usernameOrEmail" name="usernameOrEmail" class="form-control" ng-model="vm.credentials.usernameOrEmail"
-                        placeholder="Student Number" required autofocus>
-                    <div ng-messages="vm.userForm.usernameOrEmail.$error" role="alert">
-                        <p class="help-block error-text" ng-message="required">Username or Email is required.</p>
-                    </div>
+<div class="sidebarContainer">
+    <h3>Sign In</h3>
+    <form name="vm.userForm" ng-submit="vm.signin(vm.userForm.$valid)" novalidate autocomplete="off">
+        <fieldset>
+            <div class="form-group" show-errors>
+                <uib-alert type="danger" ng-show="vm.error" class="text-center text-danger">
+                    <span ng-bind="vm.error"></span>
+                </uib-alert>
+                <label for="usernameOrEmail"></label>
+                <input type="text" class="sidebarInput" id="usernameOrEmail" name="usernameOrEmail" class="form-control" ng-model="vm.credentials.usernameOrEmail"
+                    placeholder="Student Number" required autofocus>
+                <div ng-messages="vm.userForm.usernameOrEmail.$error" role="alert">
+                    <p class="help-block error-text" ng-message="required">Username or Email is required.</p>
                 </div>
-                <div class="form-group" show-errors>
-                    <label for="password">Password</label>
-                    <input type="password" id="password" class="sidebarInput" name="password" class="form-control" ng-model="vm.credentials.password" placeholder="Password"
-                        required>
-                    <div ng-messages="vm.userForm.password.$error" role="alert">
-                        <p class="help-block error-text" ng-message="required">Password is required.</p>
-                    </div>
-                </div>
-            </fieldset>
-            <div class="centertext">
-                <input type="submit" value="Login" ui-sref="authentication.signin">
-                <p>or <a>Register</a></p>
             </div>
-        </form>
-    </div>
+            <div class="form-group" show-errors>
+                <label for="password">Password</label>
+                <input type="password" id="password" class="sidebarInput" name="password" class="form-control" ng-model="vm.credentials.password"
+                    placeholder="Password" required>
+                <div ng-messages="vm.userForm.password.$error" role="alert">
+                    <p class="help-block error-text" ng-message="required">Password is required.</p>
+                </div>
+            </div>
+        </fieldset>
+        <div class="centertext">
+            <input type="submit" value="Sign In"/>
+            <a ui-sref="authentication.signin">TEMP SIGN IN BUTTON LEL</a>
+            <p>or <a>Register</a></p>
+        </div>
+    </form>
 </div>

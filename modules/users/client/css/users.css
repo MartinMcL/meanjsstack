@@ -28,8 +28,13 @@
 }
 
 /* Sidebar login */
-#loginSideBar{
-  margin: 10px;
+.sidebarContainer form fieldset{
+  margin: 0px;
+  padding: 0px;
+}
+.sidebarContainer{
+  margin-left: 10px;
+  margin-right: 10px;
 }
 #loginSideBar form{
   width: 300px;
@@ -46,7 +51,7 @@
   border-bottom-color: #026990;
   font-size: 2em;
 }
-#loginSideBar form input[type="submit"]{
+.centertext input[type="submit"]{
   border: 0px;
   outline: 0px;
   border-radius: 0px;
@@ -56,8 +61,7 @@
   font-size: 2em;
   background-color: #A0CF61;
   color: white;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-radius: 5px;
 }
 .centertext{
   text-align: center;
