@@ -221,9 +221,12 @@ body {
 	font-weight: bold;
 }
 .headerUserInfo{
-	height: 86px;
-	float: right;
-	margin-right: 20px;
+	text-align: center;
+	width: 100%;
+	margin-top: 20px;
+}
+.headerUserInfo img{
+	border: 2px solid #0394c9;
 }
 .iconContainer{
 	padding: 10px;

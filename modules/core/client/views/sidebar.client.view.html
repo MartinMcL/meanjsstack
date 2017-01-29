@@ -1,9 +1,17 @@
 <div id="sidebar-wrapper">
   <div login ng-hide="vm.authentication.user"></div>
   <div ng-show="vm.authentication.user">
-    <li>
+    <div class="headerUserInfo">
+      <img ng-src="/{{vm.authentication.user.profileImageURL}}" alt="{{vm.authentication.user.displayName}}" />
+      <p ng-bind="vm.authentication.user.displayName"></p>
       <a href="/api/auth/signout" target="_self">Signout</a>
-    </li>
+    </div>
+
+
+
+
+    
+
   </div>
   <ul class="sidebar-nav">
     <li>
