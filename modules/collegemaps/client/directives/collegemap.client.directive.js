@@ -1,4 +1,4 @@
-(function() {
+(function () {
   'use strict';
 
   angular
@@ -14,11 +14,35 @@
       scope: true,
       templateUrl: 'modules/collegemaps/client/img/map.svg',
       link: function (scope, element, attrs) {
-        scope.elementId = element.attr('id');
-        scope.blockClick = function () {
-          alert(scope.elementId);
-        };
+        var blocks = element[0].querySelectorAll('.blocks');
+        angular.forEach(blocks, function (path, key) {
+          var blockElement = angular.element(path);
+          blockElement.attr("block", "");
+          $compile(blockElement)(scope);
+        })
       }
+    };
+  }
+  angular
+    .module('collegemaps')
+    .directive('block', block);
+
+  block.$inject = ['$compile'];
+
+
+  function block($compile) {
+    return {
+        restrict: 'A',
+        scope: true,
+        link: function (scope, element, attrs) {
+            scope.elementId = element.attr("id");
+            scope.blockClick = function () {
+                alert(scope.elementId);
+            };
+            element.attr("ng-click", "blockClick()");
+            element.removeAttr("block");
+            $compile(element)(scope);
+        }
     };
   }
 }());
