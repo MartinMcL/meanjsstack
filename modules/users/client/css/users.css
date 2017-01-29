@@ -34,7 +34,7 @@
 #loginSideBar form{
   width: 300px;
 }
-#loginSideBar form input[type="text"]{
+.sidebarInput{
   padding-top: 10px;
   border: 0px;
   outline: 0px;

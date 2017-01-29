@@ -1,11 +1,16 @@
 <div id="sidebar-wrapper">
-
-    <ul class="sidebar-nav">
-      <li>
-        <a href="/" id="homeLink">Home</a>
-      </li>
-      <li>
-        <a href="/contact" id="contactsLink">Contact</a>
-      </li>
-    </ul>
+  <div login ng-hide="vm.authentication.user"></div>
+  <div ng-show="vm.authentication.user">
+    <li>
+      <a href="/api/auth/signout" target="_self">Signout</a>
+    </li>
   </div>
+  <ul class="sidebar-nav">
+    <li>
+      <a href="/" id="homeLink">Home</a>
+    </li>
+    <li>
+      <a href="/contact" id="contactsLink">Contact</a>
+    </li>
+  </ul>
+</div>
