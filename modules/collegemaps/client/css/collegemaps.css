@@ -8,13 +8,17 @@ svg #GreenLayer_main:hover{
 svg #block_p:hover{
  background-color: red;
 }
-svg .blocks:hover{
+svg{
+   
+}
+svg .blocks{
   stroke-width: 4;
-  stroke: red;
+  stroke: black;
+  fill: #99ccff;
 
 }
 .cls-1 {
-    fill: #8cc640;
+    fill: #ccffcc;
 }
 .cls-1,
 .cls-4,
@@ -27,7 +31,8 @@ svg .blocks:hover{
 }
 .cls-2,
 .cls-6 {
-    fill: #8e8e8e;
+    fill: #cccccc;
+    stroke: black;
 }
 .cls-3 {
     fill: #01007f;
@@ -43,4 +48,10 @@ svg .blocks:hover{
 }
 .cls-8 {
     fill: none;
+}
+
+
+.mapContainer{
+    text-align: center;
+    overflow: scroll;
 }
