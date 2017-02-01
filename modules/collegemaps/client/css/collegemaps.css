@@ -9,7 +9,9 @@ svg #block_p:hover{
  background-color: red;
 }
 svg{
-   
+   height: 1000px;
+   overflow: hidden;
+
 }
 svg .blocks{
   stroke-width: 4;
@@ -55,10 +57,36 @@ svg .blocks{
     text-align: center;
     overflow: scroll;
     overflow-y: hidden; 
-overflow-x: hidden;
+    overflow-x: hidden;
+    max-height: 500px;
 }
 .collegemapContainer{
     margin: 10px;
     background-color: #F7F7F7;
     border-radius: 5px;
+}
+.blocksCard{
+    padding: 20px;
+    margin-bottom: 10px;
+    height: 100px;
+}
+.blocksCard .col-xs-4{
+ 
+}
+.blocksCard .col-xs-4 img{
+    margin: 0px;
+    padding: 0px;
+}
+.blocksInfo{
+    
+}
+.blocksInfo h2{
+        margin: 0px;
+    padding: 0px;
+}
+
+.hover:hover{
+-webkit-box-shadow: inset 0px 0px 150px -54px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 0px 0px 150px -54px rgba(0,0,0,0.75);
+box-shadow: inset 0px 0px 150px -54px rgba(0,0,0,0.75);
 }
