@@ -54,4 +54,11 @@ svg .blocks{
 .mapContainer{
     text-align: center;
     overflow: scroll;
+    overflow-y: hidden; 
+overflow-x: hidden;
+}
+.collegemapContainer{
+    margin: 10px;
+    background-color: #F7F7F7;
+    border-radius: 5px;
 }

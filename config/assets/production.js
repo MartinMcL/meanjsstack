@@ -25,7 +25,8 @@ module.exports = {
         'public/lib/angular-ui-router/release/angular-ui-router.min.js',
         'public/lib/ng-file-upload/ng-file-upload.min.js',
         'public/lib/owasp-password-strength-test/owasp-password-strength-test.js',
-        'public/lib/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar-tpls.js'
+        'public/lib/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar-tpls.js',
+        'public/lib/angular-drag-scroll/src/ng-drag-scroll.js'
         // endbower
       ]
     },

@@ -5,19 +5,22 @@
     .module('collegemaps')
     .controller('CollegeMapMainCtrl', CollegeMapMainCtrl);
 
-  CollegeMapMainCtrl.$inject = ['$scope'];
+  CollegeMapMainCtrl.$inject = ['$scope', "$http"];
 
-  function CollegeMapMainCtrl($scope) {
-    // Correct the block names
-    var blocks = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
-    $scope.data = function() {
-      var dataTemp = {};
-      angular.forEach(blocks, function(block, key) {
-        dataTemp[block] = { value: Math.random() };
+  function CollegeMapMainCtrl($scope, $http) {
+    $scope.makeCall = function () {
+      $http({
+        method: 'GET',
+        url: 'https://api.mlab.com/api/1/databases/bamsdevdb/collections/blocks?apiKey=kDXKvwOsOc2CEpsqYadOjacn36flg_yA'
+      }).then(function successCallback(response) {
+        console.log(response.data)
+      }, function errorCallback(response) {
+        console.log("woops")
       });
-      $scope.mainData = dataTemp;
-    };
-    $scope.data();
+    }
+
+
+
 
   }
-}());
+} ());
