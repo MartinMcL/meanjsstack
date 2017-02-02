@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "acl": "~0.4.9",
+    "angular-drag-scroll": "^0.2.2",
     "angular-material": "^1.1.1",
     "async": "~2.0.1",
     "body-parser": "~1.15.0",

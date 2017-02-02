@@ -1,5 +1,37 @@
-<div class="container">
+<div class="collegemapContainer">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item hover" ng-repeat="block in blocks" ng-click="gotoBlock(block.blockId)">
+                        <div class="row">
+                            <div class="col-xs-2 col-md-1">
+                                <img src="http://placehold.it/80" class="img-circle img-responsive" alt="" /></div>
+                            <div class="col-xs-10 col-md-11">
+                                <div>
+                                    {{block.blockId | uppercase}}
+                                </div>
+                                <div class="comment-text">
+                                    {{block.description}}
+                                </div>
+                                <div class="action">
 
-<div collegemap></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="panel-body">
+                <div class="list-group">
+                    <div class="list-group-item">
+                        <div drag-scroll="true" collegemap class="mapContainer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>

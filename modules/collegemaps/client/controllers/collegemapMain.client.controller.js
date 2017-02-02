@@ -5,19 +5,17 @@
     .module('collegemaps')
     .controller('CollegeMapMainCtrl', CollegeMapMainCtrl);
 
-  CollegeMapMainCtrl.$inject = ['$scope'];
+  CollegeMapMainCtrl.$inject = ['$scope', 'dataFactory'];
 
-  function CollegeMapMainCtrl($scope) {
-    // Correct the block names
-    var blocks = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
-    $scope.data = function() {
-      var dataTemp = {};
-      angular.forEach(blocks, function(block, key) {
-        dataTemp[block] = { value: Math.random() };
-      });
-      $scope.mainData = dataTemp;
+  function CollegeMapMainCtrl($scope, dataFactory) {
+
+    dataFactory.getBlocks().then(function (response) {
+      $scope.blocks = response.data[0].blocks
+    });
+
+    $scope.gotoBlock = function (blockid) {
+      console.log(blockid);
     };
-    $scope.data();
-
+  
   }
-}());
+} ());

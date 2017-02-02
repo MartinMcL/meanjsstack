@@ -26,7 +26,8 @@ module.exports = {
         'public/lib/angular-ui-router/release/angular-ui-router.js',
         'public/lib/owasp-password-strength-test/owasp-password-strength-test.js',
         'public/lib/moment/moment.js',
-        'public/lib/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar-tpls.js'
+        'public/lib/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar-tpls.js',
+        'public/lib/angular-drag-scroll/src/ng-drag-scroll.js'
         // endbower
         // Jquery
       ],

@@ -1,0 +1,54 @@
+[
+    {
+        "blockId": "a",
+        "description": "Library/Central Administration"
+    },
+    {
+        "blockId": "b",
+        "description": "MacMunn 1970 Building & Canteen"
+    },
+    {
+        "blockId": "c",
+        "description": "Language & Marketing Centre"
+    },
+    {
+        "blockId": "d",
+        "description": "Business & Social Sciences"
+    },
+    {
+        "blockId": "e",
+        "description": "Technological Engineering & Computing Facility"
+    },
+    {
+        "blockId": "f",
+        "description": "Technology Centre"
+    },
+    {
+        "blockId": "g",
+        "description": "Innovation Centre"
+    },
+    {
+        "blockId": "h",
+        "description": "Student Services Centre"
+    },
+    {
+        "blockId": "j",
+        "description": "Old BIC"
+    },
+    {
+        "blockId": "k",
+        "description": "Fine Art & Creative Design"
+    },
+    {
+        "blockId": "l",
+        "description": "Fine Art & Creative Design"
+    },
+    {
+        "blockId": "m",
+        "description": "Applied Technology"
+    },
+    {
+        "blockId": "p",
+        "description": "Knocknarea Arena"
+    }
+]

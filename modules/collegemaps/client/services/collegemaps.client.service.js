@@ -4,17 +4,17 @@
 
   angular
     .module('collegemaps')
-    .factory('CollegemapsService', CollegemapsService);
+    .factory('dataFactory', dataFactory);
 
-  CollegemapsService.$inject = ['$resource'];
-
-  function CollegemapsService($resource) {
-    return $resource('api/collegemaps/:collegemapId', {
-      collegemapId: '@_id'
-    }, {
-      update: {
-        method: 'PUT'
-      }
-    });
+  function dataFactory($http) {
+    function getBlocks(){
+    return $http({
+        method: 'GET',
+        url: 'https://api.mlab.com/api/1/databases/bamsdevdb/collections/blocks?apiKey=kDXKvwOsOc2CEpsqYadOjacn36flg_yA'
+      });
+    };
+    return {
+      getBlocks: getBlocks
+    };
   }
 }());
