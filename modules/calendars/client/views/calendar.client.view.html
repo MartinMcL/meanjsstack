@@ -1,58 +1,61 @@
 <div class="container">
   <div class="row">
     <div class="sideCal col-md-3">
-        <h1 class="text-primary">Add an event</h1>
-        <div class="form-group">
+      <h1 class="text-primary">Add an event</h1>
+      <div class="form-group">
         <label for>
         Event Title
         <input type="text" class="form-control col-md-9" ng-model="addEventForm.calTitle" id='calTitle'/>  
         </label>
-        </div>
-        <div class="row">
-        <div class="form-group col-md-6">        
-        <label class="text-primary">Start Date</label>
-        <br />
-        <label>Day</label><input type="number" class="form-control" ng-model="addEventForm.startsAtD"></input>
-        <label>Month</label><input type="number" class="form-control" ng-model="addEventForm.startsAtM"></input>
-        <label>Year</label><input type="number" class="form-control" ng-model="addEventForm.startsAtY"></input>
-        </div> 
+      </div>
+      <div class="row">
         <div class="form-group col-md-6">
-        <label class="text-primary">End Date</label>
-        <br />
-        <label>Day</label><input type="number" class="form-control" ng-model="addEventForm.endsAtD"></input>
-        <label>Month</label><input type="number" class="form-control" ng-model="addEventForm.endsAtM"></input>
-        <label>Year</label><input type="number" class="form-control" ng-model="addEventForm.endsAtY"></input>
+          <label class="text-primary">Start Date</label>
+          <br />
+          <label>Day</label><input type="number" class="form-control" ng-model="addEventForm.startsAtD"></input>
+          <label>Month</label><input type="number" class="form-control" ng-model="addEventForm.startsAtM"></input>
+          <label>Year</label><input type="number" class="form-control" ng-model="addEventForm.startsAtY"></input>
         </div>
+        <div class="form-group col-md-6">
+          <label class="text-primary">End Date</label>
+          <br />
+          <label>Day</label><input type="number" class="form-control" ng-model="addEventForm.endsAtD"></input>
+          <label>Month</label><input type="number" class="form-control" ng-model="addEventForm.endsAtM"></input>
+          <label>Year</label><input type="number" class="form-control" ng-model="addEventForm.endsAtY"></input>
         </div>
-        <div class="form-group">
+      </div>
+      <div class="form-group">
         <label for>
         Colour
         <input type="text" class="form-control col-md-9" ng-model="addEventForm.colour" id='calColour'/>  
         </label>
-        </div>
-        <div class="col-md-6">
-        <input type="submit" class="btn button btn-success col-md-9" ng-click="addEvent()" Value="Add" />  
-        </div>
-        <div class="col-md-6">
-        <button class="btn button btn-danger col-md-9">Delete</button>          
-        </div>        
-        <br />
-        <br />
-        <br />
+      </div>
+      <div class="col-md-6">
+        <input type="submit" class="btn button btn-success col-md-9" ng-click="addEvent()" Value="Add" />
+      </div>
+      <div class="col-md-6">
+        <button class="btn button btn-danger col-md-9">Delete</button>
+      </div>
+      <br />
+      <br />
+      <br />
     </div>
-    <div class="mainCal col-md-7 col-md-offset-1 container">
+    <div class="mainCal col-md-6 col-md-offset-1 container">
       <div class="row">
-      <img src="modules/calendars/client/img/upArrow.svg" alt="" ng-click="upArrow()" class='arrow img img-responsive col-md-2'>
-      <img src="modules/calendars/client/img/leftArrow.svg" alt="" ng-click="prevArrow()" class='arrow img img-responsive col-md-2'>
-      <h1 class="text-center col-md-6"> {{ calendarTitle }} </h1>
-      <img src="modules/calendars/client/img/rightArrow.svg" alt="" ng-click="nextArrow()" class='arrow img img-responsive col-md-2'>      
+        <div>
+          <h1>
+            <span class="glyphicon glyphicon-arrow-up col-md-1" ng-click="upArrow()"></span>
+            <span class="glyphicon glyphicon-arrow-left col-md-1 col-md-offset-2" ng-click="prevArrow()"></span>
+            <span class="text-center text-primary col-md-6">{{ calendarTitle }}</span>
+            <span class="glyphicon glyphicon-arrow-right col-md-1" ng-click="nextArrow()"></span>
+          </h1>
+        </div>
       </div>
       <div class="row">
-      <mwl-calendar view="calendarView" view-date="viewDate" events="events" view-title="calendarTitle"
-      on-event-click="eventClicked(calendarEvent)"
-      on-event-times-changed="calendarEvent.startsAt = calendarNewEventStart; calendarEvent.endsAt = calendarNewEventEnd"
-      cell-is-open="true">
-      </mwl-calendar>
+        <mwl-calendar view="calendarView" view-date="viewDate" events="events" view-title="calendarTitle" on-event-click="eventClicked(calendarEvent)"
+          on-event-times-changed="calendarEvent.startsAt = calendarNewEventStart; calendarEvent.endsAt = calendarNewEventEnd"
+          cell-is-open="true">
+          </mwl-calendar>
       </div>
     </div>
   </div>
