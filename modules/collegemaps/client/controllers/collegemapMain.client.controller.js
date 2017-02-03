@@ -10,12 +10,12 @@
   function CollegeMapMainCtrl($scope, dataFactory) {
 
     dataFactory.getBlocks().then(function (response) {
-      $scope.blocks = response.data[0].blocks
+      $scope.blocks = response.data[0].blocks;
     });
 
     $scope.gotoBlock = function (blockid) {
       console.log(blockid);
     };
-  
+
   }
-} ());
+}());

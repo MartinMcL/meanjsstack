@@ -8,7 +8,7 @@
 
   CollegemapsController.$inject = ['$scope', '$state', '$window', 'Authentication', 'collegemapResolve'];
 
-  function CollegemapsController ($scope, $state, $window, Authentication, collegemap) {
+  function CollegemapsController($scope, $state, $window, Authentication, collegemap) {
     var vm = this;
 
     vm.authentication = Authentication;
@@ -17,7 +17,6 @@
     vm.form = {};
     vm.remove = remove;
     vm.save = save;
-
     // Remove existing Collegemap
     function remove() {
       if ($window.confirm('Are you sure you want to delete?')) {
