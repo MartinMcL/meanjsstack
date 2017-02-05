@@ -5,13 +5,19 @@
     .module('calendars')
     .controller('CalendarsMainCtrl', CalendarsMainCtrl);
 
-  CalendarsMainCtrl.$inject = ['$scope', 'moment'];
+  CalendarsMainCtrl.$inject = ['$scope', 'CalendarFactory', 'moment'];
 
-  function CalendarsMainCtrl($scope) {
+  function CalendarsMainCtrl($scope, CalendarFactory) {
     // Add information for the calendar to render
     $scope.calendarView = 'month';
     $scope.viewDate = moment();
-    $scope.events = [];
+    var result = CalendarFactory.getEvents().then(function (response) {
+      $scope.events = response.data[0].events;
+      $scope.events.forEach(function(element) {
+        element.startsAt = new Date(element.startsAt);
+        element.endsAt = new Date(element.endsAt);
+      }, this);
+    });
     $scope.calendarTitle = 'Student Calendar';
     $scope.addEventForm = {
       'calTitle': '',

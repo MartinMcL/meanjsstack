@@ -1,16 +1,199 @@
-[{
-  "title": "My event title", // The title of the event
-  "startsAt": "Sun Jan 01 2017 00:00:00 GMT+0000 (GMT)", // A javascript date object for when the event starts
-  "endsAt": "", // Optional - a javascript date object for when the event ends
-  "color": { // can also be calendarConfig.colorTypes.warning for shortcuts to the deprecated event types
-    "primary": "#e3bc08", // the primary event color (should be darker than secondary)
-    "secondary": "#fdf1ba" // the secondary event color (should be lighter than primary)
-  },
-  "actions": [],
-  "draggable": true, //Allow an event to be dragged and dropped
-  "resizable": true, //Allow an event to be resizable
-  "incrementsBadgeTotal": true, //If set to false then will not count towards the badge total amount on the month and year view
-  "recursOn": "year", // If set the event will recur on the given period. Valid values are year or month
-  "cssClass": "a-css-class-name", //A CSS class (or more, just separate with spaces) that will be added to the event when it is displayed on each view. Useful for marking an event as selected / active etc
-  "allDay": false // set to true to display the event as an all day event on the day view
-}];
+{
+  "events": [
+    {
+      "title": "Semester 1 Exam Results",
+      "startsAt": "Mon Feb 06 2017 00:00:00 GMT+0000 (GMT)",
+      "endsAt": "",
+      "color": {
+        "primary": "#e3bc08",
+        "secondary": "#fdf1ba"
+      },
+      "actions": [],
+      "draggable": false,
+      "resizable": false,
+      "incrementsBadgeTotal": false,
+      "cssClass": "college-events",
+      "allDay": true
+    },
+    {
+      "title": "Exam Appeals Close",
+      "startsAt": "Fri Feb 10 2017 00:00:00 GMT+0000 (GMT)",
+      "endsAt": "",
+      "color": {
+        "primary": "#e3bc08",
+        "secondary": "#fdf1ba"
+      },
+      "actions": [],
+      "draggable": false,
+      "resizable": false,
+      "incrementsBadgeTotal": false,
+      "cssClass": "college-events",
+      "allDay": true
+    },
+    {
+      "title": "CAO Closing Date for amending course",
+      "startsAt": "Wed Mar 01 2017 00:00:00 GMT+0000 (GMT)",
+      "endsAt": "",
+      "color": {
+        "primary": "#e3bc08",
+        "secondary": "#fdf1ba"
+      },
+      "actions": [],
+      "draggable": false,
+      "resizable": false,
+      "incrementsBadgeTotal": false,
+      "cssClass": "college-events",
+      "allDay": true
+    },
+    {
+      "title": "TY Taster Day",
+      "startsAt": "Thu Mar 02 2017 00:00:00 GMT+0000 (GMT)",
+      "endsAt": "",
+      "color": {
+        "primary": "#e3bc08",
+        "secondary": "#fdf1ba"
+      },
+      "actions": [],
+      "draggable": false,
+      "resizable": false,
+      "incrementsBadgeTotal": false,
+      "cssClass": "college-events",
+      "allDay": true
+    },
+    {
+      "title": "TY Taster Day",
+      "startsAt": "Thu Mar 09 2017 00:00:00 GMT+0000 (GMT)",
+      "endsAt": "",
+      "color": {
+        "primary": "#e3bc08",
+        "secondary": "#fdf1ba"
+      },
+      "actions": [],
+      "draggable": false,
+      "resizable": false,
+      "incrementsBadgeTotal": false,
+      "cssClass": "college-events",
+      "allDay": true
+    },
+    {
+      "title": "Academic Council",
+      "startsAt": "Fri Mar 10 2017 00:00:00 GMT+0000 (GMT)",
+      "endsAt": "",
+      "color": {
+        "primary": "#e3bc08",
+        "secondary": "#fdf1ba"
+      },
+      "actions": [],
+      "draggable": false,
+      "resizable": false,
+      "incrementsBadgeTotal": false,
+      "cssClass": "college-events",
+      "allDay": true
+    },
+    {
+      "title": "St. Patrick's Day",
+      "startsAt": "Fri Mar 17 2017 00:00:00 GMT+0000 (GMT)",
+      "endsAt": "",
+      "color": {
+        "primary": "#e3bc08",
+        "secondary": "#fdf1ba"
+      },
+      "actions": [],
+      "draggable": false,
+      "resizable": false,
+      "incrementsBadgeTotal": false,
+      "cssClass": "college-events",
+      "allDay": true
+    },
+    {
+      "title": "OPEN DAY",
+      "startsAt": "Sat Apr 01 2017 00:00:00 GMT+0000 (GMT)",
+      "endsAt": "",
+      "color": {
+        "primary": "#e3bc08",
+        "secondary": "#fdf1ba"
+      },
+      "actions": [],
+      "draggable": false,
+      "resizable": false,
+      "incrementsBadgeTotal": false,
+      "cssClass": "college-events",
+      "allDay": true
+    },
+    {
+      "title": "Student Easter break",
+      "startsAt": "Wed Apr 10 2017 00:00:00 GMT+0000 (GMT)",
+      "endsAt": "Thu Apr 20 2017 00:00:00 GMT+0000 (GMT)",
+      "color": {
+        "primary": "#e3bc08",
+        "secondary": "#fdf1ba"
+      },
+      "actions": [],
+      "draggable": false,
+      "resizable": false,
+      "incrementsBadgeTotal": false,
+      "cssClass": "college-events",
+      "allDay": true
+    },
+    {
+      "title": "Sem 2 Teaching Ends",
+      "startsAt": "Sat May 05 2017 00:00:00 GMT+0000 (GMT)",
+      "endsAt": "",
+      "color": {
+        "primary": "#e3bc08",
+        "secondary": "#fdf1ba"
+      },
+      "actions": [],
+      "draggable": false,
+      "resizable": false,
+      "incrementsBadgeTotal": false,
+      "cssClass": "college-events",
+      "allDay": true
+    },
+    {
+      "title": "Study Week",
+      "startsAt": "Mon May 08 2017 00:00:00 GMT+0000 (GMT)",
+      "endsAt": "Fri May 12 2017 00:00:00 GMT+0000 (GMT)",
+      "color": {
+        "primary": "#e3bc08",
+        "secondary": "#fdf1ba"
+      },
+      "actions": [],
+      "draggable": false,
+      "resizable": false,
+      "incrementsBadgeTotal": false,
+      "cssClass": "college-events",
+      "allDay": true
+    },
+    {
+      "title": "Sem 2 Exams",
+      "startsAt": "Fri May 12 2017 00:00:00 GMT+0000 (GMT)",
+      "endsAt": "Wed May 24 2017 00:00:00 GMT+0000 (GMT)",
+      "color": {
+        "primary": "#e3bc08",
+        "secondary": "#fdf1ba"
+      },
+      "actions": [],
+      "draggable": false,
+      "resizable": false,
+      "incrementsBadgeTotal": false,
+      "cssClass": "college-events",
+      "allDay": true
+    },
+    {
+      "title": "Sem 2 Exam Results",
+      "startsAt": "Mon Jun 12 2017 00:00:00 GMT+0000 (GMT)",
+      "endsAt": "",
+      "color": {
+        "primary": "#e3bc08",
+        "secondary": "#fdf1ba"
+      },
+      "actions": [],
+      "draggable": false,
+      "resizable": false,
+      "incrementsBadgeTotal": false,
+      "cssClass": "college-events",
+      "allDay": true
+    }
+  ]
+}
