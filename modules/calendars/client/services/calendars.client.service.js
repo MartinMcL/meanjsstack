@@ -4,17 +4,17 @@
 
   angular
     .module('calendars')
-    .factory('CalendarsService', CalendarsService);
-
-  CalendarsService.$inject = ['$resource'];
-
-  function CalendarsService($resource) {
-    return $resource('api/calendars/:calendarId', {
-      calendarId: '@_id'
-    }, {
-      update: {
-        method: 'PUT'
-      }
-    });
+    .factory('CalendarFactory', CalendarFactory);
+  function CalendarFactory($http) {
+    function getEvents() {
+      return $http({
+        method: 'GET',
+        url: 'https://api.mlab.com/api/1/databases/bamsdevdb/collections/events?apiKey=kDXKvwOsOc2CEpsqYadOjacn36flg_yA'
+      });
+    }
+    return {
+      getEvents: getEvents
+    };
   }
 }());
+
