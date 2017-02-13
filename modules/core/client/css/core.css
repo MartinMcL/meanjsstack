@@ -189,21 +189,21 @@ body {
 	height: 86px;
 	margin: 0px;
 	padding: 0px;
-	border-bottom: 2px solid #03a7e2;
+	border-bottom: 2px solid #e6f8ff;
 
 	
 }
 .headerline1{
 	width: 100%;
-	border-bottom: 2px solid#0394c9;
+	border-bottom: 4px solid#cdf1fe;
 }
 .headerline2{
 	width:100%;
-	border-bottom: 2px solid #0382b0;
+	border-bottom: 4px solid #9be3fd;
 }
 .headerline3{
 	width: 100%;
-	border-bottom: 2px solid #026f97;
+	border-bottom: 4px solid #4fcefc;
 }
 .studentHubCont{
 	float: right;

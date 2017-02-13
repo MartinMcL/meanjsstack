@@ -67,3 +67,24 @@
   text-align: center;
 }
 
+.loginPage{
+  background-color: #4fcefc;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0 10px 6px -6px black;
+}
+.notice {
+    padding: 15px;
+    background-color: #fafafa;
+    border-left: 6px solid #7f7f84;
+    margin: 15px;
+    -webkit-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+       -moz-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+            box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+}
+.notice-success {
+    border-color: #80D651;
+}
+.signin{
+  margin: 15px;
+}
