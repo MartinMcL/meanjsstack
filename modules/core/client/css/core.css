@@ -245,3 +245,16 @@ body {
 	border: 2px solid white;
 	border-radius: 5px;
 }
+.loginStuff{
+	text-align: center;
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+.loginStuff a{
+	padding: 20px;
+	font-size: 1.5em;
+}
+.loginStuff a:hover{
+	text-decoration-style: none;
+	text-decoration: none;
+}
