@@ -39,8 +39,8 @@ var validateLocalStrategyEmail = function (email) {
  * - not begin or end with "."
  */
 
-var validateUsername = function(username) {
-  var usernameRegex = /^(?=[\w.-]+$)(?!.*[._-]{2})(?!\.)(?!.*\.$).{3,34}$/;
+var validateUsername = function (username) {
+  var usernameRegex = /^[sS][0-9]{8}$/;
   return (
     this.provider !== 'local' ||
     (username && usernameRegex.test(username) && config.illegalUsernames.indexOf(username) < 0)
@@ -82,7 +82,7 @@ var UserSchema = new Schema({
     type: String,
     unique: 'Username already exists',
     required: 'Please fill in a username',
-    validate: [validateUsername, 'Please enter a valid username: 3+ characters long, non restricted word, characters "_-.", no consecutive dots, does not begin or end with dots, letters a-z and numbers 0-9.'],
+    validate: [validateUsername, 'Please enter a valid student username in the form - S00123456'],
     lowercase: true,
     trim: true
   },
@@ -124,7 +124,16 @@ var UserSchema = new Schema({
   },
   resetPasswordExpires: {
     type: Date
-  }
+  },
+  calendarEvents: [{
+    title: String,
+    startsAt: Date,
+    endsAt: Date,
+    color: {
+      primary: String,
+      secondary: String
+    }
+  }]
 });
 
 /**
