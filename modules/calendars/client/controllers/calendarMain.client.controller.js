@@ -31,21 +31,18 @@
       'colour': ''
     };
     $scope.eventClicked = function (calendarEvent) {
-      $scope.addEventForm.calTitle = calendarEvent.title.toString();
-      $scope.addEventForm.startsAtD = calendarEvent.startsAt.getDate();
-      $scope.addEventForm.startsAtM = calendarEvent.startsAt.getMonth();
-      $scope.addEventForm.startsAtY = calendarEvent.startsAt.getFullYear();
-      if (calendarEvent.endsAt != null) {
-        $scope.addEventForm.endsAtD = calendarEvent.endsAt.getDate();
-        $scope.addEventForm.endsAtM = calendarEvent.endsAt.getMonth();
-        $scope.addEventForm.endsAtY = calendarEvent.endsAt.getFullYear();
-      }
-      $scope.addEventForm.colour = calendarEvent.color.primary;
-      if (calendarEvent.cssClass === 'college-events') {
-        $scope.delActive = false;
-      }
-      else {
-        $scope.delActive = true;
+      if (calendarEvent.cssClass !== 'college-events') {
+        $scope.addEventForm.calTitle = calendarEvent.title.toString();
+        $scope.addEventForm.startsAtD = calendarEvent.startsAt.getDate();
+        $scope.addEventForm.startsAtM = calendarEvent.startsAt.getMonth();
+        $scope.addEventForm.startsAtY = calendarEvent.startsAt.getFullYear();
+        if (calendarEvent.endsAt != null) {
+          $scope.addEventForm.endsAtD = calendarEvent.endsAt.getDate();
+          $scope.addEventForm.endsAtM = calendarEvent.endsAt.getMonth();
+          $scope.addEventForm.endsAtY = calendarEvent.endsAt.getFullYear();
+        }
+        $scope.addEventForm.colour = calendarEvent.color.primary;
+
       }
     };
     $scope.tsClicked = function (calendarDate) {
