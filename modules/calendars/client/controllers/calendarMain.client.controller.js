@@ -31,7 +31,6 @@
       'colour': ''
     };
     $scope.eventClicked = function (calendarEvent) {
-      console.log($scope.addEventForm);
       $scope.addEventForm.calTitle = calendarEvent.title.toString();
       $scope.addEventForm.startsAtD = calendarEvent.startsAt.getDate();
       $scope.addEventForm.startsAtM = calendarEvent.startsAt.getMonth();
@@ -42,7 +41,6 @@
         $scope.addEventForm.endsAtY = calendarEvent.endsAt.getFullYear();
       }
       $scope.addEventForm.colour = calendarEvent.color.primary;
-      console.log(calendarEvent);
       if (calendarEvent.cssClass === 'college-events') {
         $scope.delActive = false;
       }
