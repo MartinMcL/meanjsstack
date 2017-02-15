@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="sideCal col-md-3">
+    <div class="sideCal col-md-3" ng-hide="!vm.authentication.user">
       <h1 class="text-primary">Add an event</h1>
       <div class="form-group">
         <label for>
@@ -40,7 +40,7 @@
       <br />
       <br />
     </div>
-    <div class="mainCal col-md-6 col-md-offset-1 container">
+    <div class="mainCal col-md-offset-1 container" ng-class="{'col-md-9' : !vm.authentication.user, 'col-md-6' : vm.authentication.user}">
       <div class="row">
         <div>
           <h1>

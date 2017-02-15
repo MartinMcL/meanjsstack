@@ -30,7 +30,6 @@
       'endsAtY': '',
       'colour': ''
     };
-
     $scope.eventClicked = function (calendarEvent) {
       console.log($scope.addEventForm);
       $scope.addEventForm.calTitle = calendarEvent.title.toString();
