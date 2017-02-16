@@ -17,5 +17,13 @@
       console.log(blockid);
     };
 
+    $scope.flyTo =function() {
+      
+    }
+
+    $scope.getCords = function ($event) {
+      console.log($event.offsetX, $event.offsetY);
+    };
+
   }
 }());

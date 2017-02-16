@@ -1,0 +1,14 @@
+<div class="iconContainer">
+  <div class="wrapper">
+    <div class="row">
+      <div class="col-xs-6 col-md-6 col-lg-4" ng-repeat="icon in icons">
+        <div class="homeIcons">
+          <svg data-ng-include="{{icon.url}}"></svg>
+          <a href={{icon.state}}><img ng-src="{{icon.url}}"></a>
+          <p>{{icon.icon}}</p>
+        </div>
+      </div>
+      <ui-view></ui-view>
+    </div>
+  </div>
+</div>

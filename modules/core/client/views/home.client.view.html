@@ -1,11 +1,42 @@
+<div class="wrappers" id="currInfo">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3>Welcome Back <strong>{{vm.authentication.user.displayName}}</strong></h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="row">
+        <div class="col-xs-6">
+          <p><i class="glyphicon glyphicon-star-empty"></i>Current Class</p>
+        </div>
+        <div class="col-xs-6">
+          <p><i class="glyphicon glyphicon-arrow-right"></i>Next class</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <p><i class="wi wi-day-{{ weatherstatus | lowercase }}"></i>{{weather}} C</p>
+          
+        </div>
+        <div class="col-xs-6">
+          <p><i class="glyphicon glyphicon-calendar"></i> {{date | date:'dd/mm/yyyy'}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="iconContainer">
-  <h1>User Dashboard</h1>
   <div class="wrapper">
     <div class="row">
       <div class="col-xs-6 col-md-6 col-lg-4" ng-repeat="icon in icons">
         <div class="homeIcons">
-          <a href={{icon.state}}><img ng-src="{{icon.url}}"></a>
+          <a href={{icon.state}}><div class="div" ng-include="icon.url">
+          </div></a>
+          <p>{{icon.icon}}</p>
         </div>
       </div>
       <ui-view></ui-view>

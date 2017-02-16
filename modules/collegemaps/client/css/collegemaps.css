@@ -11,7 +11,8 @@ svg #block_p:hover{
 svg{
    height: 1000px;
    overflow: hidden;
-
+       display: inline;
+        
 }
 svg .blocks{
   stroke-width: 4;
@@ -137,3 +138,4 @@ box-shadow: inset 0px 0px 150px -54px rgba(0,0,0,0.75);
     max-height: 500px;
     overflow: hidden;
 }
+

@@ -42,6 +42,10 @@
         element.attr('ng-click', 'blockClick()');
         element.removeAttr('block');
         $compile(element)(scope);
+
+        attrs.$observe('viewBox', function(value) {
+          element.attr('viewBox', "607 641 800 600");
+        });
       }
     };
   }
