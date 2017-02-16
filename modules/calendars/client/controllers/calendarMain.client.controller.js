@@ -13,13 +13,14 @@
     $scope.viewDate = moment();
     $scope.delActive = false;
     $scope.loadEventsIntoScope = function () {
+      // Get College Events and Convert to JavaScript Date Objects
       var result = CalendarFactory.getEvents().then(function (response) {
         $scope.events = response.data[0].events;
         $scope.events.forEach(function (element) {
           element.startsAt = new Date(element.startsAt);
           element.endsAt = new Date(element.endsAt);
         }, this);
-        if (user.username != null) {
+        if (user.username != null) { // If a user is logged in, Retrieve their events and show
           var userResult = CalendarFactory.getUser(user.username).then(function (responses) {
             $scope.user = responses.data[0];
             $scope.uEvents = $scope.user.calendarEvents;
@@ -55,14 +56,14 @@
       $scope.addEventForm.endsAtY = '';
       $scope.addEventForm.colour = '';
     };
-    $scope.eventClicked = function (calendarEvent) {
+    $scope.eventClicked = function (calendarEvent) { // Populate form with selected event info
       $scope.addEventForm.calTitle = calendarEvent.title.toString();
       $scope.addEventForm.startsAtD = calendarEvent.startsAt.getDate();
-      $scope.addEventForm.startsAtM = calendarEvent.startsAt.getMonth();
+      $scope.addEventForm.startsAtM = calendarEvent.startsAt.getMonth() + 1;
       $scope.addEventForm.startsAtY = calendarEvent.startsAt.getFullYear();
       if (calendarEvent.endsAt != null) {
         $scope.addEventForm.endsAtD = calendarEvent.endsAt.getDate();
-        $scope.addEventForm.endsAtM = calendarEvent.endsAt.getMonth();
+        $scope.addEventForm.endsAtM = calendarEvent.endsAt.getMonth() + 1;
         $scope.addEventForm.endsAtY = calendarEvent.endsAt.getFullYear();
       }
       $scope.addEventForm.colour = calendarEvent.color.primary;
@@ -73,23 +74,27 @@
         $scope.delActive = true;
       }
     };
-    $scope.tsClicked = function (calendarDate) {
-      $scope.addEventForm.calTitle = null;
-      $scope.addEventForm.startsAtD = calendarDate.getDate();
-      $scope.addEventForm.startsAtM = calendarDate.getMonth() + 1;
-      $scope.addEventForm.startsAtY = calendarDate.getFullYear();
-      $scope.addEventForm.endsAtD = '';
-      $scope.addEventForm.endsAtM = '';
-      $scope.addEventForm.endsAtY = '';
-      $scope.addEventForm.colour = '';
+    $scope.tsClicked = function (calendarDate) { // Populate form with timespan that was clicked in month view
+      if ($scope.calendarView === 'month') {
+        $scope.addEventForm.calTitle = null;
+        $scope.addEventForm.startsAtD = calendarDate.getDate();
+        $scope.addEventForm.startsAtM = calendarDate.getMonth() + 1;
+        $scope.addEventForm.startsAtY = calendarDate.getFullYear();
+        $scope.addEventForm.endsAtD = '';
+        $scope.addEventForm.endsAtM = '';
+        $scope.addEventForm.endsAtY = '';
+        $scope.addEventForm.colour = '';
+      }
     };
 
     $scope.addEvent = function () {
+      // Setting the end of the event to the start date, in case there is no end assigned i.e. starts + ends same day
       var endevent = new Date($scope.addEventForm.startsAtY, $scope.addEventForm.startsAtM - 1, $scope.addEventForm.startsAtD);
+      // If there is an end event, Overwrite to that instead
       if (($scope.addEventForm.endsAtY + $scope.addEventForm.endsAtM + $scope.addEventForm.endsAtD).length > 0) {
         endevent = new Date($scope.addEventForm.endsAtY, $scope.addEventForm.endsAtM - 1, $scope.addEventForm.endsAtD);
       }
-      var newEvent = {
+      var newEvent = { // New event object to insert
         title: $scope.addEventForm.calTitle,
         startsAt: new Date($scope.addEventForm.startsAtY, $scope.addEventForm.startsAtM - 1, $scope.addEventForm.startsAtD),
         endsAt: endevent,
@@ -98,11 +103,12 @@
           secondary: '#fdf1ba'
         }
       };
+      // Run function to add to the user's document
       var result = CalendarFactory.addUserEvent(user.username, newEvent);
       $scope.clearForm();
-      $scope.loadEventsIntoScope();
-      console.log(result);
+      $scope.loadEventsIntoScope(); // Refresh calendar's view of the scope.
     };
+    // Remove selected event
     $scope.remEvent = function () {
       var endevent = new Date($scope.addEventForm.startsAtY, $scope.addEventForm.startsAtM - 1, $scope.addEventForm.startsAtD);
       if (($scope.addEventForm.endsAtY + $scope.addEventForm.endsAtM + $scope.addEventForm.endsAtD).length > 0) {
@@ -120,8 +126,7 @@
       var results = CalendarFactory.remUserEvent(user.username, newEvent);
       $scope.clearForm();
       $scope.loadEventsIntoScope();
-      console.log(results);
-      // window.location.reload(); // I think problem is with asynchronous code here
+      // window.location.reload(); // TODO: I think problem is with asynchronous code here
     };
 
     $scope.prevArrow = function () {
