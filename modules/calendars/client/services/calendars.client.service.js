@@ -43,7 +43,9 @@
             }
           }
         });
-        userEvent.calendarEvents.splice(index, 1); // Remove 1 event at the index of the matched event
+        if (index !== -1) {
+          userEvent.calendarEvents.splice(index, 1); // Remove 1 event at the index of the matched event
+        }
         return $http({
           method: 'PUT',
           url: 'https://api.mlab.com/api/1/databases/bamsdevdb/collections/users?q={"username":"' + user + '"}&apiKey=kDXKvwOsOc2CEpsqYadOjacn36flg_yA&',
