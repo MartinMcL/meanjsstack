@@ -1,5 +1,10 @@
 <div id="sidebar-wrapper">
-  <div login ng-hide="vm.authentication.user"></div>
+  <div ng-hide="vm.authentication.user">
+    <div class="loginStuff">
+        <a href="/authentication/signin" class="loginButton"><span class="glyphicon glyphicon-user"></span> Log In
+        </a>
+    </div>
+  </div>
   <div ng-show="vm.authentication.user">
     <div class="headerUserInfo">
       <img ng-src="/{{vm.authentication.user.profileImageURL}}" alt="{{vm.authentication.user.displayName}}" />

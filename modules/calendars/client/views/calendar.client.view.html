@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" ng-init="loadEventsIntoScope()">
   <div class="row">
     <div class="sideCal col-md-3" ng-hide="!vm.authentication.user">
       <h1 class="text-primary">Add an event</h1>
@@ -34,7 +34,7 @@
         <input type="submit" class="btn button btn-success col-md-9" ng-click="addEvent()" Value="Add" />
       </div>
       <div class="col-md-6">
-        <button class="btn button btn-danger col-md-9" ng-class="{'hidden' : !delActive}">Delete</button>
+        <button class="btn button btn-danger col-md-9" ng-class="{'hidden' : !delActive}" ng-click="remEvent()">Delete</button>
       </div>
       <br />
       <br />
