@@ -12,13 +12,28 @@
     $scope.calendarView = 'month';
     $scope.viewDate = moment();
     $scope.delActive = false;
-    var result = CalendarFactory.getEvents().then(function (response) {
-      $scope.events = response.data[0].events;
-      $scope.events.forEach(function (element) {
-        element.startsAt = new Date(element.startsAt);
-        element.endsAt = new Date(element.endsAt);
-      }, this);
-    });
+    $scope.loadEventsIntoScope = function () {
+      var result = CalendarFactory.getEvents().then(function (response) {
+        $scope.events = response.data[0].events;
+        $scope.events.forEach(function (element) {
+          element.startsAt = new Date(element.startsAt);
+          element.endsAt = new Date(element.endsAt);
+        }, this);
+        if (user.username != null) {
+          var userResult = CalendarFactory.getUser(user.username).then(function (responses) {
+            $scope.user = responses.data[0];
+            $scope.uEvents = $scope.user.calendarEvents;
+            $scope.uEvents.forEach(function (element) {
+              element.startsAt = new Date(element.startsAt);
+              if (element.endsAt !== '') {
+                element.endsAt = new Date(element.endsAt);
+              }
+              $scope.events.push(element);
+            }, this);
+          });
+        }
+      });
+    };
     $scope.calendarTitle = 'Student Calendar';
     $scope.addEventForm = {
       'calTitle': '',
@@ -29,6 +44,16 @@
       'endsAtM': '',
       'endsAtY': '',
       'colour': ''
+    };
+    $scope.clearForm = function () {
+      $scope.addEventForm.calTitle = '';
+      $scope.addEventForm.startsAtD = '';
+      $scope.addEventForm.startsAtM = '';
+      $scope.addEventForm.startsAtY = '';
+      $scope.addEventForm.endsAtD = '';
+      $scope.addEventForm.endsAtM = '';
+      $scope.addEventForm.endsAtY = '';
+      $scope.addEventForm.colour = '';
     };
     $scope.eventClicked = function (calendarEvent) {
       $scope.addEventForm.calTitle = calendarEvent.title.toString();
@@ -58,6 +83,7 @@
       $scope.addEventForm.endsAtY = '';
       $scope.addEventForm.colour = '';
     };
+
     $scope.addEvent = function () {
       var endevent = new Date($scope.addEventForm.startsAtY, $scope.addEventForm.startsAtM - 1, $scope.addEventForm.startsAtD);
       if (($scope.addEventForm.endsAtY + $scope.addEventForm.endsAtM + $scope.addEventForm.endsAtD).length > 0) {
@@ -72,7 +98,30 @@
           secondary: '#fdf1ba'
         }
       };
-      $scope.events.push(newEvent);
+      var result = CalendarFactory.addUserEvent(user.username, newEvent);
+      $scope.clearForm();
+      $scope.loadEventsIntoScope();
+      console.log(result);
+    };
+    $scope.remEvent = function () {
+      var endevent = new Date($scope.addEventForm.startsAtY, $scope.addEventForm.startsAtM - 1, $scope.addEventForm.startsAtD);
+      if (($scope.addEventForm.endsAtY + $scope.addEventForm.endsAtM + $scope.addEventForm.endsAtD).length > 0) {
+        endevent = new Date($scope.addEventForm.endsAtY, $scope.addEventForm.endsAtM - 1, $scope.addEventForm.endsAtD);
+      }
+      var newEvent = {
+        title: $scope.addEventForm.calTitle,
+        startsAt: new Date($scope.addEventForm.startsAtY, $scope.addEventForm.startsAtM - 1, $scope.addEventForm.startsAtD),
+        endsAt: endevent,
+        color: {
+          primary: $scope.addEventForm.colour,
+          secondary: '#fdf1ba'
+        }
+      };
+      var results = CalendarFactory.remUserEvent(user.username, newEvent);
+      $scope.clearForm();
+      $scope.loadEventsIntoScope();
+      console.log(results);
+      // window.location.reload(); // I think problem is with asynchronous code here
     };
 
     $scope.prevArrow = function () {
