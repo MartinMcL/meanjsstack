@@ -103,10 +103,15 @@
           secondary: '#fdf1ba'
         }
       };
+      if (newEvent.calendarTitle !== '' && $scope.addEventForm.startsAtD !== '' && $scope.addEventForm.startsAtM !== '' && $scope.addEventForm.startsAtY !== '') {
+        var result = CalendarFactory.addUserEvent(user.username, newEvent);
+        $scope.clearForm();
+        $scope.loadEventsIntoScope(); // Refresh calendar's view of the scope.
+      }
+      else {
+        alert('Event Must have a title and start date!');
+      }
       // Run function to add to the user's document
-      var result = CalendarFactory.addUserEvent(user.username, newEvent);
-      $scope.clearForm();
-      $scope.loadEventsIntoScope(); // Refresh calendar's view of the scope.
     };
     // Remove selected event
     $scope.remEvent = function () {
