@@ -46,6 +46,7 @@
       'endsAtY': '',
       'colour': ''
     };
+
     $scope.clearForm = function () {
       $scope.addEventForm.calTitle = '';
       $scope.addEventForm.startsAtD = '';
