@@ -15,7 +15,7 @@
     vm.signup = signup;
     vm.signin = signin;
     vm.callOauthProvider = callOauthProvider;
-    vm.usernameRegex = /^(?=[\w.-]+$)(?!.*[._-]{2})(?!\.)(?!.*\.$).{3,34}$/;
+    vm.usernameRegex = /^[sS][0-9]{8}$/;
 
     // Get an eventual error defined in the URL query string:
     if ($location.search().err) {
