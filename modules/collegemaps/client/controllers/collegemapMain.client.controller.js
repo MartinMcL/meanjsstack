@@ -25,11 +25,10 @@
     $scope.config = {}; // use defaults
     $scope.model = {}; // always pass empty object
 
-   
 
     $scope.getCords = function ($event) {
       $event.target()[0].scrollTop = 500;
-      //console.log($event.offsetX, $event.offsetY);
+      // console.log($event.offsetX, $event.offsetY);
     };
 
   }
