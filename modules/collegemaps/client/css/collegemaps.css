@@ -57,8 +57,7 @@ svg .blocks{
 .mapContainer{
     text-align: center;
     overflow: scroll;
-    overflow-y: hidden; 
-    overflow-x: hidden;
+
     max-height: 500px;
 }
 .collegemapContainer{
@@ -139,3 +138,6 @@ box-shadow: inset 0px 0px 150px -54px rgba(0,0,0,0.75);
     overflow: hidden;
 }
 
+svg{
+ 
+}
