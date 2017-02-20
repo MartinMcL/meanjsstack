@@ -20,7 +20,7 @@
           element.startsAt = new Date(element.startsAt);
           element.endsAt = new Date(element.endsAt);
         }, this);
-        if (user.username != null) { // If a user is logged in, Retrieve their events and show
+        if (user != null) { // If a user is logged in, Retrieve their events and show
           var userResult = CalendarFactory.getUser(user.username).then(function (responses) {
             $scope.user = responses.data[0];
             $scope.uEvents = $scope.user.calendarEvents;
@@ -70,8 +70,7 @@
       $scope.addEventForm.colour = calendarEvent.color.primary;
       if (calendarEvent.cssClass === 'college-events') {
         $scope.delActive = false;
-      }
-      else {
+      } else {
         $scope.delActive = true;
       }
     };
@@ -85,54 +84,65 @@
         $scope.addEventForm.endsAtM = '';
         $scope.addEventForm.endsAtY = '';
         $scope.addEventForm.colour = '';
+      } else {
+        window.location.reload();
       }
     };
 
     $scope.addEvent = function () {
-      // Setting the end of the event to the start date, in case there is no end assigned i.e. starts + ends same day
-      var endevent = new Date($scope.addEventForm.startsAtY, $scope.addEventForm.startsAtM - 1, $scope.addEventForm.startsAtD);
-      // If there is an end event, Overwrite to that instead
-      if (($scope.addEventForm.endsAtY + $scope.addEventForm.endsAtM + $scope.addEventForm.endsAtD).length > 0) {
-        endevent = new Date($scope.addEventForm.endsAtY, $scope.addEventForm.endsAtM - 1, $scope.addEventForm.endsAtD);
-      }
-      var newEvent = { // New event object to insert
-        title: $scope.addEventForm.calTitle,
-        startsAt: new Date($scope.addEventForm.startsAtY, $scope.addEventForm.startsAtM - 1, $scope.addEventForm.startsAtD),
-        endsAt: endevent,
-        color: {
-          primary: $scope.addEventForm.colour,
-          secondary: '#fdf1ba'
+      if (user !== null) {
+
+        // Setting the end of the event to the start date, in case there is no end assigned i.e. starts + ends same day
+        var endevent = new Date($scope.addEventForm.startsAtY, $scope.addEventForm.startsAtM - 1, $scope.addEventForm.startsAtD);
+        // If there is an end event, Overwrite to that instead
+        if (($scope.addEventForm.endsAtY + $scope.addEventForm.endsAtM + $scope.addEventForm.endsAtD).length > 0) {
+          endevent = new Date($scope.addEventForm.endsAtY, $scope.addEventForm.endsAtM - 1, $scope.addEventForm.endsAtD);
         }
-      };
-      if (newEvent.calendarTitle !== '' && $scope.addEventForm.startsAtD !== '' && $scope.addEventForm.startsAtM !== '' && $scope.addEventForm.startsAtY !== '') {
-        var result = CalendarFactory.addUserEvent(user.username, newEvent);
-        $scope.clearForm();
-        $scope.loadEventsIntoScope(); // Refresh calendar's view of the scope.
+        var newEvent = { // New event object to insert
+          title: $scope.addEventForm.calTitle,
+          startsAt: new Date($scope.addEventForm.startsAtY, $scope.addEventForm.startsAtM - 1, $scope.addEventForm.startsAtD),
+          endsAt: endevent,
+          color: {
+            primary: $scope.addEventForm.colour,
+            secondary: '#fdf1ba'
+          }
+        };
+        if (newEvent.calendarTitle !== '' && $scope.addEventForm.startsAtD !== '' && $scope.addEventForm.startsAtM !== '' && $scope.addEventForm.startsAtY !== '') {
+          var result = CalendarFactory.addUserEvent(user.username, newEvent).then(function (response) {
+            $scope.clearForm();
+            $scope.loadEventsIntoScope(); // Refresh calendar's view of the scope.
+          });
+        } else {
+          alert('Event Must have a title and start date!');
+        }
+        // Run function to add to the user's document
+      } else {
+        window.location.reload();
       }
-      else {
-        alert('Event Must have a title and start date!');
-      }
-      // Run function to add to the user's document
     };
     // Remove selected event
     $scope.remEvent = function () {
-      var endevent = new Date($scope.addEventForm.startsAtY, $scope.addEventForm.startsAtM - 1, $scope.addEventForm.startsAtD);
-      if (($scope.addEventForm.endsAtY + $scope.addEventForm.endsAtM + $scope.addEventForm.endsAtD).length > 0) {
-        endevent = new Date($scope.addEventForm.endsAtY, $scope.addEventForm.endsAtM - 1, $scope.addEventForm.endsAtD);
-      }
-      var newEvent = {
-        title: $scope.addEventForm.calTitle,
-        startsAt: new Date($scope.addEventForm.startsAtY, $scope.addEventForm.startsAtM - 1, $scope.addEventForm.startsAtD),
-        endsAt: endevent,
-        color: {
-          primary: $scope.addEventForm.colour,
-          secondary: '#fdf1ba'
+      if (user !== null) {
+
+        var endevent = new Date($scope.addEventForm.startsAtY, $scope.addEventForm.startsAtM - 1, $scope.addEventForm.startsAtD);
+        if (($scope.addEventForm.endsAtY + $scope.addEventForm.endsAtM + $scope.addEventForm.endsAtD).length > 0) {
+          endevent = new Date($scope.addEventForm.endsAtY, $scope.addEventForm.endsAtM - 1, $scope.addEventForm.endsAtD);
         }
-      };
-      var results = CalendarFactory.remUserEvent(user.username, newEvent);
-      $scope.clearForm();
-      $scope.loadEventsIntoScope();
-      // window.location.reload(); // TODO: I think problem is with asynchronous code here
+        var newEvent = {
+          title: $scope.addEventForm.calTitle,
+          startsAt: new Date($scope.addEventForm.startsAtY, $scope.addEventForm.startsAtM - 1, $scope.addEventForm.startsAtD),
+          endsAt: endevent,
+          color: {
+            primary: $scope.addEventForm.colour,
+            secondary: '#fdf1ba'
+          }
+        };
+        var results = CalendarFactory.remUserEvent(user.username, newEvent).then(function (response) {
+          $scope.clearForm();
+          $scope.loadEventsIntoScope();
+        });
+        // window.location.reload(); // TODO: I think problem is with asynchronous code here
+      }
     };
 
     $scope.prevArrow = function () {
