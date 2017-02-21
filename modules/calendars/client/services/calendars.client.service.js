@@ -29,6 +29,7 @@
           data: JSON.stringify({ '$set': { 'calendarEvents': userEvent.calendarEvents } }) // Send new calendarEvents to DB
         });
       });
+      return newData;
     }
     function remUserEvent(user, event) {
       var newData = getUser(user).then(function (response) {
@@ -53,6 +54,7 @@
           data: JSON.stringify({ '$set': { 'calendarEvents': userEvent.calendarEvents } }) // Replace calendarEvents with new one less an event
         });
       });
+      return newData;
     }
     return {
       getEvents: getEvents,

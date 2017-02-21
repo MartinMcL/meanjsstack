@@ -5,12 +5,13 @@
     .module('collegemaps')
     .controller('CollegeMapMainCtrl', CollegeMapMainCtrl);
 
-  CollegeMapMainCtrl.$inject = ['$scope', 'dataFactory'];
+  CollegeMapMainCtrl.$inject = ['$scope', 'dataFactory', 'ngMap'];
 
-  function CollegeMapMainCtrl($scope, dataFactory) {
+  function CollegeMapMainCtrl($scope, dataFactory, ngMap) {
 
     dataFactory.getBlocks().then(function (response) {
       $scope.blocks = response.data[0].blocks;
+
     });
 
     $scope.gotoBlock = function (blockid) {
@@ -21,8 +22,14 @@
       
     };
 
+
+    $scope.config = {}; // use defaults
+    $scope.model = {}; // always pass empty object
+
+
     $scope.getCords = function ($event) {
-      console.log($event.offsetX, $event.offsetY);
+      $event.target()[0].scrollTop = 500;
+      // console.log($event.offsetX, $event.offsetY);
     };
 
   }

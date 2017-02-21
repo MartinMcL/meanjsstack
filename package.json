@@ -11,8 +11,8 @@
     "url": "https://github.com/meanjs/mean.git"
   },
   "engines": {
-    "node": ">=4.6.0",
-    "npm": ">=3.10.8"
+    "node": "4.6.0",
+    "npm": ">=4.1.0"
   },
   "scripts": {
     "update": "npm update && npm prune && bower install --allow-root && bower prune --allow-root",
@@ -35,6 +35,7 @@
   "dependencies": {
     "acl": "~0.4.9",
     "angular-drag-scroll": "^0.2.2",
+    "angular-svg-pan-zoom": "^1.0.0",
     "async": "~2.0.1",
     "body-parser": "~1.15.0",
     "bower": "^1.7.9",
