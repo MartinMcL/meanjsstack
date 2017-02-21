@@ -1,102 +1,102 @@
 [
-    {
-        "blockId": "a",
-        "description": "Library/Central Administration",
-        "mapPosition": {
-            "top" : "348",
-            "left": "1037"
+        {
+            "blockId": "a",
+            "description": "Library/Central Administration",
+            "mapPosition": {
+                "lat": "348",
+                "long": "1037"
+            }
+        },
+        {
+            "blockId": "b",
+            "description": "MacMunn 1970 Building & Canteen",
+            "mapPosition": {
+                "lat": "448",
+                "long": "1191"
+            }
+        },
+        {
+            "blockId": "c",
+            "description": "Language & Marketing Centre",
+            "mapPosition": {
+                "lat": "348",
+                "long": "1244"
+            }
+        },
+        {
+            "blockId": "d",
+            "description": "Business & Social Sciences",
+            "mapPosition": {
+                "lat": "248",
+                "long": "1324"
+            }
+        },
+        {
+            "blockId": "e",
+            "description": "Technological Engineering & Computing Facility",
+            "mapPosition": {
+                "lat": "242",
+                "long": "943"
+            }
+        },
+        {
+            "blockId": "f",
+            "description": "Technology Centre",
+            "mapPosition": {
+                "lat": "242",
+                "long": "843"
+            }
+        },
+        {
+            "blockId": "g",
+            "description": "Innovation Centre",
+            "mapPosition": {
+                "lat": "242",
+                "long": "769"
+            }
+        },
+        {
+            "blockId": "h",
+            "description": "Student Services Centre",
+            "mapPosition": {
+                "lat": "348",
+                "long": "984"
+            }
+        },
+        {
+            "blockId": "j",
+            "description": "Old BIC",
+            "mapPosition": {
+                "lat": "448",
+                "long": "1084"
+            }
+        },
+        {
+            "blockId": "k",
+            "description": "Fine Art & Creative Design"
+        },
+        {
+            "blockId": "l",
+            "description": "Fine Art & Creative Design",
+            "mapPosition": {
+                "lat": "142",
+                "long": "328"
+            }
+        },
+        {
+            "blockId": "m",
+            "description": "Applied Technology",
+            "mapPosition": {
+                "lat": "231",
+                "long": "756"
+            }
+        },
+        {
+            "blockId": "p",
+            "description": "Knocknarea Arena",
+            "mapPosition": {
+                "lat": "54.2792048",
+                "long": "-8.4654263"
+            }
         }
-    },
-    {
-        "blockId": "b",
-        "description": "MacMunn 1970 Building & Canteen",
-        "mapPosition": {
-            "top" : "448",
-            "left": "1191"
-        }
-    },
-    {
-        "blockId": "c",
-        "description": "Language & Marketing Centre",
-        "mapPosition": {
-            "top" : "348",
-            "left": "1244"
-        }
-    },
-    {
-        "blockId": "d",
-        "description": "Business & Social Sciences",
-        "mapPosition": {
-            "top" : "248",
-            "left": "1324"
-        }
-    },
-    {
-        "blockId": "e",
-        "description": "Technological Engineering & Computing Facility",
-        "mapPosition": {
-            "top" : "242",
-            "left": "943"
-        }
-    },
-    {
-        "blockId": "f",
-        "description": "Technology Centre",
-        "mapPosition": {
-            "top" : "242",
-            "left": "843"
-        }
-    },
-    {
-        "blockId": "g",
-        "description": "Innovation Centre",
-        "mapPosition": {
-            "top" : "242",
-            "left": "769"
-        }
-    },
-    {
-        "blockId": "h",
-        "description": "Student Services Centre",
-        "mapPosition": {
-            "top" : "348",
-            "left": "984"
-        }
-    },
-    {
-        "blockId": "j",
-        "description": "Old BIC",
-        "mapPosition": {
-            "top" : "448",
-            "left": "1084"
-        }
-    },
-    {
-        "blockId": "k",
-        "description": "Fine Art & Creative Design"
-    },
-    {
-        "blockId": "l",
-        "description": "Fine Art & Creative Design",
-        "mapPosition": {
-            "top" : "142",
-            "left": "328"
-        }
-    },
-    {
-        "blockId": "m",
-        "description": "Applied Technology",
-        "mapPosition": {
-            "top" : "231",
-            "left": "756"
-        }
-    },
-    {
-        "blockId": "p",
-        "description": "Knocknarea Arena",
-        "mapPosition": {
-            "top" : "142",
-            "left": "328"
-        }
-    }
-]
+    ]

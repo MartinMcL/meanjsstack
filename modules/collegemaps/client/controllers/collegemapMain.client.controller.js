@@ -18,9 +18,10 @@
       console.log(blockid);
     };
 
-    $scope.flyTo = function (event) {
+    $scope.flyTo =function() {
+      
+    };
 
-    }
 
     $scope.config = {}; // use defaults
     $scope.model = {}; // always pass empty object

@@ -27,10 +27,9 @@ module.exports = {
         'public/lib/owasp-password-strength-test/owasp-password-strength-test.js',
         'public/lib/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar-tpls.js',
         'public/lib/angular-drag-scroll/src/ng-drag-scroll.js',
-        'public/lib/ngmap/build/scripts/ng-map.min.js',
-        'public/lib/angular-pan-zoom/release/panzoom.js'
-        
-        
+        '//maps.googleapis.com/maps/api/js?key=AIzaSyDcIDTKSppZ28KwSTjIW92Q9Ojmw7lodqM',
+        'public/lib/ngmap/build/scripts/ng-map.min.js'
+
         // endbower
       ]
     },
