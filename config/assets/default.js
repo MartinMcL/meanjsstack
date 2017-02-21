@@ -27,7 +27,8 @@ module.exports = {
         'public/lib/owasp-password-strength-test/owasp-password-strength-test.js',
         'public/lib/moment/moment.js',
         'public/lib/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar-tpls.js',
-        'public/lib/angular-drag-scroll/src/ng-drag-scroll.js'
+        'public/lib/angular-drag-scroll/src/ng-drag-scroll.js',
+        'public/lib/ngmap/build/scripts/ng-map.min.js'
         // endbower
         // Jquery
       ],
