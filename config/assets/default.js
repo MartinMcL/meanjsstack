@@ -28,6 +28,7 @@ module.exports = {
         'public/lib/moment/moment.js',
         'public/lib/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar-tpls.js',
         'public/lib/angular-drag-scroll/src/ng-drag-scroll.js',
+        '//maps.googleapis.com/maps/api/js?key=AIzaSyDcIDTKSppZ28KwSTjIW92Q9Ojmw7lodqM',
         'public/lib/ngmap/build/scripts/ng-map.min.js'
         // endbower
         // Jquery
