@@ -5,9 +5,9 @@
     .module('collegemaps')
     .controller('CollegeMapMainCtrl', CollegeMapMainCtrl);
 
-  CollegeMapMainCtrl.$inject = ['$scope', 'dataFactory', 'ngMap'];
+  CollegeMapMainCtrl.$inject = ['$scope', 'dataFactory', 'NgMap'];
 
-  function CollegeMapMainCtrl($scope, dataFactory, ngMap) {
+  function CollegeMapMainCtrl($scope, dataFactory, NgMap) {
 
     dataFactory.getBlocks().then(function (response) {
       $scope.blocks = response.data[0].blocks;
