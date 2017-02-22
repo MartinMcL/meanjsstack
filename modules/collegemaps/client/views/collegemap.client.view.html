@@ -1,50 +1,63 @@
 <div class="collegemapContainer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div id="custom-search-input">
-                    <div class="input-group col-md-12">
-                        <input type="text" class="form-control input-lg" placeholder="Search" ng-model="blocksFilter" />
-                        <span class="input-group-btn">
+
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="blockInfoPanel">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="custom-search-input">
+                            <div class="input-group">
+                                <input type="text" class="form-control input-lg" placeholder="Search" ng-model="blocksFilter" />
+                                <span class="input-group-btn">
                         <button class="btn btn-info btn-lg" type="button">
                             <i class="glyphicon glyphicon-search"></i>
                         </button>
                     </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 panelBody " drag-scroll="true">
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item hover" ng-repeat="block in blocks | filter : blocksFilter" ng-click="gotoBlock(block)">
+                                    <div class="row">
+                                        <div class="col-xs-2 col-md-1">
+                                            <img src="http://placehold.it/80" class="img-circle img-responsive" alt="" /></div>
+                                        <div class="col-xs-10 col-md-11">
+                                            <div>
+                                                <p>{{block.blockId | uppercase }} Block</p>
+                                            </div>
+                                            <div class="comment-text">
+                                                {{block.description}}
+                                            </div>
+                                            <div class="action">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <div class="row">
-        <div class="col-sm-4 panelBody " drag-scroll="true">
-            <div class="panel-body">
-                <ul class="list-group">
-                    <li class="list-group-item hover" ng-repeat="block in blocks | filter : blocksFilter" ng-click="gotoBlock(block)">
-                        <div class="row">
-                            <div class="col-xs-2 col-md-1">
-                                <img src="http://placehold.it/80" class="img-circle img-responsive" alt="" /></div>
-                            <div class="col-xs-10 col-md-11">
-                                <div>
-                                    <p>{{block.blockId | uppercase }} Block</p>
-                                </div>
-                                <div class="comment-text">
-                                    {{block.description}}
-                                </div>
-                                <div class="action">
 
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
         </div>
+
         <div class="col-sm-8">
             <div class="panel-body">
                 <div class="list-group">
-                    <div class="list-group-item">
-                        <ng-map center="[54.2784358, -8.460294]" zoom="18"></ng-map>
+                    <div class="list-group-item" id="map">
+                        <ng-map center="[54.2784358, -8.460294]" zoom="18">
+                            <custom-marker id="foo" ng-repeat="block in blocks" position="[{{block.mapPosition.lat}}, {{block.mapPosition.long}}]">
+                                <div class="marker">
+                                    <h2>{{block.blockId}}</h2>
+                                </div>
+                            </custom-marker>
+                        </ng-map>
                     </div>
                 </div>
             </div>
@@ -52,4 +65,3 @@
     </div>
 
 </div>
-
