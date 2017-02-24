@@ -202,3 +202,18 @@ body {
   background: #fff;
   min-height: 460px;
 }
+
+/* Profile Overview */
+#overview-profile table{
+  margin: 20px;
+  padding: 20px;
+}
+#overview-profile h2{
+  border-bottom: solid gray 2px;
+}
+#overview-profile tbody{
+  font-size: 2em;
+}
+#overview-profile tbody tr th{
+
+}
