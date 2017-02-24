@@ -5,11 +5,13 @@
     .module('users')
     .controller('SettingsController', SettingsController);
 
-  SettingsController.$inject = ['$scope', 'Authentication'];
+  SettingsController.$inject = ['$scope', '$state', 'Authentication', 'menuService'];
 
-  function SettingsController($scope, Authentication) {
-    var vm = this;
+  function SettingsController($scope, $state, Authentication, menuService) {
+        var vm = this;
 
-    vm.user = Authentication.user;
+    vm.accountMenu = menuService.getMenu('account').items[0];
+    vm.authentication = Authentication;
+
   }
 }());

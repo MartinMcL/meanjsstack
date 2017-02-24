@@ -21,6 +21,15 @@
           roles: ['user', 'admin']
         }
       })
+      .state('settings.overview', {
+        url: '/overview',
+        templateUrl: '/modules/users/client/views/settings/profile-oveview.client.view.html',
+        controller: 'OverviewController',
+        controllerAs: 'vm',
+        data: {
+           pageTitle: 'Overview'
+        }
+      })
       .state('settings.profile', {
         url: '/profile',
         templateUrl: '/modules/users/client/views/settings/edit-profile.client.view.html',
