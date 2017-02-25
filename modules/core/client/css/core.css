@@ -282,6 +282,13 @@ body {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
+
+#footer{
+	margin-top: 50px;
+	height: 200px;
+	background-color: #0394c9;
+	border-top: white solid 1px;
+}
  /* Custom, iPhone Retina */ 
     @media only screen and (min-width : 320px) {
         .wrappers h3{
