@@ -3,7 +3,7 @@ body {
 	background-color: #026f97;
 	margin: 0px;
 }
-.btn{
+.btns{
 	margin: 10px;
 	position: absolute;
 }
@@ -167,13 +167,18 @@ body {
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
+	border-radius: 5px;
 }
 #menu-toggle span{
 	color: white;
 	background-color: none;
 	font-size: 50px;
 	vertical-align: middle;
+	padding: 5px;
 
+}
+#menu-toggle:focus {
+	outline: 0;
 }
 
 #menu-toggle.toggled {
