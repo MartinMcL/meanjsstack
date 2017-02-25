@@ -3,6 +3,9 @@
 
   angular
     .module('calendars')
+    .config(['calendarConfig', function (calendarConfig) {
+      calendarConfig.showTimesOnWeekView = true;
+    }])
     .controller('CalendarsMainCtrl', CalendarsMainCtrl);
 
   CalendarsMainCtrl.$inject = ['$scope', 'CalendarFactory', 'moment'];
