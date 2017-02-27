@@ -284,10 +284,20 @@ body {
 }
 
 #footer{
-	margin-top: 50px;
+
 	height: 200px;
 	background-color: #F7F7F7;
 	border-top: white solid 1px;
+}
+.footerList{
+	text-align: center;
+	background-color: #e6e6e6;
+	border-radius: 5px;
+	margin-left: 25%;
+	margin-right: 25%;
+}
+.footerList li {
+	list-style-type: none;
 }
  /* Custom, iPhone Retina */ 
     @media only screen and (min-width : 320px) {
