@@ -108,46 +108,28 @@ body {
 
 /* Color Changes Sidebar */
 
-#homeLink:hover,
-#homeLink:active,
-#homeLink:focus {
-	background-color: #FBB735;
-	color: white;
+.CalendarColor:hover{
+	color: #FBB735;
 }
 
-#calendarLink:hover,
-#calendarLink:active,
-#calendarLink:focus {
-	background-color: #E98931;
-	color: white;
+.ContactsColor:hover {
+	color: #E98931;
 }
 
-#emailLink:hover,
-#emailLink:active,
-#emailLink:focus {
-	background-color: #EB403B;
-	color: white;
+.EmailsColor:hover{
+	color: #EB403B;
 }
 
-#timetableLink:hover,
-#timetableLink:active,
-#timetableLink:focus {
-	background-color: #A52A32;
-	color: white;
+.MapColor:hover {
+	color: #A52A32;
 }
 
-#mapLink:hover,
-#mapLink:active,
-#mapLink:focus {
-	background-color: #6C2A6A;
-	color: white;
+.ServicesColor:hover {
+	color: #6C2A6A;
 }
 
-#servicesLink:hover,
-#servicesLink:active,
-#servicesLink:focus {
-	background-color: #5C4399;
-	color: white;
+.TimetableColor:hover {
+	color: #5C4399;
 }
 
 #contactsLink:hover,
@@ -239,26 +221,37 @@ body {
 }
 .homeIcons{
 	text-align: center;
-	
+	padding: 20px;
+	border-radius: 15px;
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
-.homeIcons div{
-	
-	
-}
-.homeIcons .div svg{
+.homeIcons a{
 	height: 150px;
+	width: 150px;
+}
+.homeIcons p{
+	font-size: 2em;
+	font-family: 'Dosis', sans-serif;
+
+}
+.homeIcons span{
+	color: #0394c9;
+	font-size: 80px;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
-	margin-top: 25px;
-	margin-bottom: 25px;
-	background-color: white;
-	border: 2px solid gray;
-	padding: 15px;
-	border-radius: 15px;
+	text-decoration: none;
+	margin: 0px;
+	padding: 0px;
 	
 }
-
+.homeIcons span:hover{
+	color: 
+}
+.homeIcons a:hover{
+	text-decoration: none;
+}
 .wrapper{
 	background-color: #F7F7F7;
 	border: 2px solid white;

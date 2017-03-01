@@ -40,11 +40,11 @@
       <div class="row">
         <div class="col-xs-6 col-md-6 col-lg-4" ng-repeat="icon in icons">
           <div class="homeIcons">
-            <a href={{icon.state}}>
-              <div class="div" ng-include="icon.url">
-              </div>
+            <a href={{icon.state}}> 
+              <span class="{{icon.icon}} {{icon.name}}Color" aria-hidden="true"></span>
+              
             </a>
-            <p>{{icon.icon}}</p>
+            <p>{{icon.name}}</p>
           </div>
         </div>
         <ui-view></ui-view>
