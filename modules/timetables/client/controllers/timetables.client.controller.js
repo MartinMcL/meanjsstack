@@ -1,53 +1,96 @@
 (function () {
   'use strict';
 
-  // Timetables controller
   angular
     .module('timetables')
+    .config(['calendarConfig', function (calendarConfig) {
+      calendarConfig.showTimesOnWeekView = true;
+    }])
     .controller('TimetablesController', TimetablesController);
 
-  TimetablesController.$inject = ['$scope', '$state', '$window', 'Authentication', 'timetableResolve'];
+  TimetablesController.$inject = ['$scope', 'CalendarFactory', 'moment'];
 
-  function TimetablesController ($scope, $state, $window, Authentication, timetable) {
-    var vm = this;
+  function TimetablesController($scope) {
+    // Add information for the calendar to render
+    $scope.calendarView = 'week';
+    $scope.weekview = true;
+    $scope.viewDate = moment();
+    $scope.delActive = false;
+    $scope.calendarTitle = 'Timetable';
 
-    vm.authentication = Authentication;
-    vm.timetable = timetable;
-    vm.error = null;
-    vm.form = {};
-    vm.remove = remove;
-    vm.save = save;
-
-    // Remove existing Timetable
-    function remove() {
-      if ($window.confirm('Are you sure you want to delete?')) {
-        vm.timetable.$remove($state.go('timetables.list'));
+    $scope.calEvents = [
+      {
+        title: 'Maths', // The title of the event
+        startsAt: new Date(2017, 2, 1, 9), // A javascript date object for when the event starts
+        endsAt: new Date(2017, 2, 1, 11), // Optional - a javascript date object for when the event ends
+        color: { // can also be calendarConfig.colorTypes.warning for shortcuts to the deprecated event types
+          primary: '#e3bc08' // the primary event color (should be darker than secondary)
+        }
+      }, {
+        title: 'Web Programming', // The title of the event
+        startsAt: new Date(2017, 2, 1, 12), // A javascript date object for when the event starts
+        endsAt: new Date(2017, 2, 1, 14), // Optional - a javascript date object for when the event ends
+        color: { // can also be calendarConfig.colorTypes.warning for shortcuts to the deprecated event types
+          primary: '#e3bc08' // the primary event color (should be darker than secondary)
+        }
+      }, {
+        title: 'Database', // The title of the event
+        startsAt: new Date(2017, 2, 1, 14), // A javascript date object for when the event starts
+        endsAt: new Date(2017, 2, 1, 16), // Optional - a javascript date object for when the event ends
+        color: { // can also be calendarConfig.colorTypes.warning for shortcuts to the deprecated event types
+          primary: '#e3bc08' // the primary event color (should be darker than secondary)
+        }
+      }, 
+    ];
+    console.log($scope.events);
+    moment.locale('en_gb', {
+      week: {
+        dow: 1 // Monday is the first day of the week
       }
-    }
+    });
 
-    // Save Timetable
-    function save(isValid) {
-      if (!isValid) {
-        $scope.$broadcast('show-errors-check-validity', 'vm.form.timetableForm');
-        return false;
+    $scope.tsClicked = function (calendarDate) { // Populate form with timespan that was clicked in month view
+      if ($scope.calendarView === 'day') {
+        $scope.weekview = false;
       }
+    };
+    $scope.eventClicked = function (calendarDate) { // Populate form with timespan that was clicked in month view
+      if ($scope.calendarView === 'day') {
+        $scope.weekview = false;
+      }
+    };
+    $scope.viewClicked = function (calendarDate) { // Populate form with timespan that was clicked in month view
+      if ($scope.calendarView === 'week') {
+        $scope.weekview = false;
+      }
+    };
+    $scope.prevArrow = function () {
+      $scope.viewDate = moment($scope.viewDate).subtract(1, $scope.calendarView);
+    };
 
-      // TODO: move create/update logic to service
-      if (vm.timetable._id) {
-        vm.timetable.$update(successCallback, errorCallback);
-      } else {
-        vm.timetable.$save(successCallback, errorCallback);
+    $scope.nextArrow = function () {
+      $scope.viewDate = moment($scope.viewDate).add(1, $scope.calendarView);
+    };
+    $scope.upArrow = function () {
+      if ($scope.calendarView === 'day') {
+        $scope.calendarView = 'week';
+        $scope.weekview = true;
       }
+    };
 
-      function successCallback(res) {
-        $state.go('timetables.view', {
-          timetableId: res._id
-        });
+    $scope.events = [
+      {
+        title: 'Maths',
+        startsAt: new Date(2017, 3, 1, 9),
+        endsAt: new Date(2017, 3, 1, 11),
+        color: 'red'
+      },
+      {
+        title: 'Database',
+        startsAt: new Date(2017, 3, 1, 12),
+        endsAt: new Date(2017, 3, 1, 13),
+        color: 'red'
       }
-
-      function errorCallback(res) {
-        vm.error = res.data.message;
-      }
-    }
+    ];
   }
 }());

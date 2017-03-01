@@ -1,4 +1,4 @@
-debugger;
+// debugger;
 (function () {
   'use strict';
 

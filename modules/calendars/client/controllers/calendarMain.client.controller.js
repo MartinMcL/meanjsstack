@@ -87,8 +87,6 @@
         $scope.addEventForm.endsAtM = '';
         $scope.addEventForm.endsAtY = '';
         $scope.addEventForm.colour = '';
-      } else {
-        window.location.reload();
       }
     };
 

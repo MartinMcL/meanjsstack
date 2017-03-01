@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="mainCal container">
+      <div class="row" ng-class="{'hidden' : weekview}">
+        <div>
+          <h1>
+            <span class="glyphicon glyphicon-arrow-up col-md-1 col-md-offset-1" ng-click="upArrow()" ></span>
+            <span class="glyphicon glyphicon-arrow-left col-md-1 col-md-offset-2" ng-click="prevArrow()"></span>
+            <span class="text-center text-primary col-md-6">{{ calendarTitle }}</span>
+            <span class="glyphicon glyphicon-arrow-right col-md-1" ng-click="nextArrow()"></span>
+          </h1>
+        </div>
+      </div>
+      <div class="row">
+        <mwl-calendar view="calendarView" view-date="viewDate" events="calEvents" view-title="calendarTitle" on-event-click="eventClicked(calendarEvent)"
+          on-view-change-click="viewClicked(calendarDate)"
+          cell-is-open="true" day-view-event-width="500"
+          on-timespan-click="tsClicked(calendarDate)"
+          day-view-start="09:00" day-view-end="18:00">
+          </mwl-calendar>
+      </div>
+    </div>
+  </div>
+</div>
