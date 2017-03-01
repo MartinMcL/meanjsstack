@@ -235,18 +235,28 @@ body {
 }
 .iconContainer{
 	padding: 10px;
+	
 }
 .homeIcons{
 	text-align: center;
+	
+}
+.homeIcons div{
+	
+	
 }
 .homeIcons .div svg{
-	height: 100px;
+	height: 150px;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
 	margin-top: 25px;
 	margin-bottom: 25px;
-	fill: red;
+	background-color: white;
+	border: 2px solid gray;
+	padding: 15px;
+	border-radius: 15px;
+	
 }
 
 .wrapper{
@@ -298,6 +308,10 @@ body {
 }
 .footerList li {
 	list-style-type: none;
+}
+
+.marginFot{
+	margin-bottom: 250px;
 }
  /* Custom, iPhone Retina */ 
     @media only screen and (min-width : 320px) {

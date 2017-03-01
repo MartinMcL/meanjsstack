@@ -68,6 +68,8 @@ svg .blocks {
 	margin: 10px;
 	background-color: #F7F7F7;
 	border-radius: 5px;
+	padding: 10px;
+	padding-bottom: 100px;
 }
 
 .blocksCard {
@@ -177,4 +179,18 @@ ng-map {
 }
 .marker h2{
   
+}
+
+.headerText{
+	text-align: center;
+	font-family: 'Dosis', sans-serif;
+	color: #0394c9;
+	border-bottom: 3px solid lightgray;
+	
+}
+.headerText a{
+	float: left;
+}
+.headerText h2 {
+	font-size: 5em;
 }
