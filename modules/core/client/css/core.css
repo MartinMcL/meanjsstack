@@ -306,6 +306,11 @@ body {
 .marginFot{
 	margin-bottom: 250px;
 }
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
  /* Custom, iPhone Retina */ 
     @media only screen and (min-width : 320px) {
         .wrappers h3{

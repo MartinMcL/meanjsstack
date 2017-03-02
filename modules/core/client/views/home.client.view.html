@@ -1,34 +1,32 @@
 <section ng-show="vm.authentication.user">
   <div class="wrappers" id="currInfo">
     <div class="row">
-      <div class="col-sm-6">
-        <div class="row">
-          <div class="col-xs-12">
-            <h3>Welcome Back <strong>{{vm.authentication.user.displayName}}</strong></h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12">
-            <a href="/settings/profile" class="btn-primary btn-lg">Go to Profile</a>
+      <div class="col-sm-4">
+        <div class="row coralbg white">
+          <div class="col-md-12 no-pad">
+            <div class="user-pad">
+              <h3>Welcome back, {{vm.authentication.user.displayName}}</h3>
+              <h4 class="white"><i class="fa fa-check-circle-o"></i> course</h4>
+              <h4 class="white"><i class="fa fa-twitter"></i> Department</h4>
+              <a type="button" href="/settings/profile" class="btn btn-labeled btn-info" href="#">
+                <span class="btn-label"><i class="fa fa-pencil"></i></span>Profile</a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-sm-6">
-        <div class="row">
-          <div class="col-xs-6">
-            <p><i class="glyphicon glyphicon-star-empty"></i>Current Class</p>
+      <div class="col-sm-8">
+        <div class="row overview">
+          <div class="col-md-4 user-pad text-center">
+            <h3><i class="glyphicon glyphicon-star-empty"></i>CURRENT CLASS</h3>
+            <h4>class</h4>
           </div>
-          <div class="col-xs-6">
-            <p><i class="glyphicon glyphicon-arrow-right"></i>Next class</p>
+          <div class="col-md-4 user-pad text-center">
+            <h3><i class="wi wi-day-{{ weatherstatus | lowercase }}"></i>WEATHER</h3>
+            <h4>{{weather}} C</h4>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-6">
-            <p><i class="wi wi-day-{{ weatherstatus | lowercase }}"></i>{{weather}} C </p>
-
-          </div>
-          <div class="col-xs-6">
-            <p><i class="glyphicon glyphicon-calendar"></i> {{date | date:'dd/mm/yyyy'}}</p>
+          <div class="col-md-4 user-pad text-center">
+            <h3><i class="glyphicon glyphicon-arrow-right"></i>NEXT CLASS</h3>
+            <h4>class</h4>
           </div>
         </div>
       </div>
@@ -40,9 +38,9 @@
       <div class="row">
         <div class="col-xs-6 col-md-6 col-lg-4" ng-repeat="icon in icons">
           <div class="homeIcons">
-            <a href={{icon.state}}> 
+            <a href={{icon.state}}>
               <span class="{{icon.icon}} {{icon.name}}Color" aria-hidden="true"></span>
-              
+
             </a>
             <p>{{icon.name}}</p>
           </div>
@@ -52,7 +50,7 @@
     </div>
   </div>
 </section>
-
+{{vm.authentication.user.coursename}}
 <section ng-hide="vm.authentication.user">
- <h1>MUST BE LOGGED IN TO VIEW THE DASHBOARD</h1>
+  <h1>MUST BE LOGGED IN TO VIEW THE DASHBOARD</h1>
 </section>
