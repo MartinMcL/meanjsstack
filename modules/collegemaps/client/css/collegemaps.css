@@ -64,7 +64,7 @@ svg .blocks {
 	max-height: 500px;
 }
 
-.collegemapContainer {
+.Containers {
 	margin: 10px;
 	background-color: #F7F7F7;
 	border-radius: 5px;
@@ -186,6 +186,7 @@ ng-map {
 	font-family: 'Dosis', sans-serif;
 	color: #0394c9;
 	border-bottom: 3px solid lightgray;
+	margin-bottom: 20px;
 	
 }
 .headerText a{
