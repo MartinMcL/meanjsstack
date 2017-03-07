@@ -5,9 +5,9 @@
         <div class="row coralbg white">
           <div class="col-md-12 no-pad">
             <div class="user-pad">
-              <h3>Welcome back, {{vm.authentication.user.displayName}}</h3>
-              <h4 class="white"><i class="fa fa-check-circle-o"></i> course</h4>
-              <h4 class="white"><i class="fa fa-twitter"></i> Department</h4>
+              <h3>Welcome back, {{user.displayName}}</h3>
+              <h3 class="white text-primary"><i class="fa fa-check-circle-o"></i>Course Name</h3>
+              <h4 class="white"><i class="fa fa-check-circle-o"></i>{{user.coursename}}</h4>
               <a type="button" href="/settings/profile" class="btn btn-labeled btn-info" href="#">
                 <span class="btn-label"><i class="fa fa-pencil"></i></span>Profile</a>
             </div>
@@ -50,7 +50,6 @@
     </div>
   </div>
 </section>
-{{vm.authentication.user.coursename}}
 <section ng-hide="vm.authentication.user">
   <h1>MUST BE LOGGED IN TO VIEW THE DASHBOARD</h1>
 </section>

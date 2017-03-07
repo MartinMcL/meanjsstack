@@ -20,7 +20,6 @@
         vm.map = map;
         vm.map.setCenter(loc);
       });
-      
     };
 
 

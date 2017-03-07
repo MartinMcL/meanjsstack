@@ -13,7 +13,7 @@ var _ = require('lodash'),
   User = mongoose.model('User'),
   validator = require('validator');
 
-var whitelistedFields = ['firstName', 'lastName', 'email', 'username'];
+var whitelistedFields = ['firstName', 'lastName', 'email', 'username', 'coursename'];
 
 /**
  * Update user details
@@ -156,6 +156,7 @@ exports.me = function (req, res) {
       email: validator.escape(req.user.email),
       lastName: validator.escape(req.user.lastName),
       firstName: validator.escape(req.user.firstName),
+      coursename: validator.escape(req.user.coursename),
       additionalProvidersData: req.user.additionalProvidersData
     };
   }
