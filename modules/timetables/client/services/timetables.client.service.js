@@ -6,15 +6,16 @@
     .module('timetables')
     .factory('TimetablesService', TimetablesService);
 
-  TimetablesService.$inject = ['$resource'];
 
-  function TimetablesService($resource) {
-    return $resource('api/timetables/:timetableId', {
-      timetableId: '@_id'
-    }, {
-      update: {
-        method: 'PUT'
-      }
-    });
+  function TimetablesService($http) {
+    function getTimetable(user) {
+      return $http({
+        method: 'GET',
+        url: 'https://api.mlab.com/api/1/databases/bamsdevdb/collections/departments?q={"courses.courseName": "' + user.coursename + '"}&apiKey=kDXKvwOsOc2CEpsqYadOjacn36flg_yA'
+      });
+    }
+    return {
+      getTimetable: getTimetable
+    };
   }
 }());
