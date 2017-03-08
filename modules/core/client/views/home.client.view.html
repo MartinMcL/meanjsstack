@@ -18,7 +18,7 @@
         <div class="row overview">
           <div class="col-md-4 user-pad text-center">
             <h3><i class="glyphicon glyphicon-star-empty"></i>CURRENT CLASS</h3>
-            <h4>class</h4>
+            <h4>{{ currentClass }}</h4>
           </div>
           <div class="col-md-4 user-pad text-center">
             <h3><i class="wi wi-day-{{ weatherstatus | lowercase }}"></i>WEATHER</h3>
@@ -26,7 +26,7 @@
           </div>
           <div class="col-md-4 user-pad text-center">
             <h3><i class="glyphicon glyphicon-arrow-right"></i>NEXT CLASS</h3>
-            <h4>class</h4>
+            <h4>{{ nextClass }}</h4>
           </div>
         </div>
       </div>
