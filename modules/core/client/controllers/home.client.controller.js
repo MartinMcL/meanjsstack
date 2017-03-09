@@ -12,12 +12,8 @@
 
     getFactory.getWeather().then(function (response) {
       $scope.weather = response.data.main.temp;
-<<<<<<< HEAD
-      $scope.weatherstatus = response.data.weather[0].id;
-      
-=======
+     // $scope.weatherstatus = response.data.weather[0].id;
       $scope.weatherstatus = response.data.weather[0].main;
->>>>>>> 196115ddc765f1ac6d0ab7bbccec15aed265f7f0
     });
 
     vm.accountMenu = menuService.getMenu('account').items[0];
