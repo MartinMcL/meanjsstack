@@ -13,13 +13,15 @@
         <div>
           <h1>
             <span class="glyphicon glyphicon-arrow-up col-md-1 col-md-offset-1" ng-click="upArrow()" ></span>
-            <span class="glyphicon glyphicon-arrow-left col-md-1 col-md-offset-2" ng-click="prevArrow()"></span>
+            <span class="col-md-1 col-md-offset-2" ng-class="{'hidden' : !startOfWeek}"></span>
+            <span class="glyphicon glyphicon-arrow-left col-md-1 col-md-offset-2" ng-click="prevArrow()" ng-class="{'hidden' : startOfWeek}"></span>
             <span class="text-center text-primary col-md-6">{{ calendarTitle }}</span>
-            <span class="glyphicon glyphicon-arrow-right col-md-1" ng-click="nextArrow()"></span>
+            <span class="glyphicon glyphicon-arrow-right col-md-1" ng-click="nextArrow()" ng-class="{'hidden' : endOfWeek}"></span>
           </h1>
         </div>
       </div>
       <div class="row">
+        <h3 class="text-centre text-primary col-md-offset-4">{{ user.coursename }}</h3>
         <mwl-calendar view="calendarView" view-date="viewDate" events="calEvents" view-title="calendarTitle" on-event-click="eventClicked(calendarEvent)"
           on-view-change-click="viewClicked(calendarDate)"
           cell-is-open="true" day-view-event-width="500"

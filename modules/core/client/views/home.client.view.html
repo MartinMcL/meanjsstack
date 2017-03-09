@@ -5,9 +5,9 @@
         <div class="row coralbg white">
           <div class="col-md-12 no-pad">
             <div class="user-pad">
-              <h3>Welcome back, {{vm.authentication.user.displayName}}</h3>
-              <h4 class="white"><i class="fa fa-check-circle-o"></i> course</h4>
-              <h4 class="white"><i class="fa fa-twitter"></i> Department</h4>
+              <h3>Welcome back, {{user.displayName}}</h3>
+              <h3 class="white text-primary"><i class="fa fa-check-circle-o"></i>Course Name</h3>
+              <h4 class="white"><i class="fa fa-check-circle-o"></i>{{user.coursename}}</h4>
               <a type="button" href="/settings/profile" class="btn btn-labeled btn-info" href="#">
                 <span class="btn-label"><i class="fa fa-pencil"></i></span>Profile</a>
             </div>
@@ -18,7 +18,7 @@
         <div class="row overview">
           <div class="col-md-4 user-pad text-center">
             <h3><i class="glyphicon glyphicon-star-empty"></i>CURRENT CLASS</h3>
-            <h4>class</h4>
+            <h4>{{ currentClass }}</h4>
           </div>
           <div class="col-md-4 user-pad text-center">
             <h3><i class="wi wi-owm-{{weatherstatus}}"></i>WEATHER</h3>
@@ -26,7 +26,7 @@
           </div>
           <div class="col-md-4 user-pad text-center">
             <h3><i class="glyphicon glyphicon-arrow-right"></i>NEXT CLASS</h3>
-            <h4>class</h4>
+            <h4>{{ nextClass }}</h4>
           </div>
         </div>
       </div>
@@ -51,7 +51,10 @@
   </div>
   {{vm.authentication.user.coursename}}
 </section>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 196115ddc765f1ac6d0ab7bbccec15aed265f7f0
 <section ng-hide="vm.authentication.user">
   <h1>MUST BE LOGGED IN TO VIEW THE DASHBOARD</h1>
 </section>
