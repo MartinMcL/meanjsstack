@@ -51,7 +51,6 @@
         $scope.uTimetable.forEach(function (element) {
           if (count === 1) {
             element.monday.forEach(function (elements) {
-              console.log(count + elements);
               var timeClass = {
                 title: elements.subjectName + ' - ' + elements.roomNum, // The title of the event
                 startsAt: new Date(moment(moment().startOf('week')._d).year(), moment(moment().startOf('week')._d).month(), moment(moment().startOf('week')._d).date() + count, elements.startTime.split(':')[0]), // A javascript date object for when the event starts
@@ -66,7 +65,6 @@
             count++;
           } else if (count === 2) {
             element.tuesday.forEach(function (elements) {
-              console.log(count + elements);
               var timeClass = {
                 title: elements.subjectName + ' - ' + elements.roomNum, // The title of the event
                 startsAt: new Date(moment(moment().startOf('week')._d).year(), moment(moment().startOf('week')._d).month(), moment(moment().startOf('week')._d).date() + count, elements.startTime.split(':')[0]), // A javascript date object for when the event starts
@@ -81,7 +79,6 @@
             count++;
           } else if (count === 3) {
             element.wednesday.forEach(function (elements) {
-              console.log(count + elements);
               var timeClass = {
                 title: elements.subjectName + ' - ' + elements.roomNum, // The title of the event
                 startsAt: new Date(moment(moment().startOf('week')._d).year(), moment(moment().startOf('week')._d).month(), moment(moment().startOf('week')._d).date() + count, elements.startTime.split(':')[0]), // A javascript date object for when the event starts
@@ -96,7 +93,6 @@
             count++;
           } else if (count === 4) {
             element.thursday.forEach(function (elements) {
-              console.log(count + elements);
               var timeClass = {
                 title: elements.subjectName + ' - ' + elements.roomNum, // The title of the event
                 startsAt: new Date(moment(moment().startOf('week')._d).year(), moment(moment().startOf('week')._d).month(), moment(moment().startOf('week')._d).date() + count, elements.startTime.split(':')[0]), // A javascript date object for when the event starts
@@ -111,7 +107,6 @@
             count++;
           } else if (count === 5) {
             element.friday.forEach(function (elements) {
-              console.log(count + elements);
               var timeClass = {
                 title: elements.subjectName + ' - ' + elements.roomNum, // The title of the event
                 startsAt: new Date(moment(moment().startOf('week')._d).year(), moment(moment().startOf('week')._d).month(), moment(moment().startOf('week')._d).date() + count, elements.startTime.split(':')[0]), // A javascript date object for when the event starts
@@ -126,7 +121,6 @@
           }
         }, this);
       }
-      console.log($scope.calEvents); // get Date of the start of the week
     }
 
     $scope.tsClicked = function (calendarDate) { // Populate form with timespan that was clicked in month view
