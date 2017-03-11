@@ -30,7 +30,7 @@
       });
     function loadTimetableIntoScope() {
       // Get College Events and Convert to JavaScript Date Objects
-      if ($scope.user !== undefined) { // If a user is logged in, Retrieve their events and show
+      if ($scope.user !== null) { // If a user is logged in, Retrieve their events and show
         var userResult = TimetablesService.getTimetable($scope.user).then(function (responses) {
           $scope.uCourses = responses.data[0].courses;
           $scope.uCourses.forEach(function (element) {
@@ -41,7 +41,10 @@
             }
           }, this);
         });
+      } else {
+        location.href = "/authentication/signin";
       }
+      
     }
     function getCurrentClass(timetable) {
       var dow = moment().weekday();

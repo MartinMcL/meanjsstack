@@ -8,13 +8,19 @@
     }])
     .controller('CalendarsMainCtrl', CalendarsMainCtrl);
 
-  CalendarsMainCtrl.$inject = ['$scope', 'CalendarFactory', 'moment'];
+  CalendarsMainCtrl.$inject = ['$scope', '$http', 'CalendarFactory', 'moment'];
 
-  function CalendarsMainCtrl($scope, CalendarFactory) {
+  function CalendarsMainCtrl($scope, $http, CalendarFactory) {
     // Add information for the calendar to render
     $scope.calendarView = 'month';
     $scope.viewDate = moment();
     $scope.delActive = false;
+    $http.get('/api/users/me')
+      .then(function (result) {
+        $scope.user = result.data;
+        $scope.loadEventsIntoScope();
+        // Do whatever you need to do with the userId here.
+      });
     $scope.loadEventsIntoScope = function () {
       // Get College Events and Convert to JavaScript Date Objects
       var result = CalendarFactory.getEvents().then(function (response) {
@@ -23,10 +29,10 @@
           element.startsAt = new Date(element.startsAt);
           element.endsAt = new Date(element.endsAt);
         }, this);
-        if (user != null) { // If a user is logged in, Retrieve their events and show
-          var userResult = CalendarFactory.getUser(user.username).then(function (responses) {
-            $scope.user = responses.data[0];
-            $scope.uEvents = $scope.user.calendarEvents;
+        if ($scope.user !== null) { // If a user is logged in, Retrieve their events and show
+          var userResult = CalendarFactory.getUser($scope.user.username).then(function (responses) {
+            $scope.userData = responses.data[0];
+            $scope.uEvents = $scope.userData.calendarEvents;
             $scope.uEvents.forEach(function (element) {
               element.startsAt = new Date(element.startsAt);
               if (element.endsAt !== '') {
