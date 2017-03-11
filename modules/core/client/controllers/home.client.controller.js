@@ -82,7 +82,7 @@
     }
     function getNextClass(timetable) {
       var dow = moment().weekday();
-      $scope.difference = 0;
+      $scope.difference = 24;
       if (dow === 1) {
         timetable[dow - 1].monday.forEach(function (classInfo) {
           if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference)) {
