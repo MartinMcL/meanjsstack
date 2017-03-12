@@ -1,17 +1,13 @@
-<section id="overview-profile" class="col-xs-offset-1 col-xs-10 col-md-offset-4 col-md-4" >
+<section id="overview-profile" class="col-xs-offset-1 col-xs-10 col-md-12" >
   <h2>Account Overview</h2>
   <table>
     <tbody>
       <tr>
-        <th>Departement</th>
-        <td></td>
+        <th>Course:</th>
+	      <td ng-bind="vm.user.coursename"></td>
       </tr>
       <tr>
-        <th>Course</th>
-        <td></td>
-      </tr>
-      <tr>
-        <th>Email</th>
+        <th>Email:</th>
         <td ng-bind="vm.authentication.user.email"></td>
       </tr>
     </tbody>

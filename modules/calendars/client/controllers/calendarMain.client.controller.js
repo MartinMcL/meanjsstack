@@ -97,7 +97,7 @@
     };
 
     $scope.addEvent = function () {
-      if (user !== null) {
+      if ($scope.user !== null) {
 
         // Setting the end of the event to the start date, in case there is no end assigned i.e. starts + ends same day
         var endevent = new Date($scope.addEventForm.startsAtY, $scope.addEventForm.startsAtM - 1, $scope.addEventForm.startsAtD);
@@ -115,12 +115,12 @@
           }
         };
         if (newEvent.calendarTitle !== '' && $scope.addEventForm.startsAtD !== '' && $scope.addEventForm.startsAtM !== '' && $scope.addEventForm.startsAtY !== '') {
-          var result = CalendarFactory.addUserEvent(user.username, newEvent).then(function (response) {
+          var result = CalendarFactory.addUserEvent($scope.user.username, newEvent).then(function (response) {
             $scope.clearForm();
             $scope.loadEventsIntoScope(); // Refresh calendar's view of the scope.
           });
         } else {
-          alert('Event Must have a title and start date!');
+          alert('Event Must have a title and start date!'); // TODO: Remove alert?
         }
         // Run function to add to the user's document
       } else {
@@ -129,8 +129,7 @@
     };
     // Remove selected event
     $scope.remEvent = function () {
-      if (user !== null) {
-
+      if ($scope.user !== null) {
         var endevent = new Date($scope.addEventForm.startsAtY, $scope.addEventForm.startsAtM - 1, $scope.addEventForm.startsAtD);
         if (($scope.addEventForm.endsAtY + $scope.addEventForm.endsAtM + $scope.addEventForm.endsAtD).length > 0) {
           endevent = new Date($scope.addEventForm.endsAtY, $scope.addEventForm.endsAtM - 1, $scope.addEventForm.endsAtD);
@@ -144,7 +143,7 @@
             secondary: '#fdf1ba'
           }
         };
-        var results = CalendarFactory.remUserEvent(user.username, newEvent).then(function (response) {
+        var results = CalendarFactory.remUserEvent($scope.user.username, newEvent).then(function (response) {
           $scope.clearForm();
           $scope.loadEventsIntoScope();
         });

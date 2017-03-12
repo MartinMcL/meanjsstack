@@ -42,9 +42,8 @@
           }, this);
         });
       } else {
-        location.href = "/authentication/signin";
+        location.href = '/authentication/signin';
       }
-      
     }
     function getCurrentClass(timetable) {
       var dow = moment().weekday();
