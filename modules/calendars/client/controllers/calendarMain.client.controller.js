@@ -8,13 +8,19 @@
     }])
     .controller('CalendarsMainCtrl', CalendarsMainCtrl);
 
-  CalendarsMainCtrl.$inject = ['$scope', 'CalendarFactory', 'moment'];
+  CalendarsMainCtrl.$inject = ['$scope', '$http', 'CalendarFactory', 'moment'];
 
-  function CalendarsMainCtrl($scope, CalendarFactory) {
+  function CalendarsMainCtrl($scope, $http, CalendarFactory) {
     // Add information for the calendar to render
     $scope.calendarView = 'month';
     $scope.viewDate = moment();
     $scope.delActive = false;
+    $http.get('/api/users/me')
+      .then(function (result) {
+        $scope.user = result.data;
+        $scope.loadEventsIntoScope();
+        // Do whatever you need to do with the userId here.
+      });
     $scope.loadEventsIntoScope = function () {
       // Get College Events and Convert to JavaScript Date Objects
       var result = CalendarFactory.getEvents().then(function (response) {
@@ -23,10 +29,10 @@
           element.startsAt = new Date(element.startsAt);
           element.endsAt = new Date(element.endsAt);
         }, this);
-        if (user != null) { // If a user is logged in, Retrieve their events and show
-          var userResult = CalendarFactory.getUser(user.username).then(function (responses) {
-            $scope.user = responses.data[0];
-            $scope.uEvents = $scope.user.calendarEvents;
+        if ($scope.user !== null) { // If a user is logged in, Retrieve their events and show
+          var userResult = CalendarFactory.getUser($scope.user.username).then(function (responses) {
+            $scope.userData = responses.data[0];
+            $scope.uEvents = $scope.userData.calendarEvents;
             $scope.uEvents.forEach(function (element) {
               element.startsAt = new Date(element.startsAt);
               if (element.endsAt !== '') {
@@ -91,7 +97,7 @@
     };
 
     $scope.addEvent = function () {
-      if (user !== null) {
+      if ($scope.user !== null) {
 
         // Setting the end of the event to the start date, in case there is no end assigned i.e. starts + ends same day
         var endevent = new Date($scope.addEventForm.startsAtY, $scope.addEventForm.startsAtM - 1, $scope.addEventForm.startsAtD);
@@ -109,12 +115,12 @@
           }
         };
         if (newEvent.calendarTitle !== '' && $scope.addEventForm.startsAtD !== '' && $scope.addEventForm.startsAtM !== '' && $scope.addEventForm.startsAtY !== '') {
-          var result = CalendarFactory.addUserEvent(user.username, newEvent).then(function (response) {
+          var result = CalendarFactory.addUserEvent($scope.user.username, newEvent).then(function (response) {
             $scope.clearForm();
             $scope.loadEventsIntoScope(); // Refresh calendar's view of the scope.
           });
         } else {
-          alert('Event Must have a title and start date!');
+          alert('Event Must have a title and start date!'); // TODO: Remove alert?
         }
         // Run function to add to the user's document
       } else {
@@ -123,8 +129,7 @@
     };
     // Remove selected event
     $scope.remEvent = function () {
-      if (user !== null) {
-
+      if ($scope.user !== null) {
         var endevent = new Date($scope.addEventForm.startsAtY, $scope.addEventForm.startsAtM - 1, $scope.addEventForm.startsAtD);
         if (($scope.addEventForm.endsAtY + $scope.addEventForm.endsAtM + $scope.addEventForm.endsAtD).length > 0) {
           endevent = new Date($scope.addEventForm.endsAtY, $scope.addEventForm.endsAtM - 1, $scope.addEventForm.endsAtD);
@@ -138,7 +143,7 @@
             secondary: '#fdf1ba'
           }
         };
-        var results = CalendarFactory.remUserEvent(user.username, newEvent).then(function (response) {
+        var results = CalendarFactory.remUserEvent($scope.user.username, newEvent).then(function (response) {
           $scope.clearForm();
           $scope.loadEventsIntoScope();
         });

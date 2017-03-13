@@ -14,11 +14,9 @@
   //     scope: true,
   //     templateUrl: 'modules/collegemaps/client/img/map.svg',
   //     link: function (scope, element, attrs) {
-           
-            
   //         element.on('click', function() {
   //           console.log("Top " + element.parent()[0].scrollTop,"Left " + element.parent()[0].scrollLeft)
-  //         }); 
+  //         });
   //       var blocks = element[0].querySelectorAll('.blocks');
   //       angular.forEach(blocks, function (path, key) {
   //         var blockElement = angular.element(path);
@@ -60,14 +58,14 @@
   .module('collegemaps')
   .directive('look', look);
   look.$inject = ['$compile'];
-  function look($compile){
-    return{
+  function look($compile) {
+    return {
       restrict: 'A',
       scope: true,
       templateUrl: 'modules/collegemaps/client/views/blocksTable.client.view.html',
-      link: function (scope,element,attrs) {
+      link: function (scope, element, attrs) {
         var map = angular.element(document.getElementById(attrs.handleId));
-        scope.gotoBlock = function(x){
+        scope.gotoBlock = function(x) {
           map[0].scrollTop = x.mapPosition.top;
           map[0].scrollLeft = x.mapPosition.left;
         };

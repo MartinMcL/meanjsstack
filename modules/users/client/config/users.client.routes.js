@@ -27,7 +27,7 @@
         controller: 'OverviewController',
         controllerAs: 'vm',
         data: {
-           pageTitle: 'Overview'
+          pageTitle: 'Overview'
         }
       })
       .state('settings.profile', {
