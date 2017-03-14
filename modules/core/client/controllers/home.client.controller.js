@@ -87,35 +87,35 @@
       $scope.difference = 24;
       if (dow === 1) {
         timetable[dow - 1].monday.forEach(function (classInfo) {
-          if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference)) {
+          if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference && $scope.currentClass !== classInfo.subjectName + ' - ' + classInfo.roomNum)) {
             $scope.nextClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
             $scope.difference = (classInfo.startTime.split(':')[0] - moment().hour());
           }
         });
       } else if (dow === 2) {
         timetable[dow - 1].tuesday.forEach(function (classInfo) {
-          if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference)) {
+          if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference && $scope.currentClass !== classInfo.subjectName + ' - ' + classInfo.roomNum)) {
             $scope.nextClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
             $scope.difference = (classInfo.startTime.split(':')[0] - moment().hour());
           }
         });
       } else if (dow === 3) {
         timetable[dow - 1].wednesday.forEach(function (classInfo) {
-          if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference)) {
+          if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference && $scope.currentClass !== classInfo.subjectName + ' - ' + classInfo.roomNum)) {
             $scope.nextClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
             $scope.difference = (classInfo.startTime.split(':')[0] - moment().hour());
           }
         });
       } else if (dow === 4) {
         timetable[dow - 1].thursday.forEach(function (classInfo) {
-          if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference)) {
+          if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference && $scope.currentClass !== classInfo.subjectName + ' - ' + classInfo.roomNum)) {
             $scope.nextClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
             $scope.difference = (classInfo.startTime.split(':')[0] - moment().hour());
           }
         });
       } else if (dow === 5) {
         timetable[dow - 1].friday.forEach(function (classInfo) {
-          if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference)) {
+          if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference && $scope.currentClass !== classInfo.subjectName + ' - ' + classInfo.roomNum)) {
             $scope.nextClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
             $scope.difference = (classInfo.startTime.split(':')[0] - moment().hour());
           }
