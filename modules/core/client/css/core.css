@@ -192,10 +192,15 @@ body {
 	width: 100%;
 	border-bottom: 4px solid #4fcefc;
 }
+.weather{
+
+}
 .studentHubCont{
 	float: right;
 	margin-right: 10px;
+
 }
+
 .studentHub{
 	display: inline;
 	font-size: 50px;
