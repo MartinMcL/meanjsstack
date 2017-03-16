@@ -30,7 +30,7 @@ module.exports = {
         'public/lib/angular-drag-scroll/src/ng-drag-scroll.js',
         '//maps.googleapis.com/maps/api/js?key=AIzaSyDcIDTKSppZ28KwSTjIW92Q9Ojmw7lodqM',
         'public/lib/ngmap/build/scripts/ng-map.min.js',
-        'node_modules/jsrsasign/lib/jsrsasign.js'
+        'node-modules/handlebars/dist/handlebars.js'
 
 
         // endbower

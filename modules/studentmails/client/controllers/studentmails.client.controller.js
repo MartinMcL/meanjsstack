@@ -6,9 +6,9 @@
     .module('studentmails')
     .controller('StudentmailsController', StudentmailsController);
 
-  StudentmailsController.$inject = ['$scope', '$state', '$window', 'Authentication'];
+  StudentmailsController.$inject = ['$scope', '$state', '$window', 'Authentication', 'Handlebars'];
 
-  function StudentmailsController ($scope, $state, $window, Authentication, studentmail) {
+  function StudentmailsController ($scope, $state, $window, Authentication, Handlebars) {
     
 
 
@@ -19,24 +19,24 @@
   var appId = '8a6e0620-094a-4268-8f3f-567d9c851c2b';
   var scopes = 'openid profile https://outlook.office.com/mail.read';
 
-  // Check for browser support for sessionStorage
-  if (typeof(Storage) === 'undefined') {
-    render('#unsupportedbrowser');
-    return;
-  }
+  // // Check for browser support for sessionStorage
+  // if (typeof(Storage) === 'undefined') {
+  //   render('#unsupportedbrowser');
+  //   return;
+  // }
 
   // Check for browser support for crypto.getRandomValues
-  var cryptObj = window.crypto || window.msCrypto; // For IE11
-  if (cryptObj === undefined || cryptObj.getRandomValues === 'undefined') {
-    render('#unsupportedbrowser');
-    return;
-  }
+  // var cryptObj = window.crypto || window.msCrypto; // For IE11
+  // if (cryptObj === undefined || cryptObj.getRandomValues === 'undefined') {
+  //   render('#unsupportedbrowser');
+  //   return;
+  // }
 
-  render(window.location.hash);
-//?????????
-  $(window).on('hashchange', function() {
-    render(window.location.hash);
-  });
+//   render(window.location.hash);
+// //?????????
+//   $(window).on('hashchange', function() {
+//     render(window.location.hash);
+//   });
 
   $scope.render = function(hash) {
 
