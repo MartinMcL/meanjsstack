@@ -36,10 +36,7 @@
           }
         });
         if (index !== -1) {
-          console.log(userObject.userToDos[index]);
           userObject.userToDos.splice(index, 1); // Remove 1 event at the index of the matched event
-        } else {
-          console.log('no such element');
         }
         return $http({
           method: 'PUT',
