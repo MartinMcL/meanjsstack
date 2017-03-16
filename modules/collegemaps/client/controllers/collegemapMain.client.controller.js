@@ -7,6 +7,7 @@
 
   CollegeMapMainCtrl.$inject = ['$scope', 'dataFactory', 'NgMap'];
 
+
   function CollegeMapMainCtrl($scope, dataFactory, NgMap) {
     var vm = this;
     dataFactory.getBlocks().then(function (response) {

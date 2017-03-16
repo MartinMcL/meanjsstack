@@ -1,3 +1,4 @@
+<!--<<<<<<< HEAD
 <div class="Containers">
       <div class="headerText">
         <a href="/" type="button" class="btn btn-lg btn-default">
@@ -11,10 +12,19 @@
       <div class="sideCal col-md-3" ng-hide="!vm.authentication.user">
         <h1 class="text-primary">Add an event</h1>
         <div class="form-group">
+=======
+<div class="container" ng-init="loadEventsIntoScope()">
+  <div class="row">
+    <div class="sideCal col-md-3" ng-hide="!vm.authentication.user">
+      <h1 class="text-primary">Add an event</h1>
+      <div class="row">
+        <div class="form-group col-md-10 col-xs-12 col-md-offset-1 col-xs-offset-0">
+>>>>>>> 3aae81e1a755049496518d86ae3a7bb875dbd742
           <label for>
         Event Title
-        <input type="text" class="form-control col-md-9" ng-model="addEventForm.calTitle" id='calTitle'/>  
+        <input type="text" class="form-control" ng-model="addEventForm.calTitle" id='calTitle'/>  
         </label>
+<<<<<<< HEAD
         </div>
         <div class="row">
           <div class="form-group col-md-6">
@@ -33,10 +43,58 @@
           </div>
         </div>
         <div class="form-group">
+=======
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-6 col-xs-6">
+          <label class="text-primary">Start Date</label>
+          <br />
+          <label>Day</label><input type="number" class="form-control" ng-model="addEventForm.startsAtD"></input>
+          <label>Month</label><input type="number" class="form-control" ng-model="addEventForm.startsAtM"></input>
+          <label>Year</label><input type="number" class="form-control" ng-model="addEventForm.startsAtY"></input>
+        </div>
+        <div class="form-group col-md-6 col-xs-6">
+          <label class="text-primary">End Date</label>
+          <br />
+          <label>Day</label><input type="number" class="form-control" ng-model="addEventForm.endsAtD"></input>
+          <label>Month</label><input type="number" class="form-control" ng-model="addEventForm.endsAtM"></input>
+          <label>Year</label><input type="number" class="form-control" ng-model="addEventForm.endsAtY"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-10 col-xs-12 col-md-offset-1 col-xs-offset-0">
+>>>>>>> 3aae81e1a755049496518d86ae3a7bb875dbd742
           <label for>
         Colour
-        <input type="text" class="form-control col-md-9" ng-model="addEventForm.colour" id='calColour'/>  
+        <input type="text" class="form-control" ng-model="addEventForm.colour" id='calColour'/>  
         </label>
+<<<<<<< HEAD
+=======
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-xs-6">
+          <input type="submit" class="btn button btn-success col-md-9 col-xs-8 col-xs-offset-9" ng-click="addEvent()" Value="Add" />
+        </div>
+        <div class="col-md-6 col-xs-6">
+          <button class="btn button btn-danger col-md-9 col-xs-8 col-xs-offset-2" ng-class="{'hidden' : !delActive}" ng-click="remEvent()">Delete</button>
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
+    </div>
+    <div class="mainCal col-md-offset-1 container" ng-class="{'col-md-9' : !vm.authentication.user, 'col-md-6' : vm.authentication.user}">
+      <div class="row">
+        <div>
+          <h1>
+            <span class="glyphicon glyphicon-arrow-up col-md-1 col-xs-1" ng-click="upArrow()"></span>
+            <span class="glyphicon glyphicon-arrow-left col-md-1 col-md-offset-2 col-xs-1 col-xs-offset-1" ng-click="prevArrow()"></span>
+            <span class="text-center text-primary col-md-6 col-xs-5 col-xs-offset-1">{{ calendarTitle }}</span>
+            <span class="glyphicon glyphicon-arrow-right col-md-1 col-xs-1" ng-click="nextArrow()"></span>
+          </h1>
+>>>>>>> 3aae81e1a755049496518d86ae3a7bb875dbd742
         </div>
         <div class="col-md-6">
           <input type="submit" class="btn button btn-success col-md-9" ng-click="addEvent()" Value="Add" />
@@ -48,6 +106,7 @@
         <br />
         <br />
       </div>
+<<<<<<< HEAD
       <div class="mainCal col-md-offset-1 container" ng-class="{'col-md-9' : !vm.authentication.user, 'col-md-6' : vm.authentication.user}">
         <div class="row">
           <div>
@@ -63,9 +122,15 @@
           <mwl-calendar view="calendarView" view-date="viewDate" events="events" view-title="calendarTitle" on-event-click="eventClicked(calendarEvent)"
             on-event-times-changed="calendarEvent.startsAt = calendarNewEventStart; calendarEvent.endsAt = calendarNewEventEnd"
             cell-is-open="true" on-timespan-click="tsClicked(calendarDate)">
+=======
+      <div class="row">
+        <mwl-calendar view="calendarView" view-date="viewDate" events="events" view-title="calendarTitle" on-event-click="eventClicked(calendarEvent)"
+          on-event-times-changed="calendarEvent.startsAt = calendarNewEventStart; calendarEvent.endsAt = calendarNewEventEnd"
+          cell-is-open="true" on-timespan-click="tsClicked(calendarDate)">
+>>>>>>> 3aae81e1a755049496518d86ae3a7bb875dbd742
           </mwl-calendar>
         </div>
       </div>
     </div>
   </div>
-</div>
+</div>-->
