@@ -9,10 +9,25 @@
 
   function HomeController($scope, $http, Authentication, menuService, getFactory, TimetablesService) {
     var vm = this;
-
+    // var twitteruser = "itsligo";
+    // var consumerkey = "GUEFMD0fROzVFgrj0B3pMMvIS";
+    // var consumersecret = "GHDzEPNho35tF3y9vZrkhxRYgolZUhVQbVMxLNqDWfYu3EVZmr";
+    // var accesstoken = "839975953090674688-AGsMIj8Bm1rgdoH1dNDqmpllp4sHytx";
+    // var accesssecret = "	4K0P02MH6pqo0Si5mDULiDTth0sbGZR0cPSGpH1YY04fN";
+    // var myToken = '';
+    // $twitterApi.configure(consumerkey, consumersecret, accesssecret);
+    // $twitterApi.getHomeTimeline({count: 5}).then(function(data) {
+    //   console.log(data);
+    // }, function(error) {
+    //   console.log('err: ' + error);
+    // });
+    // $cordovaOauth.twitter(consumerkey, consumersecret).then(function(succ){
+    //   myToken = succ;
+    //   window.local
+    // })
     getFactory.getWeather().then(function (response) {
       $scope.weather = response.data.main.temp;
-     // $scope.weatherstatus = response.data.weather[0].id;
+      // $scope.weatherstatus = response.data.weather[0].id;
       $scope.weatherstatus = response.data.weather[0].id;
     });
 
@@ -28,6 +43,7 @@
         $scope.user = result.data;
         loadTimetableIntoScope();
       });
+
     function loadTimetableIntoScope() {
       // Get College Events and Convert to JavaScript Date Objects
       if ($scope.user !== null) { // If a user is logged in, Retrieve their events and show
@@ -45,6 +61,7 @@
         location.href = '/authentication/signin';
       }
     }
+
     function getCurrentClass(timetable) {
       var dow = moment().weekday();
       if (dow === 1) {
@@ -82,6 +99,7 @@
         $scope.currentClass = 'No classes right now!';
       }
     }
+
     function getNextClass(timetable) {
       var dow = moment().weekday();
       $scope.difference = 24;
@@ -126,43 +144,43 @@
       }
     }
     $scope.icons = [{
-      name: 'Timetable',
-      icon: 'glyphicon glyphicon-th',
-      url: '/modules/core/client/img/icons/TimeTable.svg',
-      state: '/timetables'
-    },
-    {
-      name: 'Emails',
-      icon: 'glyphicon glyphicon-envelope',
-      url: '/modules/core/client/img/icons/email.svg',
-      state: '/emails'
-    },
-    {
-      name: 'Calendar',
-      icon: 'glyphicon glyphicon-calendar',
-      url: '/modules/core/client/img/icons/calendar.svg',
-      state: '/calendars'
-    },
-    {
-      name: 'Map',
-      icon: 'glyphicon glyphicon-map-marker',
-      url: '/modules/core/client/img/icons/MapIcon.svg',
-      state: '/collegemaps'
-    },
-    {
-      name: 'Contacts',
-      icon: 'glyphicon glyphicon-earphone',
-      url: '/modules/core/client/img/icons/contact.svg',
-      state: '/contacts'
-    },
+        name: 'Timetable',
+        icon: 'glyphicon glyphicon-th',
+        url: '/modules/core/client/img/icons/TimeTable.svg',
+        state: '/timetables'
+      },
+      {
+        name: 'Emails',
+        icon: 'glyphicon glyphicon-envelope',
+        url: '/modules/core/client/img/icons/email.svg',
+        state: '/emails'
+      },
+      {
+        name: 'Calendar',
+        icon: 'glyphicon glyphicon-calendar',
+        url: '/modules/core/client/img/icons/calendar.svg',
+        state: '/calendars'
+      },
+      {
+        name: 'Map',
+        icon: 'glyphicon glyphicon-map-marker',
+        url: '/modules/core/client/img/icons/MapIcon.svg',
+        state: '/collegemaps'
+      },
+      {
+        name: 'Contacts',
+        icon: 'glyphicon glyphicon-earphone',
+        url: '/modules/core/client/img/icons/contact.svg',
+        state: '/contacts'
+      },
 
 
-    {
-      name: 'Services',
-      icon: 'glyphicon glyphicon-th-list',
-      url: '/modules/core/client/img/icons/services.svg',
-      state: '/services'
-    }
+      {
+        name: 'Services',
+        icon: 'glyphicon glyphicon-th-list',
+        url: '/modules/core/client/img/icons/services.svg',
+        state: '/services'
+      }
 
     ];
   }
