@@ -16,10 +16,10 @@
     });
 
     $scope.logo = {
-        icon: 'Student Hub',
-        url: '/modules/core/client/img/brand/proj300-logo.png',
-        state: '/'
-      };
+      icon: 'Student Hub',
+      url: '/modules/core/client/img/brand/proj300-logo.png',
+      state: '/'
+    };
 
     vm.accountMenu = menuService.getMenu('account').items[0];
     vm.authentication = Authentication;
