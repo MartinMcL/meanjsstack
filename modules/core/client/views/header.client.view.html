@@ -1,8 +1,24 @@
 <div class="allHeaders">
-  <div class="studentHubCont">
-    <p id="student" class="studentHub">Student</p>
-    <p id="hub" class="studentHub">Hub</p>
+  <div class="row">
+    <div class="col-xs-3"></div>
+    <div class="col-xs-3">
+        <div class="weather">
+    <h4><i class="wi wi-owm-{{weatherstatus}}"></i> {{weather}} C</h4>
+    <div class="h4"><i class="glyphicon glyphicon-calendar"></i> {{date | date:'yyyy-MM-dd'}}</div>
+    
   </div>
+    </div>
+    <div class="col-xs-6">
+      <div class="studentHubCont">
+        <!--<p id="student" class="studentHub">Student</p>
+        <p id="hub" class="studentHub">Hub</p>-->
+        <a href="{{logo.state}}"><img class="headerLogo img-responsive" ng-src="{{logo.url}}"></a>
+
+      </div>
+    </div>
+  </div>
+
+
 </div>
 <div class="headerline1">
 
