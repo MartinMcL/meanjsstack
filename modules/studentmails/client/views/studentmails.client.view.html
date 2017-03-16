@@ -1,50 +1,59 @@
-<div class="container main-container">
-  <div id="signin-prompt" class="jumbotron page">
+<div class="Containers">
+  <div class="headerText">
+    <a href="/" type="button" class="btn btn-lg btn-default">
+      <span class="glyphicon glyphicon-triangle-left"></span>&nbsp; Back
+    </a>
+    <h2>Email</h2>
+  </div>
+  <div class="container main-container">
+    <div id="signin-prompt" class="jumbotron page">
       <a class="btn btn-lg btn-primary" role="button" ng-click="buildAuthUrl()">Sign in to Outlook</a>
       <br />
 
-  <div id="" class="">
-    <ul class="">
-      <li id='inbox-nav'><a href="#inbox">Inbox</a></li>
-      <a href="#signout">Sign out</a>
-    </ul>
+      <div id="" class="">
+        <ul class="">
+          <li id='inbox-nav'><a href="#inbox">Inbox</a></li>
+          <a href="#signout">Sign out</a>
+        </ul>
+      </div>
+
+      <!-- logged in user welcome -->
+      <div id="logged-in-welcome">
+        <p>Welcome <span id="username"></span></p>
+      </div>
+    </div>
+
+    <!-- inbox display -->
+    <div id="inbox" class="page panel panel-default">
+      <div class="panel-heading">
+        <h1 class="panel-title">Inbox</h1>
+        <p>Sign in to see your emails</p>
+      </div>
+      <div id="inbox-status" class="panel-body">
+      </div>
+      <div class="list-group" id="message-list">
+      </div>
+    </div>
+
+  </div>
+  <!-- Handlebars template for message list -->
+  <script id="msg-list-template" type="text/x-handlebars-template">
+    {{#each messages}}
+    <div class="list-group-item">
+      <h3 id="msg-from" class="list-group-item-">{{this.From.EmailAddress.Name}}</h3>
+      <h4 id="msg-subject" class="list-group-item-heading">{{this.Subject}}</h4>
+      <p id="msg-received" class="list-group-item-heading text-muted"><em>Received: {{formatDate this.ReceivedDateTime}}</em></p>
+      <p id="msg-preview" class="list-group-item-text text-muted"><em>{{this.BodyPreview}}</em></p>
+    </div>
+    {{/each}}
+  </script>
 </div>
 
-  <!-- logged in user welcome -->
-  <div id="logged-in-welcome" >
-<p>Welcome <span id="username"></span></p>
-</div>
-</div>
-
-  <!-- inbox display -->
-  <div id="inbox" class="page panel panel-default">
-    <div class="panel-heading">
-      <h1 class="panel-title">Inbox</h1>
-      <p>Sign in to see your emails</p>
-    </div>
-    <div id="inbox-status" class="panel-body">
-    </div>
-    <div class="list-group" id="message-list">
-    </div>
-  </div>
-
-  </div>
-<!-- Handlebars template for message list -->
-<script id="msg-list-template" type="text/x-handlebars-template">
-  {{#each messages}}
-  <div class="list-group-item">
-    <h3 id="msg-from" class="list-group-item-">{{this.From.EmailAddress.Name}}</h3>
-    <h4 id="msg-subject" class="list-group-item-heading">{{this.Subject}}</h4>
-    <p id="msg-received" class="list-group-item-heading text-muted"><em>Received: {{formatDate this.ReceivedDateTime}}</em></p>
-    <p id="msg-preview" class="list-group-item-text text-muted"><em>{{this.BodyPreview}}</em></p>
-  </div>
-  {{/each}}
-</script>
 
 
 
-  <!-- token display -->
-  <!-- <div id="token-display" class="page panel panel-default">
+<!-- token display -->
+<!-- <div id="token-display" class="page panel panel-default">
 <div class="panel-body">
   <h4>Access Token:</h4>
   <pre><code id="token"></code></pre>
@@ -56,7 +65,7 @@
 </div> -->
 
 
-  <!-- unsupported browser message
+<!-- unsupported browser message
   <div id="unsupported" class="jumbotron page">
 <h1>Oops....</h1>
 <p>This page requires browser support for <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">session storage</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/RandomSource/getRandomValues"><code>crypto.getRandomValues</code></a>. Unfortunately, your browser does not support one or both features. Please visit this page using a different browser.</p>
