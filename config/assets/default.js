@@ -32,6 +32,7 @@ module.exports = {
         'public/lib/ngmap/build/scripts/ng-map.min.js',
         'node_modules/jsrsasign/lib/jsrsasign.js'
 
+
         // endbower
         // Jquery
       ],
