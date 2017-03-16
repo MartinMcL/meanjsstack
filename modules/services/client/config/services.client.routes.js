@@ -13,7 +13,7 @@
         abstract: true,
         url: '/services',
         templateUrl: 'modules/services/client/views/services.client.view.html',
-        controller: 'TodoCtrl'
+        controller: 'servicesMain'
       })
       .state('services.list', {
         url: '',
