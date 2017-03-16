@@ -78,6 +78,14 @@
           ignoreState: true,
           pageTitle: 'Contact Info'
         }
+      })
+      .state('about', {
+        url: '/about',
+        templateUrl: '/modules/core/client/views/aboutus.client.view.html',
+        data: {
+          ignoreState: true,
+          pageTitle: 'About Us'
+        }
       });
   }
 }());

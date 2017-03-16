@@ -285,10 +285,40 @@ body {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
+.borderAboutus{
+	border: solid 1px #38B0DE;
+}
+.aboutusInfo{
+	background-color: 	#efefef;
+}
+.aboutusInfo p{
+	text-align: center;
+	color: black;
+}
 
+.aboutusInfo h{
+	text-align: center;
+}
+#itsligologo{
+	width:100%;
+	height:auto;
+	max-height: 125px;
+	max-width:375px;
+	margin-top: 25px;
+	margin-left:auto;
+	margin-right: auto;
+}
+#studenthublogo{
+	width:100%;
+	height:auto;
+	margin: 0 auto;
+	width: 150px;
+	height: 150px;
+	margin-left: 110px;
+	
+}
 #footer{
 	
-	height: 350px;
 	background-color: #F7F7F7;
 	border-top: white solid 1px;
 }
