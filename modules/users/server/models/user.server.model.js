@@ -137,6 +137,10 @@ var UserSchema = new Schema({
       primary: String,
       secondary: String
     }
+  }],
+  userToDos: [{
+    text: String,
+    done: Boolean
   }]
 });
 
