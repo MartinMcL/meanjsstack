@@ -128,39 +128,32 @@
     $scope.icons = [{
       name: 'Timetable',
       icon: 'glyphicon glyphicon-th',
-      url: '/modules/core/client/img/icons/TimeTable.svg',
       state: '/timetables'
     },
     {
       name: 'Emails',
       icon: 'glyphicon glyphicon-envelope',
-      url: '/modules/core/client/img/icons/email.svg',
-      state: '/emails'
+      state: '/studentmails'
     },
     {
       name: 'Calendar',
       icon: 'glyphicon glyphicon-calendar',
-      url: '/modules/core/client/img/icons/calendar.svg',
       state: '/calendars'
     },
     {
       name: 'Map',
       icon: 'glyphicon glyphicon-map-marker',
-      url: '/modules/core/client/img/icons/MapIcon.svg',
       state: '/collegemaps'
     },
     {
       name: 'Contacts',
-      icon: 'glyphicon glyphicon-earphone',
-      url: '/modules/core/client/img/icons/contact.svg',
+      icon: 'glyphicon glyphicon-phone',
       state: '/contacts'
     },
-
 
     {
       name: 'Services',
       icon: 'glyphicon glyphicon-th-list',
-      url: '/modules/core/client/img/icons/services.svg',
       state: '/services'
     }
 

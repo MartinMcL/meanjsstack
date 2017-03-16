@@ -1,0 +1,102 @@
+<div class="container">
+<div class="wrapper">
+  <form class="form-inline">
+    <h3>Add New Contact</h3>
+  <label class="sr-only" for="inlineFormInput">Name</label>
+  <input type="text" class="form-control" id="name inlineFormInput" placeholder="Jane Doe" ng-model="addContactForm.name">
+
+  <label class="sr-only" for="inlineFormInput">Email</label>
+  <input type="text" class="form-control" id="email inlineFormInput" placeholder="janedoe@email.com" ng-model="addContactForm.email">
+
+  <label class="sr-only" for="inlineFormInput">Number</label>
+  <input type="text" class="form-control" id="number inlineFormInput" placeholder="0870123456" ng-model="addContactForm.number">
+
+  <button type="submit" class="btn" ng-click="addContact()">Add Contact</button>
+</form>
+
+
+<label view="contacts"></label>
+<h3>Display contacts here</h3>
+
+  <div class="panel-group" id="accordion">
+
+    <div class="panel panel-default" ng-repeat="contact in contacts">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse">{{contact.department}}</a>
+        </h4>
+      </div>
+      <div id="collapse" class="panel-collapse collapse in" >
+        <div class="panel-body">
+                        <div>
+                            <p>Name: {{contact.name}}</p>
+                            <p>Title: {{contact.jobTitle}}</p>
+                        </div>
+                        <div class="comment-text">
+                            Email: {{contact.email}}
+                        </div>
+                        <div class="comment-text">
+                            Number: {{contact.phoneNumber}}
+                        </div>
+                        <div class="action">
+
+                        </div>
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+</div>
+</div>
+
+
+
+
+
+    <!--<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Collapsible Group 2</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>-->
+
+
+
+
+<!--<div class="col-sm-8 panelBody " drag-scroll="true">
+    <div class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="contact in contacts">
+                <div class="row">
+                    <div class="col-xs-2 col-md-1">
+                        <img src="http://placehold.it/80" class="img-circle img-responsive" alt="" /></div>
+                    <div class="col-xs-10 col-md-11">
+                        <div>
+                          Department: {{contact.department}}
+                        </div>
+                        <div>
+                            <p>Name: {{contact.name}}</p>
+                            <p>Title: {{contact.jobTitle}}</p>
+                        </div>
+                        <div class="comment-text">
+                            Email: {{contact.email}}
+                        </div>
+                        <div class="comment-text">
+                            Number: {{contact.phoneNumber}}
+                        </div>
+                        <div class="action">
+
+                        </div>
+                    </div>
+                </div>
+                </li>
+        </ul>
+    </div>
+</div>-->
