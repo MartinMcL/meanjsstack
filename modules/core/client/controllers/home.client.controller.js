@@ -105,35 +105,35 @@
       $scope.difference = 24;
       if (dow === 1) {
         timetable[dow - 1].monday.forEach(function (classInfo) {
-          if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference)) {
+          if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference && $scope.currentClass !== classInfo.subjectName + ' - ' + classInfo.roomNum)) {
             $scope.nextClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
             $scope.difference = (classInfo.startTime.split(':')[0] - moment().hour());
           }
         });
       } else if (dow === 2) {
         timetable[dow - 1].tuesday.forEach(function (classInfo) {
-          if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference)) {
+          if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference && $scope.currentClass !== classInfo.subjectName + ' - ' + classInfo.roomNum)) {
             $scope.nextClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
             $scope.difference = (classInfo.startTime.split(':')[0] - moment().hour());
           }
         });
       } else if (dow === 3) {
         timetable[dow - 1].wednesday.forEach(function (classInfo) {
-          if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference)) {
+          if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference && $scope.currentClass !== classInfo.subjectName + ' - ' + classInfo.roomNum)) {
             $scope.nextClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
             $scope.difference = (classInfo.startTime.split(':')[0] - moment().hour());
           }
         });
       } else if (dow === 4) {
         timetable[dow - 1].thursday.forEach(function (classInfo) {
-          if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference)) {
+          if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference && $scope.currentClass !== classInfo.subjectName + ' - ' + classInfo.roomNum)) {
             $scope.nextClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
             $scope.difference = (classInfo.startTime.split(':')[0] - moment().hour());
           }
         });
       } else if (dow === 5) {
         timetable[dow - 1].friday.forEach(function (classInfo) {
-          if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference)) {
+          if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference && $scope.currentClass !== classInfo.subjectName + ' - ' + classInfo.roomNum)) {
             $scope.nextClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
             $scope.difference = (classInfo.startTime.split(':')[0] - moment().hour());
           }
@@ -144,44 +144,36 @@
       }
     }
     $scope.icons = [{
-        name: 'Timetable',
-        icon: 'glyphicon glyphicon-th',
-        url: '/modules/core/client/img/icons/TimeTable.svg',
-        state: '/timetables'
-      },
-      {
-        name: 'Emails',
-        icon: 'glyphicon glyphicon-envelope',
-        url: '/modules/core/client/img/icons/email.svg',
-        state: '/emails'
-      },
-      {
-        name: 'Calendar',
-        icon: 'glyphicon glyphicon-calendar',
-        url: '/modules/core/client/img/icons/calendar.svg',
-        state: '/calendars'
-      },
-      {
-        name: 'Map',
-        icon: 'glyphicon glyphicon-map-marker',
-        url: '/modules/core/client/img/icons/MapIcon.svg',
-        state: '/collegemaps'
-      },
-      {
-        name: 'Contacts',
-        icon: 'glyphicon glyphicon-earphone',
-        url: '/modules/core/client/img/icons/contact.svg',
-        state: '/contacts'
-      },
+      name: 'Timetable',
+      icon: 'glyphicon glyphicon-th',
+      state: '/timetables'
+    },
+    {
+      name: 'Emails',
+      icon: 'glyphicon glyphicon-envelope',
+      state: '/studentmails'
+    },
+    {
+      name: 'Calendar',
+      icon: 'glyphicon glyphicon-calendar',
+      state: '/calendars'
+    },
+    {
+      name: 'Map',
+      icon: 'glyphicon glyphicon-map-marker',
+      state: '/collegemaps'
+    },
+    {
+      name: 'Contacts',
+      icon: 'glyphicon glyphicon-phone',
+      state: '/contacts'
+    },
 
-
-      {
-        name: 'Services',
-        icon: 'glyphicon glyphicon-th-list',
-        url: '/modules/core/client/img/icons/services.svg',
-        state: '/services'
-      }
-
+    {
+      name: 'Services',
+      icon: 'glyphicon glyphicon-th-list',
+      state: '/services'
+    }
     ];
   }
 }());

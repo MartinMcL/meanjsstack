@@ -9,7 +9,7 @@
   </div>
   <div ng-show="vm.authentication.user">
     <div class="headerUserInfo">
-      <img ng-src="/{{vm.authentication.user.profileImageURL}}" alt="{{vm.authentication.user.displayName}}" />
+      <img class="profileImg" ng-src="/{{vm.authentication.user.profileImageURL}}" alt="{{vm.authentication.user.displayName}}" />
       <p ng-bind="vm.authentication.user.displayName"></p>
       <a href="/api/auth/signout" target="_self">Signout</a>
     </div>
