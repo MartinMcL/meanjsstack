@@ -20,55 +20,17 @@
       <button type="submit" class="btn" ng-click="addContact()">Add Contact</button>
     </form>
 
-    <div class="panel-group" id="accordion">
+    <uib-accordion>
+      <div ng-repeat="department in contacts" uib-accordion-group class="panel-default" heading="{{ department.department }}" is-open="status.isFirstOpen"
+        is-disabled="status.isFirstDisabled">
 
-      <div class="panel panel-default" ng-repeat="department in contacts">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapse">{{department.department}}</a>
-          </h4>
-        </div>
-        <div id="collapse" class="panel-collapse collapse in" ng-repeat="contact in department.contacts">
-          <div class="panel-body">
-            <div>
-              <p><strong>Name:</strong> {{contact.name}}</p>
-              <p><strong>Title:</strong> {{contact.jobTitle}}</p>
-            </div>
-            <div class="comment-text">
-              <strong>Email:</strong> {{contact.email}}
-            </div>
-            <div class="comment-text">
-              <strong>Number:</strong> {{contact.phoneNumber}}
-            </div>
-            <div class="action">
-
-            </div>
+        <div ng-repeat="contact in department.contacts">
+          <div class="tables">
+            <p><strong>Name:</strong> {{contact.name}}</p>
+            <p><strong>Title:</strong> {{contact.jobTitle}}</p>
+            </p><strong>Email:</strong> {{contact.email}}</p>
+            <p><strong>Number:</strong> {{contact.phoneNumber}} </p>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse">Your Contacts</a>
-      </h4>
-    </div>
-    <div id="collapse" class="panel-collapse collapse in" ng-repeat="contact in userContacts">
-      <div class="panel-body">
-        <div>
-          <p><strong>Name:</strong> {{contact.name}}</p>
-        </div>
-        <div class="comment-text">
-          <strong>Email:</strong> {{contact.email}}
-        </div>
-        <div class="comment-text">
-          <strong>Number:</strong> {{contact.phoneNumber}}
-        </div>
-        <div class="action">
-
-        </div>
-      </div>
-    </div>
+    </uib-accordion>
   </div>
 </div>
