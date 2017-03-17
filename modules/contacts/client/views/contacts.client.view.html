@@ -26,13 +26,13 @@
 
     <div class="panel-group" id="accordion">
 
-      <div class="panel panel-default" ng-repeat="contact in contacts">
+      <div class="panel panel-default" ng-repeat="department in contacts">
         <div class="panel-heading">
           <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapse">{{contact.department}}</a>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse">{{department.department}}</a>
           </h4>
         </div>
-        <div id="collapse" class="panel-collapse collapse in">
+        <div id="collapse" class="panel-collapse collapse in" ng-repeat="contact in department.contacts">
           <div class="panel-body">
             <div>
               <p>Name: {{contact.name}}</p>
