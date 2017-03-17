@@ -6,20 +6,6 @@
     <h2>Contacts</h2>
   </div>
   <div class="wrapper">
-    <form class="form-inline" ng-hide="!vm.authentication.user">
-      <h3>Add New Contact</h3>
-      <label class="sr-only" for="inlineFormInput">Name</label>
-      <input type="text" class="form-control" id="name inlineFormInput" placeholder="Jane Doe" ng-model="addContactForm.name">
-
-      <label class="sr-only" for="inlineFormInput">Email</label>
-      <input type="text" class="form-control" id="email inlineFormInput" placeholder="janedoe@email.com" ng-model="addContactForm.email">
-
-      <label class="sr-only" for="inlineFormInput">Number</label>
-      <input type="text" class="form-control" id="number inlineFormInput" placeholder="0870123456" ng-model="addContactForm.number">
-
-      <button type="submit" class="btn" ng-click="addContact()">Add Contact</button>
-    </form>
-
     <uib-accordion>
       <div ng-repeat="department in contacts" uib-accordion-group class="panel-default" heading="{{ department.department }}" is-open="status.isFirstOpen"
         is-disabled="status.isFirstDisabled">
