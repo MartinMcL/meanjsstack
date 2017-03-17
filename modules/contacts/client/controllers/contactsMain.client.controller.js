@@ -8,6 +8,9 @@
   ContactsMainCtrl.$inject = ['$scope', '$http', 'contactsFactory'];
 
   function ContactsMainCtrl($scope, $http, contactsFactory) {
+    $scope.collapselel = function(e) {
+      console.log(e);
+    };
     $scope.loadContactsIntoScope = function () {
       contactsFactory.getContacts().then(function (response) {
         $scope.contacts = response.data;
