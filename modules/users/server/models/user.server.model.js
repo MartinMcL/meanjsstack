@@ -141,6 +141,11 @@ var UserSchema = new Schema({
   userToDos: [{
     text: String,
     done: Boolean
+  }],
+  userContacts: [{
+    name: String,
+    email: String,
+    phoneNumber: String
   }]
 });
 

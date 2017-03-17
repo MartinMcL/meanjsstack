@@ -33,8 +33,9 @@
     }
 
     // If user is signed in then redirect back home
-    // if (vm.authentication.user) {
-    // }
+    if (vm.authentication.user) {
+      location.href = '/';
+    }
 
     function signup(isValid) {
 
