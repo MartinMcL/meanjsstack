@@ -1,26 +1,37 @@
 <section>
-  <div class="page-header">
-    <h1>Settings</h1>
-  </div>
-  <div class="row">
-    <nav class="col-sm-3 col-md-3">
-      <ul class="nav nav-pills nav-stacked">
-        <li ui-sref-active="active">
-          <a ui-sref="settings.profile">Edit Profile</a>
-        </li>
-        <li ui-sref-active="active">
-          <a ui-sref="settings.picture">Change Profile Picture</a>
-        </li>
-        <li ui-sref-active="active" ng-show="vm.user.provider === 'local'">
-          <a ui-sref="settings.password">Change Password</a>
-        </li>
-        <li ui-sref-active="active">
-          <a ui-sref="settings.accounts">Manage Social Accounts</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="col-sm-9 col-md-8 settings-view">
-      <div ui-view></div>
+  <div class="row profile">
+    <div class="col-md-3">
+      <div class="profile-sidebar">
+        <div class="profile-userpic">
+          <img ng-src="/{{vm.authentication.user.profileImageURL}}" alt="{{vm.authentication.user.displayName}}" class="img-responsive" />
+        </div>
+        <div class="profile-usertitle">
+          <div class="profile-usertitle-name">
+            <p ng-bind="vm.authentication.user.displayName"></p>
+          </div>
+        </div>
+        <div class="profile-usermenu">
+          <ul class="nav">
+            <li ui-sref-active="active">
+              <a ui-sref="settings.overview">
+                <i class="glyphicon glyphicon-home"></i> Overview </a>
+            </li>
+            <li ui-sref-active="active">
+              <a ui-sref="settings.profile">
+                <i class="glyphicon glyphicon-user"></i> Edit Profile </a>
+            </li>
+            <li ui-sref-active="active">
+              <a ui-sref="settings.password">
+                <i class="glyphicon glyphicon-asterisk"></i> Change Password </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="profile-content">
+        <div ui-view></div>
+      </div>
     </div>
   </div>
 </section>

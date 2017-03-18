@@ -12,9 +12,9 @@
       .state('timetables', {
         abstract: true,
         url: '/timetables',
-        templateUrl: 'modules/timetables/client/views/test.client.view.html',
-        controller: 'testController',
-        directive: 'myTimetable',
+        templateUrl: 'modules/timetables/client/views/timetable.client.view.html',
+        controller: 'TimetablesController',
+        directive: 'timetable',
         data: {
           pageTitle: 'Timetable'
         }

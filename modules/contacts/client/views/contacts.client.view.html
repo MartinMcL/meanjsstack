@@ -1,0 +1,21 @@
+<div class="Containers" ng-init="loadContactsIntoScope()">
+  <div class="headerText">
+    <a href="/" type="button" class="btn btn-lg btn-default">
+      <span class="glyphicon glyphicon-triangle-left"></span>&nbsp; Back
+    </a>
+    <h2>Contacts</h2>
+  </div>
+  <div class="wrapper">
+    <uib-accordion>
+      <div ng-repeat="department in contacts" uib-accordion-group class="panel-default" heading="{{ department.department }}" is-open="status.isFirstOpen"
+        is-disabled="status.isFirstDisabled">
+
+        <div ng-repeat="contact in department.contacts">
+          <div class="tables">
+            <p><strong>Name:</strong> {{contact.name}}</p>
+            <p><strong>Title:</strong> {{contact.jobTitle}}</p>
+            <p><strong>Number:</strong> {{contact.phoneNumber}} </p>
+          </div>
+    </uib-accordion>
+  </div>
+</div>

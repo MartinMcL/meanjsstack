@@ -1,45 +1,51 @@
-<div class="wrappers" id="currInfo">
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="row">
-        <div class="col-xs-12">
-          <h3>Welcome Back <strong>{{vm.authentication.user.displayName}}</strong></h3>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="row">
-        <div class="col-xs-6">
-          <p><i class="glyphicon glyphicon-star-empty"></i>Current Class</p>
-        </div>
-        <div class="col-xs-6">
-          <p><i class="glyphicon glyphicon-arrow-right"></i>Next class</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-6">
-          <p><i class="wi wi-day-{{ weatherstatus | lowercase }}"></i>{{weather}} C </p>
-          
-        </div>
-        <div class="col-xs-6">
-          <p><i class="glyphicon glyphicon-calendar"></i> {{date | date:'dd/mm/yyyy'}}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="iconContainer">
-  <div class="wrapper">
+<section ng-show="vm.authentication.user">
+  <div class="wrappers" id="currInfo">
     <div class="row">
-      <div class="col-xs-6 col-md-6 col-lg-4" ng-repeat="icon in icons">
-        <div class="homeIcons">
-          <a href={{icon.state}}><div class="div" ng-include="icon.url">
-          </div></a>
-          <p>{{icon.icon}}</p>
+      <div class="col-sm-4">
+        <div class="row coralbg white">
+          <div class="col-md-12 no-pad">
+            <div class="user-pad">
+              <h3>{{user.displayName}}</h3>
+              <h4 class="white"><i class="fa fa-check-circle-o"></i>{{user.coursename}}</h4>
+              <a type="button" href="/settings/profile" class="btn btn-labeled btn-info" href="#">
+                <span class="btn-label"><i class="fa fa-pencil"></i></span>Profile</a>
+            </div>
+          </div>
         </div>
       </div>
-      <ui-view></ui-view>
+      <div class="col-sm-8">
+        <div class="row overview">
+          <div class="col-md-6 user-pad text-center">
+            <h3><i class="glyphicon glyphicon-star-empty"></i>CURRENT CLASS</h3>
+            <h4>{{ currentClass }}</h4>
+          </div>
+          <div class="col-md-6 user-pad text-center">
+            <h3><i class="glyphicon glyphicon-arrow-right"></i>NEXT CLASS</h3>
+            <h4>{{ nextClass }}</h4>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+  <div class="iconContainer">
+    <div class="wrapper">
+      <div class="row">
+        <div class="col-xs-6 col-md-6 col-lg-4" ng-repeat="icon in icons">
+          <div class="homeIcons">
+            <a href={{icon.state}}>
+              <span class="{{icon.icon}} {{icon.name}}Color" aria-hidden="true"></span>
+            </a>
+            <p>{{icon.name}}</p>
+          </div>
+        </div>
+        <ui-view></ui-view>
+      </div>
+    </div>
+  </div>
+</section>
+<section ng-hide="vm.authentication.user">
+  <div class="row text-center">
+    <h3 class="text-primary">You must be signed in to view this page.</h3>
+    <h2 class="text-warning">Redirecting...</h5>
+  </div>
+</section>

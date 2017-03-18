@@ -1,13 +1,15 @@
 <div id="sidebar-wrapper">
   <div ng-hide="vm.authentication.user">
     <div class="loginStuff">
-        <a href="/authentication/signin" class="loginButton"><span class="glyphicon glyphicon-user"></span> Log In
+      <a href="/authentication/signin" class="loginButton"><span class="glyphicon glyphicon-user"></span> Log In
+        </a>
+      <a href="/authentication/signup" class="loginButton"><span class="glyphicon glyphicon-pencil"></span> Sign up
         </a>
     </div>
   </div>
   <div ng-show="vm.authentication.user">
     <div class="headerUserInfo">
-      <img ng-src="/{{vm.authentication.user.profileImageURL}}" alt="{{vm.authentication.user.displayName}}" />
+      <img class="profileImg" ng-src="/{{vm.authentication.user.profileImageURL}}" alt="{{vm.authentication.user.displayName}}" />
       <p ng-bind="vm.authentication.user.displayName"></p>
       <a href="/api/auth/signout" target="_self">Signout</a>
     </div>
@@ -15,9 +17,6 @@
   <ul class="sidebar-nav">
     <li>
       <a href="/" id="homeLink">Home</a>
-    </li>
-    <li>
-      <a href="/contact" id="contactsLink">Contact</a>
     </li>
   </ul>
 </div>

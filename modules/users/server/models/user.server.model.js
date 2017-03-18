@@ -90,10 +90,10 @@ var UserSchema = new Schema({
     type: String,
     default: ''
   },
-  // courseName: { // TODO: Needs to be implemented in the signup
-  //   type: String,
-  //   required: 'Please choose a course'
-  // },
+  coursename: {
+    type: String,
+    required: 'Please choose a course'
+  },
   salt: {
     type: String
   },
@@ -137,6 +137,15 @@ var UserSchema = new Schema({
       primary: String,
       secondary: String
     }
+  }],
+  userToDos: [{
+    text: String,
+    done: Boolean
+  }],
+  userContacts: [{
+    name: String,
+    email: String,
+    phoneNumber: String
   }]
 });
 

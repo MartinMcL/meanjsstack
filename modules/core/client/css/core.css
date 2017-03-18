@@ -1,9 +1,9 @@
 body {
 	overflow-x: hidden;
-	background-color: #026f97;
+	background-color: #026990;
 	margin: 0px;
 }
-.btn{
+.btns{
 	margin: 10px;
 	position: absolute;
 }
@@ -82,7 +82,7 @@ body {
 .sidebar-nav li a:hover {
 	text-decoration: none;
 	color: #fff;
-	background: rgba(255, 255, 255, 0.2);
+	background: rgba(160, 154, 154, 0.2);
 }
 
 .sidebar-nav li a:active,
@@ -104,50 +104,35 @@ body {
 	color: #fff;
 	background: none;
 }
+.profileImg{
+	border-radius: 100px;
+}
 
 
 /* Color Changes Sidebar */
 
-#homeLink:hover,
-#homeLink:active,
-#homeLink:focus {
-	background-color: #FBB735;
-	color: white;
+.CalendarColor:hover{
+	color: #FBB735;
 }
 
-#calendarLink:hover,
-#calendarLink:active,
-#calendarLink:focus {
-	background-color: #E98931;
-	color: white;
+.ContactsColor:hover {
+	color: #E98931;
 }
 
-#emailLink:hover,
-#emailLink:active,
-#emailLink:focus {
-	background-color: #EB403B;
-	color: white;
+.EmailsColor:hover{
+	color: #EB403B;
 }
 
-#timetableLink:hover,
-#timetableLink:active,
-#timetableLink:focus {
-	background-color: #A52A32;
-	color: white;
+.MapColor:hover {
+	color: #A52A32;
 }
 
-#mapLink:hover,
-#mapLink:active,
-#mapLink:focus {
-	background-color: #6C2A6A;
-	color: white;
+.ServicesColor:hover {
+	color: #6C2A6A;
 }
 
-#servicesLink:hover,
-#servicesLink:active,
-#servicesLink:focus {
-	background-color: #5C4399;
-	color: white;
+.TimetableColor:hover {
+	color: #5C4399;
 }
 
 #contactsLink:hover,
@@ -167,13 +152,18 @@ body {
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
+	border-radius: 5px;
 }
 #menu-toggle span{
 	color: white;
 	background-color: none;
 	font-size: 50px;
 	vertical-align: middle;
+	padding: 5px;
 
+}
+#menu-toggle:focus {
+	outline: 0;
 }
 
 #menu-toggle.toggled {
@@ -191,7 +181,7 @@ body {
 	padding: 0px;
 	border-bottom: 2px solid #e6f8ff;
 
-	
+
 }
 .headerline1{
 	width: 100%;
@@ -205,11 +195,17 @@ body {
 	width: 100%;
 	border-bottom: 4px solid #4fcefc;
 }
+
 .studentHubCont{
 	float: right;
 	margin-right: 10px;
+
 }
-.studentHub{
+.headerLogo{
+	width:150px;
+	height:150px;
+}
+/*.studentHub{
 	display: inline;
 	font-size: 50px;
 }
@@ -219,7 +215,7 @@ body {
 #hub{
 	font-family: 'Indie Flower', cursive;
 	font-weight: bold;
-}
+}*/
 .headerUserInfo{
 	text-align: center;
 	width: 100%;
@@ -230,27 +226,46 @@ body {
 }
 .iconContainer{
 	padding: 10px;
+
 }
 .homeIcons{
 	text-align: center;
+	padding: 20px;
+	border-radius: 15px;
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
-.homeIcons .div svg{
-	height: 100px;
+.homeIcons a{
+	height: 150px;
+	width: 150px;
+}
+.homeIcons p{
+	font-size: 2em;
+	font-family: 'Dosis', sans-serif;
+
+}
+.homeIcons span{
+	color: #0394c9;
+	font-size: 80px;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
-	margin-top: 25px;
-	margin-bottom: 25px;
-	fill: red;
+	text-decoration: none;
+	margin: 0px;
+	padding: 0px;
+
 }
 
+.homeIcons a:hover{
+	text-decoration: none;
+}
 .wrapper{
-	background-color: #F7F7F7;
+	background-color: #f7f7f7;
 	border: 2px solid white;
 	border-radius: 5px;
 }
 .wrappers{
-	background-color: #F7F7F7;
+	background-color: #f7f7f7;
 	padding: 10px;
 	margin-left: 10px;
 	margin-right: 10px;
@@ -277,14 +292,90 @@ body {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
- /* Custom, iPhone Retina */ 
+.borderAboutus{
+	border: solid 1px #38B0DE;
+}
+.aboutusInfo{
+	background-color: 	#efefef;
+}
+.aboutusInfo p{
+	text-align: center;
+	color: black;
+}
+
+.aboutusInfo h{
+	text-align: center;
+}
+#itsligologo{
+	width:100%;
+	height:auto;
+	max-height: 125px;
+	max-width:375px;
+	margin-top: 25px;
+	margin-left:auto;
+	margin-right: auto;
+}
+#studenthublogo{
+	width:100%;
+	height:auto;
+	margin: 0 auto;
+	width: 150px;
+	height: 150px;
+	margin-left: 110px;
+	
+}
+#footer{	
+	height: 350px;
+	background-color: #f7f7f7;
+	border-top: white solid 1px;
+}
+.footerList h3{
+	text-align: center;
+}
+.footerList{
+	text-align: left;
+	background-color: #e6e6e6;
+	border-radius: 5px;
+	margin-left: 15%;
+	margin-right: 25%;
+}
+.footerList li  {
+	list-style-type: none;
+
+}
+.footerList li a{
+	text-decoration: none;
+	color: #000;
+}
+.footerList li a:hover{
+	color: #38B0DE;
+}
+.footerList li p:hover{
+	color: #38B0DE;
+}
+#footerClose{
+	text-align: center;
+}
+
+.marginFot{
+	margin-bottom: 250px;
+}
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+}
+.tables{
+	padding: 5px;
+	border-bottom: 1px solid black;
+}
+ /* Custom, iPhone Retina */
     @media only screen and (min-width : 320px) {
         .wrappers h3{
 			font-size: 1em;
 		}
     }
 
-    /* Extra Small Devices, Phones */ 
+    /* Extra Small Devices, Phones */
     @media only screen and (min-width : 480px) {
 		.wrappers h3{
 			font-size: 1em;
@@ -314,5 +405,3 @@ body {
 			margin-right: 20%;
 		}
     }
-
-

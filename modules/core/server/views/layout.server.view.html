@@ -43,12 +43,18 @@
 
   </section>
   <section class="container1">
-    <button ng-click="showDiv = !showDiv" class="btn" ng-class="{toggled : showDiv}" id="menu-toggle">
+    <button ng-click="showDiv = !showDiv" class="btns" ng-class="{toggled : showDiv}" id="menu-toggle">
       <span class="glyphicon glyphicon-menu-hamburger"></span>
     </button>
     <section class="layoutChanges">
       <header ng-include="'/modules/core/client/views/header.client.view.html'"></header>
-          {{{block "content"}}}
+
+          <div class="marginFot">
+              {{{block "content"}}}
+          </div>
+          
+
+          <footer ng-include="'/modules/core/client/views/footer.client.view.html'"></footer>
     </section>
 
   </section>
@@ -89,7 +95,6 @@
   {{/if}}
 
   <!-- Maps -->
-  <script src="http://maps.google.com/maps/api/js?key=AIzaSyBeavW6z4lYFYVs76v5L-v958YaXLTVHvI"></script>
 </body>
 
 </html>

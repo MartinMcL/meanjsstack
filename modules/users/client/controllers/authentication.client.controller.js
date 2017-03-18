@@ -1,3 +1,4 @@
+// debugger;
 (function () {
   'use strict';
 
@@ -16,15 +17,25 @@
     vm.signin = signin;
     vm.callOauthProvider = callOauthProvider;
     vm.usernameRegex = /^[sS][0-9]{8}$/;
-
+    vm.courses = [
+        { name: 'Computing in Software Development Year 1' }, { name: 'Computing in Software Development Year 2' },
+        { name: 'Computing in Software Development Year 3' }, { name: 'Civil Engineering Year 1' }, { name: 'Civil Engineering Year 2' },
+        { name: 'Civil Engineering Year 3' }, { name: 'Architectural Design Year 1' },
+        { name: 'Architectural Design Year 2' }, { name: 'Architectural Design Year 3' }, { name: 'Early Child Care & Education Year 1' }, { name: 'Early Child Care & Education Year 2' },
+        { name: 'Early Child Care & Education Year 3' }, { name: 'Social Care Practice Year 1' },
+        { name: 'Social Care Practice Year 2' }, { name: 'Social Care Practice Year 3' }, { name: 'Health Science & Psychology Year 1' }, { name: 'Health Science & Psychology Year 2' },
+        { name: 'Health Science & Psychology Year 3' }, { name: 'Biomedical Science Year 1' },
+        { name: 'Biomedical Science Year 2' }, { name: 'Biomedical Science Year 3' }
+    ];
     // Get an eventual error defined in the URL query string:
     if ($location.search().err) {
       Notification.error({ message: $location.search().err });
     }
 
     // If user is signed in then redirect back home
-    // if (vm.authentication.user) {
-    // }
+    if (vm.authentication.user) {
+      location.href = '/';
+    }
 
     function signup(isValid) {
 

@@ -3,92 +3,96 @@
             "blockId": "a",
             "description": "Library/Central Administration",
             "mapPosition": {
-                "lat": "348",
-                "long": "1037"
+                "lat": "54.2784418",
+                "long": "-8.4597685"
             }
         },
         {
             "blockId": "b",
             "description": "MacMunn 1970 Building & Canteen",
             "mapPosition": {
-                "lat": "448",
-                "long": "1191"
+                "lat": "54.2781045",
+                "long": "-8.458387"
             }
         },
         {
             "blockId": "c",
             "description": "Language & Marketing Centre",
             "mapPosition": {
-                "lat": "348",
-                "long": "1244"
+                "lat": "54.2784743",
+                "long": "-8.457928"
             }
         },
         {
             "blockId": "d",
             "description": "Business & Social Sciences",
             "mapPosition": {
-                "lat": "248",
-                "long": "1324"
+                "lat": "54.2786437",
+                "long": "-8.457676"
             }
         },
         {
             "blockId": "e",
             "description": "Technological Engineering & Computing Facility",
             "mapPosition": {
-                "lat": "242",
-                "long": "943"
+                "lat": "54.278861",
+                "long": "-8.4604854"
             }
         },
         {
             "blockId": "f",
             "description": "Technology Centre",
             "mapPosition": {
-                "lat": "242",
-                "long": "843"
+                "lat": "54.2790852",
+                "long": "-8.4614432"
             }
         },
         {
             "blockId": "g",
             "description": "Innovation Centre",
             "mapPosition": {
-                "lat": "242",
-                "long": "769"
+                "lat": "54.2787266",
+                "long": "-8.4618327"
             }
         },
         {
             "blockId": "h",
             "description": "Student Services Centre",
             "mapPosition": {
-                "lat": "348",
-                "long": "984"
+                "lat": "54.2780487",
+                "long": "-8.4603446"
             }
         },
         {
             "blockId": "j",
             "description": "Old BIC",
             "mapPosition": {
-                "lat": "448",
-                "long": "1084"
+                "lat": "54.2779488",
+                "long": "-8.4594798"
             }
         },
         {
             "blockId": "k",
-            "description": "Fine Art & Creative Design"
+            "description": "Fine Art & Creative Design",
+            "mapPosition": {
+                "lat": "54.2809742",
+                "long": "-8.4585753"
+            }
         },
         {
             "blockId": "l",
             "description": "Fine Art & Creative Design",
             "mapPosition": {
-                "lat": "142",
-                "long": "328"
+                "lat": "54.2807274",
+                "long": "-8.4564365"
             }
         },
         {
             "blockId": "m",
             "description": "Applied Technology",
             "mapPosition": {
-                "lat": "231",
-                "long": "756"
+                "lat": "54.2793351",
+                "long": "-8.4621091"
             }
         },
         {
