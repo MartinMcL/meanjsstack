@@ -45,6 +45,7 @@
       });
     };
     $scope.calendarTitle = 'Student Calendar';
+
     $scope.addEventForm = {
       'calTitle': '',
       'startsAtD': '',
@@ -85,7 +86,7 @@
     };
     $scope.tsClicked = function (calendarDate) { // Populate form with timespan that was clicked in month view
       if ($scope.calendarView === 'month') {
-        $scope.addEventForm.calTitle = null;
+        $scope.addEventForm.calTitle = '';
         $scope.addEventForm.startsAtD = calendarDate.getDate();
         $scope.addEventForm.startsAtM = calendarDate.getMonth() + 1;
         $scope.addEventForm.startsAtY = calendarDate.getFullYear();
