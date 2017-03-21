@@ -29,6 +29,7 @@
 
     $scope.addTodo = function () {
       if (event.keyCode === 13 && $scope.todoText && $scope.user !== null) {
+        $scope.todos.push({text:$scope.todoText, done:false});
         var newTodo = { text: $scope.todoText, done: false };
         ServicesFactory.addUserTodo($scope.user.username, newTodo).then(function (response) {
           $scope.todoText = '';
@@ -88,18 +89,18 @@
     $scope.icons = [
       {
         name: 'Printing',
-        icon: 'glyphicon glyphicon-print',
+        icon: 'glyphicon glyphicon-print printicon',
         state: 'http://pcounter.itsligo.ie/'
       },
       {
 
         name: 'Virtual Computer',
-        icon: 'glyphicon glyphicon-cloud',
+        icon: 'glyphicon glyphicon-cloud computericon',
         state: 'https://vdesktop.itsligo.ie/'
       },
       {
         name: 'Equipment Booking',
-        icon: 'glyphicon glyphicon-book',
+        icon: 'glyphicon glyphicon-book bookingicon',
         state: 'https://edtechbookings.itsligo.ie/cire/signIn.aspx'
       }
     ];
