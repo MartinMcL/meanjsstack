@@ -163,6 +163,9 @@ body {
 @media(min-width:768px) {
 
 }
+.marker{
+	text-transform: uppercase;
+}
 
 #menu-toggle {
 	background-color: #026990;
@@ -398,9 +401,10 @@ body {
 	
 }
 #footer{	
-	height: 350px;
+	height: auto;
 	background-color: #f7f7f7;
 	border-top: white solid 1px;
+	margin-bottom: 0px;
 }
 .footerList h3{
 	text-align: center;
@@ -428,6 +432,7 @@ body {
 }
 #footerClose{
 	text-align: center;
+	color: white;
 }
 
 .marginFot{
