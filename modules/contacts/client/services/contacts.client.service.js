@@ -12,33 +12,29 @@
         url: 'https://api.mlab.com/api/1/databases/bamsdevdb/collections/contacts?apiKey=kDXKvwOsOc2CEpsqYadOjacn36flg_yA'
       });
     }
+    function getUser(user) {
+      return $http({
+        method: 'GET',
+        url: 'https://api.mlab.com/api/1/databases/bamsdevdb/collections/users?q={"username":"' + user + '"}&apiKey=kDXKvwOsOc2CEpsqYadOjacn36flg_yA&'
+      });
+    }
+    function addUserContact(user, contact) {
+      var newData = getUser(user).then(function (response) {
+        var userObj = response.data[0];
+        userObj.userContacts.push(contact); // Add new event to the list in user object
+        return $http({
+          method: 'PUT',
+          url: 'https://api.mlab.com/api/1/databases/bamsdevdb/collections/users?q={"username":"' + user + '"}&apiKey=kDXKvwOsOc2CEpsqYadOjacn36flg_yA&',
+          ContentType: 'application/json',
+          data: JSON.stringify({ '$set': { 'userContacts': userObj.userContacts } }) // Send new calendarEvents to DB
+        });
+      });
+      return newData;
+    }
     return {
-      getContacts: getContacts
+      getContacts: getContacts,
+      getUser: getUser,
+      addUserContact: addUserContact
     };
   }
 }());
-
-
-
-
-// /*// Contacts service used to communicate Contacts REST endpoints
-// (function () {
-//   'use strict';
-
-//   angular
-//     .module('contacts')
-//     .factory('ContactsService', ContactsService);
-
-//   ContactsService.$inject = ['$resource'];
-
-//   function ContactsService($resource) {
-//     return $resource('api/contacts/:contactId', {
-//       contactId: '@_id'
-//     }, {
-//       update: {
-//         method: 'PUT'
-//       }
-//     });
-//   }
-// }());
-// */

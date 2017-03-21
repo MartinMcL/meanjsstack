@@ -64,36 +64,39 @@
 
     function getCurrentClass(timetable) {
       var dow = moment().weekday();
-      if (dow === 1) {
-        timetable[dow - 1].monday.forEach(function (classInfo) {
-          if (classInfo.startTime.split(':')[0] <= moment().hour() && classInfo.endTime.split(':')[0] > moment().hour()) {
-            $scope.currentClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
-          }
-        });
-      } else if (dow === 2) {
-        timetable[dow - 1].tuesday.forEach(function (classInfo) {
-          if (classInfo.startTime.split(':')[0] <= moment().hour() && classInfo.endTime.split(':')[0] > moment().hour()) {
-            $scope.currentClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
-          }
-        });
-      } else if (dow === 3) {
-        timetable[dow - 1].wednesday.forEach(function (classInfo) {
-          if (classInfo.startTime.split(':')[0] <= moment().hour() && classInfo.endTime.split(':')[0] > moment().hour()) {
-            $scope.currentClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
-          }
-        });
-      } else if (dow === 4) {
-        timetable[dow - 1].thursday.forEach(function (classInfo) {
-          if (classInfo.startTime.split(':')[0] <= moment().hour() && classInfo.endTime.split(':')[0] > moment().hour()) {
-            $scope.currentClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
-          }
-        });
-      } else if (dow === 5) {
-        timetable[dow - 1].friday.forEach(function (classInfo) {
-          if (classInfo.startTime.split(':')[0] <= moment().hour() && classInfo.endTime.split(':')[0] > moment().hour()) {
-            $scope.currentClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
-          }
-        });
+      if (timetable[dow - 1] !== undefined) {
+        if (dow === 1) {
+
+          timetable[dow - 1].monday.forEach(function (classInfo) {
+            if (classInfo.startTime.split(':')[0] <= moment().hour() && classInfo.endTime.split(':')[0] > moment().hour()) {
+              $scope.currentClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
+            }
+          });
+        } else if (dow === 2) {
+          timetable[dow - 1].tuesday.forEach(function (classInfo) {
+            if (classInfo.startTime.split(':')[0] <= moment().hour() && classInfo.endTime.split(':')[0] > moment().hour()) {
+              $scope.currentClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
+            }
+          });
+        } else if (dow === 3) {
+          timetable[dow - 1].wednesday.forEach(function (classInfo) {
+            if (classInfo.startTime.split(':')[0] <= moment().hour() && classInfo.endTime.split(':')[0] > moment().hour()) {
+              $scope.currentClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
+            }
+          });
+        } else if (dow === 4) {
+          timetable[dow - 1].thursday.forEach(function (classInfo) {
+            if (classInfo.startTime.split(':')[0] <= moment().hour() && classInfo.endTime.split(':')[0] > moment().hour()) {
+              $scope.currentClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
+            }
+          });
+        } else if (dow === 5) {
+          timetable[dow - 1].friday.forEach(function (classInfo) {
+            if (classInfo.startTime.split(':')[0] <= moment().hour() && classInfo.endTime.split(':')[0] > moment().hour()) {
+              $scope.currentClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
+            }
+          });
+        }
       }
       if ($scope.currentClass === undefined) {
         $scope.currentClass = 'No classes right now!';
@@ -103,41 +106,43 @@
     function getNextClass(timetable) {
       var dow = moment().weekday();
       $scope.difference = 24;
-      if (dow === 1) {
-        timetable[dow - 1].monday.forEach(function (classInfo) {
-          if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference && $scope.currentClass !== classInfo.subjectName + ' - ' + classInfo.roomNum)) {
-            $scope.nextClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
-            $scope.difference = (classInfo.startTime.split(':')[0] - moment().hour());
-          }
-        });
-      } else if (dow === 2) {
-        timetable[dow - 1].tuesday.forEach(function (classInfo) {
-          if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference && $scope.currentClass !== classInfo.subjectName + ' - ' + classInfo.roomNum)) {
-            $scope.nextClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
-            $scope.difference = (classInfo.startTime.split(':')[0] - moment().hour());
-          }
-        });
-      } else if (dow === 3) {
-        timetable[dow - 1].wednesday.forEach(function (classInfo) {
-          if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference && $scope.currentClass !== classInfo.subjectName + ' - ' + classInfo.roomNum)) {
-            $scope.nextClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
-            $scope.difference = (classInfo.startTime.split(':')[0] - moment().hour());
-          }
-        });
-      } else if (dow === 4) {
-        timetable[dow - 1].thursday.forEach(function (classInfo) {
-          if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference && $scope.currentClass !== classInfo.subjectName + ' - ' + classInfo.roomNum)) {
-            $scope.nextClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
-            $scope.difference = (classInfo.startTime.split(':')[0] - moment().hour());
-          }
-        });
-      } else if (dow === 5) {
-        timetable[dow - 1].friday.forEach(function (classInfo) {
-          if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference && $scope.currentClass !== classInfo.subjectName + ' - ' + classInfo.roomNum)) {
-            $scope.nextClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
-            $scope.difference = (classInfo.startTime.split(':')[0] - moment().hour());
-          }
-        });
+      if (timetable[dow - 1] !== undefined) {
+        if (dow === 1) {
+          timetable[dow - 1].monday.forEach(function (classInfo) {
+            if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference && $scope.currentClass !== classInfo.subjectName + ' - ' + classInfo.roomNum)) {
+              $scope.nextClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
+              $scope.difference = (classInfo.startTime.split(':')[0] - moment().hour());
+            }
+          });
+        } else if (dow === 2) {
+          timetable[dow - 1].tuesday.forEach(function (classInfo) {
+            if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference && $scope.currentClass !== classInfo.subjectName + ' - ' + classInfo.roomNum)) {
+              $scope.nextClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
+              $scope.difference = (classInfo.startTime.split(':')[0] - moment().hour());
+            }
+          });
+        } else if (dow === 3) {
+          timetable[dow - 1].wednesday.forEach(function (classInfo) {
+            if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference && $scope.currentClass !== classInfo.subjectName + ' - ' + classInfo.roomNum)) {
+              $scope.nextClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
+              $scope.difference = (classInfo.startTime.split(':')[0] - moment().hour());
+            }
+          });
+        } else if (dow === 4) {
+          timetable[dow - 1].thursday.forEach(function (classInfo) {
+            if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference && $scope.currentClass !== classInfo.subjectName + ' - ' + classInfo.roomNum)) {
+              $scope.nextClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
+              $scope.difference = (classInfo.startTime.split(':')[0] - moment().hour());
+            }
+          });
+        } else if (dow === 5) {
+          timetable[dow - 1].friday.forEach(function (classInfo) {
+            if (classInfo.startTime.split(':')[0] >= moment().hour() && ((classInfo.startTime.split(':')[0] - moment().hour()) < $scope.difference && $scope.currentClass !== classInfo.subjectName + ' - ' + classInfo.roomNum)) {
+              $scope.nextClass = classInfo.subjectName + ' - ' + classInfo.roomNum;
+              $scope.difference = (classInfo.startTime.split(':')[0] - moment().hour());
+            }
+          });
+        }
       }
       if ($scope.nextClass === undefined) {
         $scope.nextClass = 'No classes for the rest of today!';
@@ -151,7 +156,7 @@
     {
       name: 'Emails',
       icon: 'glyphicon glyphicon-envelope',
-      state: '/studentmails'
+      state: 'https://outlook.office.com/owa/?realm=mail.itsligo.ie'
     },
     {
       name: 'Calendar',

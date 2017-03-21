@@ -5,7 +5,7 @@
         <div class="row coralbg white">
           <div class="col-md-12 no-pad">
             <div class="user-pad">
-              <h3>Welcome Back</h3>
+              <h3>{{user.displayName}}</h3>
               <h4 class="white"><i class="fa fa-check-circle-o"></i>{{user.coursename}}</h4>
               <a type="button" href="/settings/profile" class="btn btn-labeled btn-info" href="#">
                 <span class="btn-label"><i class="fa fa-pencil"></i></span>Profile</a>
@@ -40,6 +40,13 @@
         </div>
         <ui-view></ui-view>
       </div>
+    </div>
+  </div>
+  <div class="chatIcons">
+    <a href="/chat">
+          <span class="chat glyphicon glyphicon-comment"></span>
+          <span class="tooltiptext">Chat</span>
+    </a>
     </div>
   </div>
 </section>
