@@ -3,7 +3,7 @@
   padding-top: 10px;
 }
 .chat-message:not(:first-child) {
-  border-top: 1px solid #e7e7e7;
+  border-top: 2px solid #e7e7e7;
 }
 .chat-message-details {
   margin-left: 10px;
@@ -12,4 +12,13 @@
   border-radius: 50%;
   height: 28px;
   width: 28px;
+}
+
+.chat{
+  margin-top: 10px;
+  height: 500px;
+  max-height: 500px;
+  overflow: hidden;
+  border: 2px solid #e7e7e7;
+  border-top: none;
 }
