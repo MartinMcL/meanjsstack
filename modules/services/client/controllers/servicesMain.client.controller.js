@@ -11,7 +11,7 @@ TodoCtrl.$inject = ['$scope', '$state', '$window', 'Authentication'];
       $scope.todos = [];
       $scope.markAll = false;
 
-//add todos to database???
+    //add todos to database???
 
       $scope.addTodo = function() {
           if(event.keyCode == 13 && $scope.todoText){
