@@ -202,8 +202,11 @@
   border-bottom: solid gray 2px;
 }
 #overview-profile tbody{
-  font-size: 2em;
+  font-size: 1em;
 }
 #overview-profile tbody tr th{
 
+}
+.table-changes tr th{
+  width: 200px;
 }

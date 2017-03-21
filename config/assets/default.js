@@ -31,7 +31,6 @@ module.exports = {
         '//maps.googleapis.com/maps/api/js?key=AIzaSyDcIDTKSppZ28KwSTjIW92Q9Ojmw7lodqM',
         'public/lib/ngmap/build/scripts/ng-map.min.js'
 
-
         // endbower
         // Jquery
       ],
