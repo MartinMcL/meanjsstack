@@ -7,13 +7,11 @@
 
   servicesMain.$inject = ['$scope', '$http', 'ServicesFactory'];
 
-<<<<<<< HEAD
     function TodoCtrl($scope) {
       $scope.todos = [];
       $scope.markAll = false;
 
-    //add todos to database???
-=======
+
   function servicesMain($scope, $http, ServicesFactory) {
     $scope.todos = [];
     $scope.markAll = false;
@@ -23,7 +21,6 @@
         $scope.loadToDosIntoScope();
         // Do whatever you need to do with the userId here.
       });
->>>>>>> fa05be659b79461e04e276749acdfb36f520a3db
 
     $scope.loadToDosIntoScope = function () {
       // Get College Events and Convert to JavaScript Date Objects
