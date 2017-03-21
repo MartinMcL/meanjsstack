@@ -151,7 +151,7 @@
     {
       name: 'Emails',
       icon: 'glyphicon glyphicon-envelope',
-      state: '/studentmails'
+      state: 'https://outlook.office.com/owa/?realm=mail.itsligo.ie'
     },
     {
       name: 'Calendar',
