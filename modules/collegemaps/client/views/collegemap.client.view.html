@@ -56,7 +56,7 @@
                         <ng-map center="[54.2784358, -8.460294]" zoom="18">
                             <custom-marker id="foo" ng-repeat="block in blocks" position="[{{block.mapPosition.lat}}, {{block.mapPosition.long}}]">
                                 <div class="marker">
-                                    <h2>{{block.blockId}}</h2>
+                                    <h2>{{ block.blockId }}</h2>
                                 </div>
                             </custom-marker>
                         </ng-map>
