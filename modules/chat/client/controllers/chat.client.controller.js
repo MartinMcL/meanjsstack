@@ -9,7 +9,6 @@
 
   function ChatController($scope, $state, Authentication, Socket) {
     var vm = this;
-
     vm.messages = [];
     vm.messageText = '';
     vm.sendMessage = sendMessage;
@@ -21,7 +20,6 @@
       if (!Authentication.user) {
         $state.go('home');
       }
-
       // Make sure the Socket is connected
       if (!Socket.socket) {
         Socket.connect();
@@ -50,6 +48,8 @@
 
       // Clear the message text
       vm.messageText = '';
+
+      
     }
   }
 }());
