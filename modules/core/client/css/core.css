@@ -135,6 +135,13 @@ body {
 	color: #5C4399;
 }
 
+#homeLink:hover,
+#homeLink:active,
+#homeLink:focus {
+	background-color: #840851;
+	color: white;
+}
+
 #moodleLink:hover,
 #moodleLink:active,
 #moodleLink:focus {
@@ -235,7 +242,6 @@ body {
 	margin-top: 15px;
 	margin-bottom: 15px;
 	position: relative;
-    display: inline-block;
 }
 .chatIcons a{
 	height: 100px;

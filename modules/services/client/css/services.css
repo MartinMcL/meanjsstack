@@ -1,6 +1,6 @@
 
 #todoapp {
-	background: #fff;
+	/*background: #fff;*/
 	margin-left: 50px;
 	margin-bottom: 40px;
 }
@@ -80,7 +80,7 @@
 	margin: 0 -20px -20px -20px;
 	overflow: hidden;
 	color: #555555;
-	background: #f4fce8;
+	/*background: #f4fce8;*/
 	border-top: 1px solid #ededed;
 	padding: 0 20px;
 	line-height: 37px;
@@ -98,11 +98,32 @@
 	float: right;
 	line-height: 20px;
 	text-decoration: none;
-	background: rgba(0, 0, 0, 0.1);
-	color: #555555;
+	/*background: rgba(0, 0, 0, 0.1);
+	color: #555555;*/
 	font-size: 11px;
 	margin-top: 8px;
 	margin-bottom: 8px;
+	margin-right:250px;
 	padding: 0 10px 1px;
 	cursor: pointer;
+}
+.quickLinks span{
+	width:100px;
+	height:100px;
+		margin-left: auto;
+	margin-right: auto;
+	display: block;
+	padding:5px;
+}
+.quickLinks p{
+	font-size:2em;
+}
+.printicon:hover{
+	color:#c6150b;
+}
+.computericon:hover{
+	color:#00b542;
+}
+.bookingicon:hover{
+	color:#a000d6;
 }
