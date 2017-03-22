@@ -12,7 +12,12 @@
 
     $scope.todos = [];
     $scope.markAll = false;
-
+    $http.get('/api/users/me')
+      .then(function (result) {
+        $scope.user = result.data;
+        $scope.loadToDosIntoScope();
+        // Do whatever you need to do with the userId here.
+      });
     $scope.loadToDosIntoScope = function () {
       // Get College Events and Convert to JavaScript Date Objects
       if ($scope.user !== null) { // If a user is logged in, Retrieve their events and show
@@ -90,21 +95,21 @@
       });
     };
     $scope.icons = [{
-        name: 'Printing',
-        icon: 'glyphicon glyphicon-print printicon',
-        state: 'http://pcounter.itsligo.ie/'
-      },
-      {
+      name: 'Printing',
+      icon: 'glyphicon glyphicon-print printicon',
+      state: 'http://pcounter.itsligo.ie/'
+    },
+    {
 
-        name: 'Virtual Computer',
-        icon: 'glyphicon glyphicon-cloud computericon',
-        state: 'https://vdesktop.itsligo.ie/'
-      },
-      {
-        name: 'Equipment Booking',
-        icon: 'glyphicon glyphicon-book bookingicon',
-        state: 'https://edtechbookings.itsligo.ie/cire/signIn.aspx'
-      }
+      name: 'Virtual Computer',
+      icon: 'glyphicon glyphicon-cloud computericon',
+      state: 'https://vdesktop.itsligo.ie/'
+    },
+    {
+      name: 'Equipment Booking',
+      icon: 'glyphicon glyphicon-book bookingicon',
+      state: 'https://edtechbookings.itsligo.ie/cire/signIn.aspx'
+    }
     ];
   }
 }());
