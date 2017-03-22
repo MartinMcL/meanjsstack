@@ -12,13 +12,6 @@
 
     $scope.todos = [];
     $scope.markAll = false;
-    $http.get('/api/users/me')
-      .then(function (result) {
-        $scope.user = result.data;
-        $scope.loadToDosIntoScope();
-        // Do whatever you need to do with the userId here.
-      });
-
 
     $scope.loadToDosIntoScope = function () {
       // Get College Events and Convert to JavaScript Date Objects
@@ -40,6 +33,7 @@
           text: $scope.todoText,
           done: false
         };
+
         ServicesFactory.addUserTodo($scope.user.username, newTodo).then(function (response) {
           $scope.todoText = '';
           $scope.loadToDosIntoScope();
