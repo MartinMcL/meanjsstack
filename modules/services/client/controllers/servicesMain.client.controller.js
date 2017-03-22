@@ -7,12 +7,11 @@
 
   servicesMain.$inject = ['$scope', '$http', 'ServicesFactory'];
 
-    function TodoCtrl($scope) {
-      $scope.todos = [];
-      $scope.markAll = false;
-
+    
 
   function servicesMain($scope, $http, ServicesFactory) {
+
+
     $scope.todos = [];
     $scope.markAll = false;
     $http.get('/api/users/me')
@@ -110,5 +109,4 @@
       }
     ];
   }
-    }
 }());
