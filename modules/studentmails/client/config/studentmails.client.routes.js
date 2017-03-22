@@ -13,8 +13,7 @@
         abstract: true,
         url: '/studentmails',
         templateUrl: 'modules/studentmails/client/views/studentmails.client.view.html',
-        controller: "StudentmailsController",
-        directive: 'myMail'
+        controller: "StudentmailsController"
       })
       .state('studentmails.list', {
         url: '',

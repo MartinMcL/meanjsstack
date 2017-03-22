@@ -35,19 +35,19 @@
 
         <div style="display: block;">
           <div class="todo-count">{{remaining()}} of {{todos.length}} remaining</div>
-          <a id="clear-completed" ng-click="clear()" ng-show="hasDone()">
+          <button id="clear-completed" class="btn btn-info" ng-click="clear()" ng-show="hasDone()">
               Clear <span >{{(todos.length - remaining())}} {{itemText()}}</span>.
-          </a>
+          </button>
         </div>
 
       </div>
     </div>
     <div class="col-md-4">
-      <h3>Quick Links</h3>
+      <h4>Quick Links</h4>
       <div class="row">
         <div ng-repeat="icon in icons">
-          <div class="homeIcons">
-            <a href={{icon.state}}><span class="{{icon.icon}}">
+          <div class="homeIcons quickLinks">
+            <a href={{icon.state}}><span class="{{icon.icon}} ">
               </span></a>
             <p>{{icon.name}}</p>
           </div>

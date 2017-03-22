@@ -1,67 +1,14 @@
-(function () {
-  'use strict';
-
-  // Studentmails controller
-  angular
-    .module('studentmails')
-    .controller('StudentmailsController', StudentmailsController);
-
-  StudentmailsController.$inject = ['$scope', '$state', '$window', 'Authentication'];
-
-  function StudentmailsController ($scope, $state, $window, Authentication) {
-    
-  }
-}());
-    
-
-
-
-
-
 // (function () {
 //   'use strict';
 
-//   // Studentmails controller
 //   angular
 //     .module('studentmails')
-//     .controller('StudentmailsController', StudentmailsController);
+//     .controller('StudentmailsCtrl', StudentmailsCtrl);
 
-//   StudentmailsController.$inject = ['$scope', '$http', '$state', '$window', 'Authentication'];
+//   StudentmailsCtrl.$inject = ['$scope', '$state', '$window', 'Authentication'];
+// function StudentmailsCtrl ($scope, $state, $window, Authentication) {
 
-//   function StudentmailsController ($scope, $http, $state, $window, Authentication) {
-//     //var vm = this;
-
-
-//     $http.get("https://outlook.office365.com/api/v1.0/me/messages")
-//       .then(function(response) {
-//         $log.debug('HTTP request to Mail API returned successfully.');
-//         vm.emails = response.data.value;
-//       }, function(error) {
-//         $log.error('Mail API Failed - bg');
-//       })
-//   }
-// }());
-
-
-
-
-
-
-// (function () {
-//   'use strict';
-
-//   // Studentmails controller
-//   angular
-//     .module('studentmails')
-//     .controller('StudentmailsController', StudentmailsController);
-
-//   StudentmailsController.$inject = ['$scope', '$state', '$window', 'Authentication'];
-
-//   function StudentmailsController ($scope, $state, $window, Authentication) {
-    
-
-
-//       // App configuration
+//   // App configuration
 //   var authEndpoint = 'https://login.microsoftonline.com/common/oauth2/v2.0/authorize?';
 //   var apiEndpoint = 'https://outlook.office.com/api/v2.0';
 //   var redirectUri = 'http://localhost:3000/studentmails';
@@ -69,29 +16,30 @@
 //   var scopes = 'openid profile https://outlook.office.com/mail.read';
 
 //   // Check for browser support for sessionStorage
-//   // if (typeof(Storage) === 'undefined') {
-//   //   render('#unsupportedbrowser');
-//   //   return;
-//   // }
+//   if (typeof(Storage) === 'undefined') {
+//     render('#unsupportedbrowser');
+//     return;
+//   }
 
 //   // Check for browser support for crypto.getRandomValues
-//   // var cryptObj = window.crypto || window.msCrypto; // For IE11
-//   // if (cryptObj === undefined || cryptObj.getRandomValues === 'undefined') {
-//   //   render('#unsupportedbrowser');
-//   //   return;
-//   // }
+//   var cryptObj = window.crypto || window.msCrypto; // For IE11
+//   if (cryptObj === undefined || cryptObj.getRandomValues === 'undefined') {
+//     render('#unsupportedbrowser');
+//     return;
+//   }
 
-//   // render(window.location.hash);
-//   // $(window).on('hashchange', function() {
-//   //   render(window.location.hash);
-//   // });
+//   render(window.location.hash);
+// //?????????
+//   $(window).on('hashchange', function() {
+//     render(window.location.hash);
+//   });
 
-//   function render (hash) {
+//   $scope.render = function(hash) {
 
 //     var action = hash.split('=')[0];
 
 //     // Hide everything
-//     // $('.main-container .page').hide();
+//     $('.main-container .page').hide();
 
 //     // Check for presence of access token
 //     var isAuthenticated = (sessionStorage.accessToken != null && sessionStorage.accessToken.length > 0);
@@ -111,10 +59,24 @@
 //       },
 
 //       // Signout
-//        '#signout': function () {
+//       '#signout': function () {
 //         clearUserState();
+
 //         // Redirect to home page
 //         window.location.hash = '#';
+//       },
+
+//       // Error display
+//       '#error': function () {
+//         var errorresponse = parseHashParams(hash);
+//         if (errorresponse.error === 'login_required' ||
+//             errorresponse.error === 'interaction_required') {
+//           // For these errors redirect the browser to the login
+//           // page.
+//           window.location = buildAuthUrl();
+//         } else {
+//           renderError(errorresponse.error, errorresponse.error_description);
+//         }
 //       },
 
 //       // Display inbox
@@ -127,93 +89,79 @@
 //         }
 //       },
 
-//             // // Error display
-//       // '#error': function () {
-//       //   var errorresponse = parseHashParams(hash);
-//       //   if (errorresponse.error === 'login_required' ||
-//       //       errorresponse.error === 'interaction_required') {
-//       //     // For these errors redirect the browser to the login
-//       //     // page.
-//       //     window.location = buildAuthUrl();
-//       //   } else {
-//       //     renderError(errorresponse.error, errorresponse.error_description);
-//       //   }
-//       // },
-
 //       // Shown if browser doesn't support session storage
-//       // '#unsupportedbrowser': function () {
-//       //   $('#unsupported').show();
-//       // }
+//       '#unsupportedbrowser': function () {
+//         $('#unsupported').show();
+//       }
 //     }
 
-//     // if (pagemap[action]){
-//     //   pagemap[action]();
-//     // } else {
-//     //   // Redirect to home page
-//     //   window.location.hash = '#';
-//     // }
-//   };
+//     if (pagemap[action]){
+//       pagemap[action]();
+//     } else {
+//       // Redirect to home page
+//       window.location.hash = '#';
+//     }
+//   }
 
-//   // function setActiveNav (navId) {
-//   //   $('#navbar').find('li').removeClass('active');
-//   //   $(navId).addClass('active');
-//   // }
+//   $scope.setActiveNav = function (navId) {
+//     $('#navbar').find('li').removeClass('active');
+//     $(navId).addClass('active');
+//   }
 
-//   // function renderNav (isAuthed) {
-//   //   if (isAuthed) {
-//   //     $('.authed-nav').show();
-//   //   } else {
-//   //     $('.authed-nav').hide();
-//   //   }
-//   // }
+//   $scope.renderNav = function (isAuthed) {
+//     if (isAuthed) {
+//       $('.authed-nav').show();
+//     } else {
+//       $('.authed-nav').hide();
+//     }
+//   }
 
-//   // function renderTokens () {
-//   //   if (sessionStorage.accessToken) {
-//   //     // For demo purposes display the token and expiration
-//   //     var expireDate = new Date(parseInt(sessionStorage.tokenExpires));
-//   //     $('#token', window.parent.document).text(sessionStorage.accessToken);
-//   //     $('#expires-display', window.parent.document).text(expireDate.toLocaleDateString() + ' ' + expireDate.toLocaleTimeString());
-//   //     if (sessionStorage.idToken) {
-//   //       $('#id-token', window.parent.document).text(sessionStorage.idToken);
-//   //     }
-//   //     $('#token-display', window.parent.document).show();
-//   //   } else {
-//   //     $('#token-display', window.parent.document).hide();
-//   //   }
-//   // }
+//   $scope.renderTokens = function () {
+//     if (sessionStorage.accessToken) {
+//       // For demo purposes display the token and expiration
+//       var expireDate = new Date(parseInt(sessionStorage.tokenExpires));
+//       $('#token', window.parent.document).text(sessionStorage.accessToken);
+//       $('#expires-display', window.parent.document).text(expireDate.toLocaleDateString() + ' ' + expireDate.toLocaleTimeString());
+//       if (sessionStorage.idToken) {
+//         $('#id-token', window.parent.document).text(sessionStorage.idToken);
+//       }
+//       $('#token-display', window.parent.document).show();
+//     } else {
+//       $('#token-display', window.parent.document).hide();
+//     }
+//   }
 
-//   // function renderError (error, description) {
-//   //   $('#error-name', window.parent.document).text('An error occurred: ' + decodePlusEscaped(error));
-//   //   $('#error-desc', window.parent.document).text(decodePlusEscaped(description));
-//   //   $('#error-display', window.parent.document).show();
-//   // }
+//   $scope.renderError = function (error, description) {
+//     $('#error-name', window.parent.document).text('An error occurred: ' + decodePlusEscaped(error));
+//     $('#error-desc', window.parent.document).text(decodePlusEscaped(description));
+//     $('#error-display', window.parent.document).show();
+//   }
 
-//   // function renderWelcome (isAuthed) {
-//   //   setActiveNav('#home-nav');
-//   //   if (isAuthed) {
-//   //     $('#username').text(sessionStorage.userDisplayName);
-//   //     $('#logged-in-welcome').show();
-//   //   } else {
-//   //     //$('#connect-button').attr('href', buildAuthUrl());
-//   //     $('#signin-prompt').show();
-//   //   }
-//   // }
+//   $scope.renderWelcome = function (isAuthed) {
+//     setActiveNav('#home-nav');
+//     if (isAuthed) {
+//       $('#username').text(sessionStorage.userDisplayName);
+//       $('#logged-in-welcome').show();
+//     } else {
+//       //$('#connect-button').attr('href', buildAuthUrl());
+//       $('#signin-prompt').show();
+//     }
+//   }
 
-//   function renderInbox () {
+//   $scope.renderInbox = function () {
 //     setActiveNav('#inbox-nav');
-//     // $('#inbox-status').text('Loading...');
-//     // $('#message-list').empty();
-//     // $('#inbox').show();
+//     $('#inbox-status').text('Loading...');
+//     $('#message-list').empty();
+//     $('#inbox').show();
 //     // Get user's email address
 //     getUserEmailAddress(function(userEmail, error) {
 //       if (error) {
 //         renderError('getUserEmailAddress failed', error.responseText);
 //       } else {
 //         getUserInboxMessages(userEmail, function(messages, error){
-//           // $('#inbox-status').text('Here are the 10 most recent messages in your inbox.');
+//           $('#inbox-status').text('Here are the 10 most recent messages in your inbox.');
 //           var templateSource = $('#msg-list-template').html();
-//           var template = compile(templateSource);
-//           //var template = Handlebars.compile(templateSource);
+//           var template = Handlebars.compile(templateSource);
 
 //           var msgList = template({messages: messages});
 //           $('#message-list').append(msgList);
@@ -224,7 +172,7 @@
 
 //   // OAUTH FUNCTIONS =============================
 
-//   function buildAuthUrl () {
+//   $scope.buildAuthUrl = function () {
 //     console.log("hello");
 //     // Generate random values for state and nonce
 //     sessionStorage.authState = guid();
@@ -243,9 +191,9 @@
 //     return authEndpoint + $.param(authParams);
 //   }
 
-//   function handleTokenResponse (hash) {
+//   $scope.handleTokenResponse = function (hash) {
 //     // If this was a silent request remove the iframe
-//     // $('#auth-iframe').remove();
+//     $('#auth-iframe').remove();
 
 //     // clear tokens
 //     sessionStorage.removeItem('accessToken');
@@ -290,7 +238,7 @@
 //     });
 //   }
 
-//   function validateIdToken (callback) {
+//   $scope.validateIdToken = function (callback) {
 //     // Per Azure docs (and OpenID spec), we MUST validate
 //     // the ID token before using it. However, full validation
 //     // of the signature currently requires a server-side component
@@ -355,7 +303,7 @@
 //     callback(true);
 //   }
 
-//   function makeSilentTokenRequest (callback) {
+//   $scope.makeSilentTokenRequest = function (callback) {
 //     // Build up a hidden iframe
 //     var iframe = $('<iframe/>');
 //     iframe.attr('id', 'auth-iframe');
@@ -374,7 +322,7 @@
 
 //   // Helper method to validate token and refresh
 //   // if needed
-//   function getAccessToken (callback) {
+//   $scope.getAccessToken = function (callback) {
 //     var now = new Date().getTime();
 //     var isExpired = now > parseInt(sessionStorage.tokenExpires);
 //     // Do we have a token already?
@@ -391,7 +339,7 @@
 
 //   // OUTLOOK API FUNCTIONS =======================
 
-//   function makeApiCall (options, callback) {
+//   $scope.makeApiCall = function (options, callback) {
 //     var headers = {
 //       // Add the access token to the request
 //       'Authorization': 'Bearer ' + options.token,
@@ -428,7 +376,7 @@
 //     });
 //   }
 
-//   function getUserEmailAddress (callback) {
+//   $scope.getUserEmailAddress = function (callback) {
 //     if (sessionStorage.userEmail) {
 //       return sessionStorage.userEmail;
 //     } else {
@@ -456,7 +404,7 @@
 //     }
 //   }
 
-//   function getUserInboxMessages (emailAddress, callback) {
+//   $scope.getUserInboxMessages = function (emailAddress, callback) {
 //     getAccessToken(function(accessToken) {
 //       if (accessToken) {
 //         // Call the Outlook API
@@ -492,7 +440,7 @@
 
 //   // HELPER FUNCTIONS ============================
 
-//   function guid () {
+//   $scope.guid = function () {
 //     var buf = new Uint16Array(8);
 //     cryptObj.getRandomValues(buf);
 //     function s4(num) {
@@ -506,7 +454,7 @@
 //       s4(buf[4]) + '-' + s4(buf[5]) + s4(buf[6]) + s4(buf[7]);
 //   }
 
-//     function parseHashParams (hash) {
+//   $scope.parseHashParams = function (hash) {
 //     var params = hash.slice(1).split('&');
 
 //     var paramarray = {};
@@ -518,7 +466,7 @@
 //     return paramarray;
 //   }
 
-//   function decodePlusEscaped (value) {
+//   $scope.decodePlusEscaped = function (value) {
 //     // decodeURIComponent doesn't handle spaces escaped
 //     // as '+'
 //     if (value) {
@@ -528,29 +476,17 @@
 //     }
 //   }
 
-//   function clearUserState () {
+//   $scope.clearUserState = function () {
 //     // Clear session
 //     sessionStorage.clear();
 //   }
-//   //Handlebars.registerHelper("formatDate", function(datetime){
-//  function registerHelper (datetime){
+
+//   Handlebars.registerHelper("formatDate", function(datetime){
 //     // Dates from API look like:
 //     // 2016-06-27T14:06:13Z
 
 //     var date = new Date(datetime);
 //     return date.toLocaleDateString() + ' ' + date.toLocaleTimeString();
-//   }
-
-
-//   }
-// }());
-
-//   function StudentmailsController($scope, $state, $window, Authentication) {
-//     // App configuration
-//     var authEndpoint = 'https://login.microsoftonline.com/common/oauth2/v2.0/authorize?';
-//     var apiEndpoint = 'https://outlook.office.com/api/v2.0';
-//     var redirectUri = 'http://localhost:3000/studentmails';
-//     var appId = '8a6e0620-094a-4268-8f3f-567d9c851c2b';
-//     var scopes = 'openid profile https://outlook.office.com/mail.read';
-//   }
-// }());
+//   });
+// }
+// });

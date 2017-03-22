@@ -66,7 +66,7 @@ body {
 }
 
 .sidebar-nav li {
-	line-height: 2.5em;
+	line-height: 2em;
 	font-size: 2.5em;
 }
 
@@ -135,15 +135,43 @@ body {
 	color: #5C4399;
 }
 
-#contactsLink:hover,
-#contactsLink:active,
-#contactsLink:focus {
-	background-color: #430549;
+#homeLink:hover,
+#homeLink:active,
+#homeLink:focus {
+	background-color: #840851;
+	color: white;
+}
+
+#moodleLink:hover,
+#moodleLink:active,
+#moodleLink:focus {
+	background-color: #ff3300;
+	color: white;
+}
+#libraryLink:hover,
+#libraryLink:active,
+#libraryLink:focus {
+	background-color: #0066cc;
+	color: white;
+}
+#examsLink:hover,
+#examsLink:active,
+#examsLink:focus {
+	background-color: #cc3399;
+	color: white;
+}
+#itsLink:hover,
+#itsLink:active,
+#itsLink:focus {
+	background-color: #33cc33;
 	color: white;
 }
 
 @media(min-width:768px) {
 
+}
+.marker{
+	text-transform: uppercase;
 }
 
 #menu-toggle {
@@ -205,6 +233,60 @@ body {
 	width:150px;
 	height:150px;
 }
+
+.chatIcons{
+	float: right;
+	text-align: center;
+	padding: 20px;
+	border-radius: 15px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	position: relative;
+}
+.chatIcons a{
+	height: 100px;
+	width: 100px;
+}
+.chatIcons span{
+	color: #f7f7f7;
+	font-size: 80px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	text-decoration: none;
+	margin: 0px;
+	padding: 0px;
+
+}
+
+.chatIcons a:hover{
+	text-decoration: none;
+}
+
+/* Tooltip text */
+.chatIcons .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    color: #026990;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: 24px;
+	line-height:normal;
+	font-family: 'Dosis', sans-serif;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 40%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.chatIcons:hover .tooltiptext {
+    visibility: visible;
+}
+
 /*.studentHub{
 	display: inline;
 	font-size: 50px;
@@ -240,7 +322,7 @@ body {
 	width: 150px;
 }
 .homeIcons p{
-	font-size: 2em;
+	font-size: 2.5em;
 	font-family: 'Dosis', sans-serif;
 
 }
@@ -325,9 +407,10 @@ body {
 	
 }
 #footer{	
-	height: 350px;
+	height: auto;
 	background-color: #f7f7f7;
 	border-top: white solid 1px;
+	margin-bottom: 0px;
 }
 .footerList h3{
 	text-align: center;
@@ -355,6 +438,7 @@ body {
 }
 #footerClose{
 	text-align: center;
+	color: white;
 }
 
 .marginFot{
